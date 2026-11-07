@@ -622,6 +622,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .tsheet>.ctrl{flex:none}
 .fs .fb{min-height:0;margin-top:0;font-weight:400}
 .fs .fb.big{min-height:0}
+.fs .ffv{font-family:'Segoe UI',Arial,'Heebo',sans-serif;font-size:15px}
+.fs .fed,.fs .fmir{font-family:'Segoe UI',Arial,'Heebo',sans-serif;font-size:15px}
 
 /* ===== lesson 2 additions ===== */
 .tg3{display:grid;grid-template-columns:286px 1fr;gap:14px;margin-top:12px;align-items:start;min-height:0}
@@ -704,6 +706,12 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .slide:has(.tg3){justify-content:flex-start}
 .tg3{flex:1;min-height:0;align-items:stretch}
 .tg3 .tcolR{overflow:hidden}
+.rdefs{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin-top:18px}
+.rd{background:#fff;border-radius:18px;padding:14px 20px;box-shadow:0 2px 0 var(--line),0 10px 26px rgba(22,33,58,.07);border-right:7px solid var(--xl)}
+.rd:nth-child(2){border-right-color:var(--gold)}.rd:nth-child(3){border-right-color:var(--coral)}.rd:nth-child(4){border-right-color:#2a5db8}
+.rdh{display:flex;align-items:center;gap:10px}.rdh .e{font-size:30px}.rdh b{font-size:25px}.rdh .en{margin-right:auto;font-size:15px;color:var(--mut);direction:ltr}
+.rd p{font-size:18.5px;line-height:1.5;margin:6px 0 8px}
+.rdx{font-size:16.5px;line-height:1.45;background:var(--xlbg);border-radius:10px;padding:6px 12px}
 
 </style>
 </head>
@@ -728,16 +736,23 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 </section>
 
 <!-- ============ PART A: REVIEW ============ -->
-<section class="slide light" id="s-rmap" data-title="מפגש 1 בתמצית" data-part="r" style="padding-top:40px;padding-bottom:46px">
-  <div class="whisper">חלק א · חזרה</div>
-  <div class="big" style="font-size:46px;margin-top:4px">מפגש 1 בשמונה כרטיסים <span style="font-size:24px;color:var(--mut)">לחצו על כרטיס כדי להפוך אותו</span></div>
-  <div class="rtiles" id="rtiles"></div>
-  <div class="tagc">חזרה · מפגש 1</div>
+<section class="slide light" id="s-rmap" data-title="הגדרות ממפגש 1 (א)" data-part="r" style="padding-top:36px;padding-bottom:46px;justify-content:flex-start">
+  <div class="whisper">חלק א · חזרה על מפגש 1</div>
+  <div class="big" style="font-size:42px;margin-top:2px">קודם ההגדרות. <span style="font-size:24px;color:var(--mut)">כל לחיצה מוסיפה הגדרה</span></div>
+  <div class="rdefs" id="rdefs1"></div>
+  <div class="tagc">חזרה · הגדרות 1 עד 4</div>
+</section>
+
+<section class="slide light" id="s-rmap2" data-title="הגדרות ממפגש 1 (ב)" data-part="r" style="padding-top:36px;padding-bottom:46px;justify-content:flex-start">
+  <div class="whisper">חלק א · חזרה על מפגש 1</div>
+  <div class="big" style="font-size:42px;margin-top:2px">ועוד ארבע הגדרות. <span style="font-size:24px;color:var(--mut)">ואחרי זה בודקים את עצמנו</span></div>
+  <div class="rdefs" id="rdefs2"></div>
+  <div class="tagc">חזרה · הגדרות 5 עד 8</div>
 </section>
 
 <section class="slide dark" id="s-rquiz" data-title="סבב בזק: נכון או לא?" data-part="r" style="padding-top:40px;padding-bottom:46px">
   <div class="whisper">חלק א · חזרה</div>
-  <div class="big" style="font-size:46px;margin-top:4px">סבב בזק: <span class="grn">נכון</span> או <span class="acc">לא נכון?</span></div>
+  <div class="big" style="font-size:46px;margin-top:4px">עכשיו בודקים: <span class="grn">נכון</span> או <span class="acc">לא נכון?</span></div>
   <div class="rq" id="rq"></div>
   <div class="rqscore" id="rqscore"></div>
   <div class="tagc">חזרה · 8 טענות מהירות</div>
@@ -782,7 +797,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-alt" data-title="מאי: Alt+Enter" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">👩 מאי</span> ״אני רוצה ׳מחיר ליח׳׳, מתחתיו ׳לפני מע״מ׳, ומתחתיו ׳בש״ח׳״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זה <span class="term" data-t="altenter">ירידת שורה ידנית</span>?</small><b>אתם קובעים איפה יורדים</b><span>בגלישת טקסט Excel מחליט איפה לשבור. כאן <b>אתם</b> מחליטים:<br>1. דאבל קליק על התא (מצב Edit).<br>2. מעמידים את הסמן במקום השבירה.<br>3. <span class="kbd">Alt</span> שמאלי ובלי לעזוב <span class="kbd">Enter</span>. במק: <span class="ltr"><span class="kbd">Option</span>+<span class="kbd">Return</span></span>.<br>4. בסוף: <span class="kbd">Enter</span> כדי לקלוט.</span></div><ol class="tasks" id="s-alt-tasks"></ol><div class="msmsg" id="s-alt-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זה <span class="term" data-t="altenter">ירידת שורה ידנית</span>?</small><b>אתם קובעים איפה יורדים</b><span>בגלישת טקסט Excel מחליט איפה לשבור. כאן <b>אתם</b> מחליטים:<br>1. דאבל קליק על התא (מצב Edit).<br>2. מעמידים את הסמן במקום השבירה.<br>3. לוחצים על <span class="kbd">Alt</span> השמאלי, ובלי לעזוב, על <span class="kbd">Enter</span>. במק: <span class="ltr"><span class="kbd">Option</span>+<span class="kbd">Return</span></span>.<br>4. בסוף: <span class="kbd">Enter</span> כדי לקלוט.</span></div><ol class="tasks" id="s-alt-tasks"></ol><div class="msmsg" id="s-alt-msg"></div></div>
   <div class="tsheet"><div id="s-alt-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · Alt+Enter</div>
 </section>
@@ -808,21 +823,21 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-dec" data-title="ספרות אחרי הנקודה: טריק" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px">טריק: <span class="acc">0.3 + 0.3 + 0.3 = 1.0</span> ?!</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה שרואים, לא תמיד מה שיש</small><b>התצוגה מעוגלת. החישוב לא.</b><span>בתאים B2 עד B4 נרשמה הנוסחה <span class="f">=1/3</span>. בתא B5 הסכום.<br>כפתור <b>.00→.0</b> מסיר ספרה אחרי הנקודה <b>בתצוגה בלבד</b>. Excel ממשיך לחשב עם 0.333333...<br>לכן הסכום 1, גם אם כל תא ״נראה״ 0.3.</span></div><ol class="tasks" id="s-dec-tasks"></ol><div class="msmsg" id="s-dec-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה שרואים, לא תמיד מה שיש</small><b>התצוגה מעוגלת. החישוב לא.</b><span>בתאים B2 עד B4 נרשמה הנוסחה <span class="f">=1/3</span>. בתא B5 הסכום.<br>כפתור <b>.00→.0</b> מסיר ספרה אחרי הנקודה <b>בתצוגה בלבד</b>. Excel ממשיך לחשב עם 0.333333...<br>לכן הסכום הוא 1, גם אם כל תא ״נראה״ 0.3.</span></div><ol class="tasks" id="s-dec-tasks"></ol><div class="msmsg" id="s-dec-msg"></div></div>
   <div class="tsheet"><div id="s-dec-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · טריק</div>
 </section>
 
 <section class="slide light" id="s-cur" data-title="ליטל: מטבע ו-####" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">👱‍♀️ ליטל</span> ״שליד כל מחיר יופיע ₪, שיהיה ברור״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זו <span class="term" data-t="cur">תבנית מטבע</span>?</small><b>סמל, פסיק ושתי ספרות</b><span>מסמנים ← <b>₪</b> ברצועת הכלים, או עיצוב תאים ← <b>מטבע</b> ← סמל ₪.<br>התוכן נעשה רחב יותר, ובעמודה צרה מופיע <span class="term" data-t="hash">####</span>. המספר <b>לא נמחק</b>: מרחיבים את העמודה (דאבל קליק על הגבול שבין האותיות).</span></div><ol class="tasks" id="s-cur-tasks"></ol><div class="msmsg" id="s-cur-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זו <span class="term" data-t="cur">תבנית מטבע</span>?</small><b>סמל, פסיק ושתי ספרות</b><span>מסמנים ← <b>₪</b> ברצועת הכלים, או עיצוב תאים ← <b>מטבע</b> ← סמל ₪.<br>התוכן נעשה רחב יותר, ובעמודה צרה מופיע <span class="term" data-t="hash">####</span>. המספר <b>לא נמחק</b>: מרחיבים את העמודה (דאבל קליק על הגבול שבין אותיות העמודות).</span></div><ol class="tasks" id="s-cur-tasks"></ol><div class="msmsg" id="s-cur-msg"></div></div>
   <div class="tsheet"><div id="s-cur-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · מטבע</div>
 </section>
 
 <section class="slide light" id="s-pct" data-title="אחוזים: מלכודת ה-100" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px">אחוזים: <span class="acc">המלכודת של ה-100</span></div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זו <span class="term" data-t="pct">תבנית אחוזים</span>?</small><b>מציגה את הערך כפול 100, עם %</b><span>0.18 מוצג 18%. אבל 18 מוצג <b>1800%</b>!<br>שלוש דרכים נכונות לקבל 18%:<br>• להקליד <b>18%</b> ישירות.<br>• להקליד <b>0.18</b> ואז %.<br>• לעצב תא ריק כאחוזים, ואז להקליד 18.</span></div><ol class="tasks" id="s-pct-tasks"></ol><div class="msmsg" id="s-pct-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זו <span class="term" data-t="pct">תבנית אחוזים</span>?</small><b>מציגה את הערך כפול 100, עם %</b><span>0.18 מוצג כ-18%. אבל 18 מוצג כ-<b>1800%</b>!<br>שלוש דרכים נכונות לקבל 18%:<br>• להקליד <b>18%</b> ישירות.<br>• להקליד <b>0.18</b> ואז ללחוץ על %.<br>• לעצב תא ריק כאחוזים, ואז להקליד 18.</span></div><ol class="tasks" id="s-pct-tasks"></ol><div class="msmsg" id="s-pct-msg"></div></div>
   <div class="tsheet"><div id="s-pct-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · אחוזים</div>
 </section>
@@ -850,7 +865,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-merge" data-title="מיזוג ומירכוז" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="term" data-t="merge">מיזוג ומירכוז</span>: <span class="grn">יפה</span>, אבל <span class="acc">עם מחיר</span></div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>כמה תאים הופכים לתא אחד</small><b>טוב לכותרת מעל הטבלה</b><span>מסמנים A1:F1 ← בית ← <b>מיזוג ומירכוז</b>.<br>⚠️ מיזוג שומר רק את הערך של התא הראשון (הימני העליון בגיליון עברי). השאר נמחקים.<br>⚠️ טווח ממוזג <b>בתוך</b> טבלה מפריע למיון, לסינון ולסימון עמודה. לכן ממזגים רק כותרות.</span></div><ol class="tasks" id="s-merge-tasks"></ol><div class="msmsg" id="s-merge-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>כמה תאים הופכים לתא אחד</small><b>טוב לכותרת מעל הטבלה</b><span>מסמנים A1:F1 ← בית ← <b>מיזוג ומירכוז</b>.<br>⚠️ מיזוג שומר רק את הערך של התא הראשון (הימני העליון בגיליון עברי). ערכי שאר התאים נמחקים.<br>⚠️ טווח ממוזג <b>בתוך</b> טבלה מפריע למיון, לסינון ולסימון עמודה. לכן ממזגים רק כותרות.</span></div><ol class="tasks" id="s-merge-tasks"></ol><div class="msmsg" id="s-merge-msg"></div></div>
   <div class="tsheet"><div id="s-merge-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · מיזוג</div>
 </section>
@@ -864,7 +879,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-freeze" data-title="הקפאת חלוניות" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="term" data-t="freeze">הקפאת חלוניות</span>: הכותרת לא בורחת</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית תצוגה · קבוצת חלון</small><b>הכותרות נשארות על המסך</b><span>בטבלה של 30 שורות, כשגוללים למטה הכותרות נעלמות, ואז ״מה זה 312?״.<br>תצוגה ← <b>הקפאת חלוניות</b> ← <b>הקפאת השורה העליונה</b>. שורה 1 נשארת במקום, והשאר זז מתחתיה.<br>זה שינוי <b>תצוגה</b> בלבד: לא משנה אף ערך.</span></div><ol class="tasks" id="s-freeze-tasks"></ol><div class="msmsg" id="s-freeze-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית תצוגה · קבוצת חלון</small><b>הכותרות נשארות על המסך</b><span>בטבלה של 30 שורות, כשגוללים למטה הכותרות נעלמות, ואז ״מה זה 3,212?״.<br>תצוגה ← <b>הקפאת חלוניות</b> ← <b>הקפאת השורה העליונה</b>. שורה 1 נשארת במקום, והשאר זז מתחתיה.<br>זה שינוי <b>תצוגה</b> בלבד: הוא לא משנה אף ערך.</span></div><ol class="tasks" id="s-freeze-tasks"></ol><div class="msmsg" id="s-freeze-msg"></div></div>
   <div class="tsheet"><div id="s-freeze-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · תצוגה</div>
 </section>
@@ -877,7 +892,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
    <tr class="st"><td>גלישת טקסט · Alt+Enter</td><td>בית, עיצוב תאים ← יישור · מצב Edit</td><td>הטקסט יורד שורה בתוך התא, השורה מתרחבת</td><td class="no">לא</td></tr>
    <tr class="st"><td>מודגש, צבעים, גבולות, יישור</td><td>בית ← גופן, יישור</td><td>מראה בלבד</td><td class="no">לא</td></tr>
    <tr class="st"><td>מיזוג ומירכוז</td><td>בית ← יישור</td><td>כמה תאים הופכים לאחד</td><td class="yes">שומר רק את הערך הראשון</td></tr>
-   <tr class="st"><td>מברשת עיצוב · הקפאת חלוניות</td><td>בית ← לוח · תצוגה ← חלון</td><td>מעתיקה עיצוב · מקבעת תצוגה</td><td class="no">לא</td></tr></table>
+   <tr class="st"><td>מברשת עיצוב · הקפאת חלוניות</td><td>בית ← לוח · תצוגה ← חלון</td><td>מעתיקה עיצוב · מקפיאה כותרות על המסך</td><td class="no">לא</td></tr></table>
   <div class="say st" style="font-size:26px;margin-top:14px;color:#b8c6e8">ובבחינה: ״הכלי משנה את הערך״ או ״מוחק את הטקסט החורג״? כמעט תמיד <b class="acc">שגוי</b>.</div>
   <div class="tagc g">סוף חלק ב</div>
 </section>
@@ -899,14 +914,14 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-rowfix" data-title="קיבוע שורה: J$2" data-part="d" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="term" data-t="abs">קיבוע שורה</span>: <span class="f" style="font-size:.95em">J$2</span> נשאר בשורה 2</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>$ לפני מספר השורה</small><b>״בגרירה למטה, השורה לא זזה״</b><span>בגרירה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה. <span class="f">$</span> לפני המספר אומר לו: את זה לא.<br>בנוסחה <span class="f">=E2*(1+J$2)</span> התא E2 זז ל-E3, E4 וכן הלאה, ו-<span class="f">J$2</span> נשאר.<br>הקלדה: <span class="ltr"><span class="kbd">Shift</span>+<span class="kbd">4</span></span>, או <span class="kbd">F4</span> על ההפניה (במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">T</span></span>), שוב ושוב: <span class="f">J2 → $J$2 → J$2 → $J2</span></span></div><ol class="tasks" id="s-rowfix-tasks"></ol><div class="msmsg" id="s-rowfix-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>סימן $ לפני מספר השורה</small><b>״בגרירה למטה, השורה לא זזה״</b><span>בגרירה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה. סימן <span class="f">$</span> לפני המספר מונע את השינוי הזה.<br>בנוסחה <span class="f">=E2*(1+J$2)</span> ההפניה E2 הופכת ל-E3, E4 וכן הלאה, וההפניה <span class="f">J$2</span> נשארת.<br>הקלדה: <span class="ltr"><span class="kbd">Shift</span>+<span class="kbd">4</span></span>, או <span class="kbd">F4</span> על ההפניה (במק <span class="ltr"><span class="kbd">fn</span>+<span class="kbd">F4</span></span> בחלק מהמקלדות), שוב ושוב: <span class="f">J2 → $J$2 → J$2 → $J2</span></span></div><ol class="tasks" id="s-rowfix-tasks"></ol><div class="msmsg" id="s-rowfix-msg"></div></div>
   <div class="tsheet"><div id="s-rowfix-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn g" data-demo="1">🪄 הדגמה</button><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">קיבוע · שורה</div>
 </section>
 
 <section class="slide light" id="s-nofix" data-title="מתי לא מקבעים" data-part="d" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px">ומתי <span class="acc">לא</span> מקבעים? <span style="font-size:24px;color:var(--mut)">בית המרקחת</span></div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>לכל שורה שיעור משלה</small><b>אין תא אחד לנעול עליו</b><span>השתתפות הקופה שונה לכל תרופה (עמודה D). בגרירה <b>רוצים</b> ש-D2 יהפוך ל-D3, D4...<br>הנוסחה <span class="f">=C2*(1-D2)</span> נכונה. הנוסחה <span class="f bad">=C2*(1-D$2)</span> נועלת את כל התרופות על ההנחה של נרבן.<br>זו מלכודת קבועה בבחינה: ״$ תמיד בגרירה למטה״? לא.</span></div><ol class="tasks" id="s-nofix-tasks"></ol><div class="msmsg" id="s-nofix-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>לכל שורה שיעור משלה</small><b>אין תא אחד לנעול עליו</b><span>השתתפות הקופה שונה לכל תרופה (עמודה D). בגרירה <b>רוצים</b> ש-D2 יהפוך ל-D3, D4...<br>הנוסחה <span class="f">=C2*(1-D2)</span> נכונה. הנוסחה <span class="f bad">=C2*(1-D$2)</span> נועלת את כל התרופות על שיעור ההשתתפות של נרבן.<br>זו מלכודת קבועה בבחינה: ״$ תמיד בגרירה למטה״? לא.</span></div><ol class="tasks" id="s-nofix-tasks"></ol><div class="msmsg" id="s-nofix-msg"></div></div>
   <div class="tsheet"><div id="s-nofix-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">קיבוע · מלכודת</div>
 </section>
@@ -937,7 +952,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   <div class="whisper">חלק ד · תרגול</div>
   <div class="big" style="margin-top:6px">20 שאלות. <span class="grn">כמו בבחינה.</span></div>
   <div class="steps4">
-    <div class="s4 st"><i>1</i><b>טענה אחת בכל פעם</b><span>נכונה או שגויה, עם נימוק של שורה. רק אחר כך מסתכלים על האפשרויות.</span></div>
+    <div class="s4 st"><i>1</i><b>טענה אחת בכל פעם</b><span>נכונה או שגויה, עם נימוק בשורה אחת. רק אחר כך מסתכלים על האפשרויות.</span></div>
     <div class="s4 st"><i>2</i><b>שאלת נוסחה?</b><span>בודקים: מתחילה ב-=, מפנה לשורה הנכונה, החשבון נכון (1+ או 1-), ו-$ רק איפה שצריך.</span></div>
     <div class="s4 st"><i>3</i><b>🧪 יש גיליון</b><span>ליד כל שאלה יש גיליון חי. מותר ורצוי לנסות בו את הנוסחה ולגרור.</span></div>
     <div class="s4 st"><i>4</i><b>📝 מקור</b><span>שאלות שמסומנות ״מבחן״ לקוחות מבחינות 2026, בשינויים קלים.</span></div>
@@ -1463,7 +1478,7 @@ class FSheet{
     h.querySelector('.ffbar').addEventListener('pointerdown',e=>{if(e.target.closest('.ffv')&&!this.editing&&this.f.edit){e.preventDefault();this.startEdit(this.rawStr(this.A(this.act.r,this.act.c)),'Edit');}});
     if(f.ribbon)this.wireRibbon();}
   wireRibbon(){const h=this.host;
-    h.querySelectorAll('.ftabs [data-tab]').forEach(t=>t.onclick=()=>{const k=t.dataset.tab;if(k!=='home'&&k!=='view'){this.say('בשיעור הזה עובדים בכרטיסיות <b>בית</b> ו<b>תצוגה</b>.');return;}
+    h.querySelectorAll('.ftabs [data-tab]').forEach(t=>t.onclick=()=>{const k=t.dataset.tab;if(k!=='home'&&k!=='view'){this.say('במפגש הזה עובדים בכרטיסיות <b>בית</b> ו<b>תצוגה</b>.');return;}
       h.querySelectorAll('.ftabs [data-tab]').forEach(x=>x.classList.toggle('on',x===t));h.querySelectorAll('.fpane').forEach(p=>p.hidden=p.dataset.pane!==k);});
     h.querySelector('.frib').addEventListener('pointerdown',e=>{if(!/SELECT|INPUT|OPTION/.test(e.target.tagName))e.preventDefault();});
     h.querySelectorAll('.frib [data-c]').forEach(b=>{b.addEventListener('click',()=>this.cmd(b.dataset.c,'ribbon'));});
@@ -1520,6 +1535,8 @@ class FSheet{
     if(th&&th.dataset.c!==undefined){e.preventDefault();if(this.editing)this.commit();const c=+th.dataset.c;if(e.shiftKey&&this.kind==='col')this.sel.c2=c;else this.sel={r1:0,c1:c,r2:this.nr-1,c2:c};this.sel.r1=0;this.sel.r2=this.nr-1;this.kind='col';this.act={r:0,c:Math.min(this.sel.c1,this.sel.c2)};this.render();this.status();this.host.focus({preventScroll:true});this.emit('select',{kind:'col',sel:this.ns()});this.afterSel();return;}
     if(th&&th.dataset.r!==undefined){e.preventDefault();if(this.editing)this.commit();const r=+th.dataset.r;if(e.shiftKey&&this.kind==='row')this.sel.r2=r;else this.sel={r1:r,c1:0,r2:r,c2:this.nc-1};this.sel.c1=0;this.sel.c2=this.nc-1;this.kind='row';this.act={r:Math.min(this.sel.r1,this.sel.r2),c:0};this.render();this.status();this.host.focus({preventScroll:true});this.emit('select',{kind:'row',sel:this.ns()});this.afterSel();return;}
     const td=t.closest('td');if(!td)return;const r=+td.dataset.r,c=+td.dataset.c;
+    const now=Date.now();if(!this.editing&&!this.painter&&!e.shiftKey&&this.f.edit&&this._lc&&this._lc.r===r&&this._lc.c===c&&now-this._lc.t<500){e.preventDefault();this._lc=null;this.act={r,c};this.sel={r1:r,c1:c,r2:r,c2:c};this.kind='cells';const raw=this.rawStr(this.A(r,c));this.render();this.startEdit(raw,raw===''?'Enter':'Edit');this._dblDone=Date.now();return;}
+    this._lc={r,c,t:now};
     if(this.editing){if(this.pointable()&&!(r===this.act.r&&c===this.act.c)){e.preventDefault();this.insRef(this.A(r,c));return;}if(r===this.act.r&&c===this.act.c)return;this.commit();}
     e.preventDefault();this.kind='cells';
     if(e.shiftKey)this.sel={r1:this.act.r,c1:this.act.c,r2:r,c2:c};else{this.act={r,c};this.sel={r1:r,c1:c,r2:r,c2:c};}
@@ -1527,7 +1544,7 @@ class FSheet{
     const mv=ev=>{const p=this.cellAt(ev.clientX,ev.clientY);if(p&&(p.r!==this.sel.r2||p.c!==this.sel.c2)){this.sel.r2=p.r;this.sel.c2=p.c;this.render();this.status();}};
     const up=()=>{removeEventListener('pointermove',mv);removeEventListener('pointerup',up);this.emit('select',{kind:'cells',sel:this.ns()});this.afterSel();};
     addEventListener('pointermove',mv);addEventListener('pointerup',up);}
-  dbl(e){const td=e.target.closest('td');if(!td||!this.f.edit||this.editing)return;e.preventDefault();const r=+td.dataset.r,c=+td.dataset.c;this.act={r,c};this.sel={r1:r,c1:c,r2:r,c2:c};this.kind='cells';const raw=this.rawStr(this.A(r,c));this.startEdit(raw,raw===''?'Enter':'Edit');}
+  dbl(e){const td=e.target.closest('td');if(!td||!this.f.edit||this.editing||(this._dblDone&&Date.now()-this._dblDone<600))return;e.preventDefault();const r=+td.dataset.r,c=+td.dataset.c;this.act={r,c};this.sel={r1:r,c1:c,r2:r,c2:c};this.kind='cells';const raw=this.rawStr(this.A(r,c));this.startEdit(raw,raw===''?'Enter':'Edit');}
   afterSel(){if(this.painter){this.paint();}}
   showTip(x,y,html){const t=this.tip;t.innerHTML=html;t.style.display='block';const W=this.host.getBoundingClientRect(),G=this.gridEl.getBoundingClientRect(),sc=this.sc();t.style.left=((G.left-W.left)/sc+x)+'px';t.style.top=((G.top-W.top)/sc+y)+'px';}
   sc(){return this.host.getBoundingClientRect().width/this.host.offsetWidth||1;}
@@ -1556,7 +1573,7 @@ class FSheet{
       const symp=f.t==='cur'?`<label>סמל: <select class="fsym">${['₪','$','€'].map(x=>`<option ${f.sym===x?'selected':''}>${x}</option>`).join('')}</select></label>`:'';
       const dtp=f.t==='date'?`<label>סוג:<select class="fdt2"><option value="" ${!f.dt?'selected':''}>14/03/2012</option><option value="short" ${f.dt==='short'?'selected':''}>14.3.12</option></select></label>`:'';
       const tmp=f.t==='time'?`<label>סוג:<select class="ftt"><option value="" ${!f.el?'selected':''}>13:30</option><option value="el" ${f.el?'selected':''}>37:30 (שעות מצטברות)</option></select></label>`:'';
-      const desc={gen:'לתאים בתבנית כללית אין תבנית מספר מסוימת.',num:'לתצוגה כללית של מספרים: מספר ספרות אחרי הנקודה ומפריד אלפים.',cur:'מספר עם סמל מטבע ומפריד אלפים.',date:'תאריך הוא מספר סידורי של ימים. התבנית קובעת איך הוא נראה.',time:'שעה היא חלק מיום: 12:00 הוא 0.5.',pct:'מציגה את ערך התא כפול 100, עם הסימן %.',txt:'התוכן נשמר ומוצג בדיוק כמו שהוקלד, גם מספר.'}[f.t];
+      const desc={gen:'לתאים בתבנית כללית אין תבנית מספר מסוימת.',num:'לתצוגה כללית של מספרים: מספר ספרות אחרי הנקודה ומפריד אלפים.',cur:'מספר עם סמל מטבע ומפריד אלפים.',date:'תאריך הוא מספר סידורי של ימים. התבנית קובעת איך הוא נראה.',time:'שעה היא חלק מיממה: 12:00 הוא 0.5.',pct:'מציגה את ערך התא כפול 100, עם הסימן %.',txt:'התוכן נשמר ומוצג בדיוק כמו שהוקלד, גם מספר.'}[f.t];
       const tabs=[['num','מספר'],['al','יישור'],['bd','גבול'],['fill','מילוי']];
       let body='';
       if(tab==='num')body=`<div class="fdn"><div class="fcat">${FS_CATS.map(c=>`<button data-cat="${c[0]}" class="${f.t===c[0]?'on':''}">${c[1]} <small>${c[2]}</small></button>`).join('')}</div><div class="fdr"><div class="fsmp"><small>דוגמה</small><div dir="auto">${esc(sample)||'&nbsp;'}</div></div>${nump}${sepp}${symp}${dtp}${tmp}<p>${desc}</p></div></div>`;
@@ -1703,24 +1720,24 @@ const G={
  fmt:{h:'עיצוב ערכים',en:'Cell formatting / Format Cells',p:'שינוי האופן שבו ערך מוצג בתא, בלי לשנות את הערך עצמו. החלון ״עיצוב תאים״ נפתח בקליק ימני על תא, או ב-Ctrl+1 (במק Cmd+1).',ex:'4000 שמעוצב כמטבע מוצג ₪ 4,000.00. בשורת הנוסחאות עדיין 4000.'},
  fbar:{h:'שורת הנוסחאות',en:'Formula bar',p:'השורה שמעל הגיליון, ליד fx. מציגה את מה שבאמת נמצא בתא: הערך המקורי או הנוסחה, בלי העיצוב.',ex:'תא שמציג 18% מראה בשורת הנוסחאות 18%, ותא שמציג ₪ 4,000.00 מראה 4000.'},
  numfmt:{h:'תבנית מספר',en:'Number format',p:'ההגדרה שקובעת איך מספר ייראה: כללי, מספר, מטבע, תאריך, שעה, אחוזים או טקסט.',ex:'אותו 0.5 נראה 0.5 (כללי), 50% (אחוזים) או 12:00 (שעה).'},
- sep:{h:'מפריד אלפים',en:'1000 Separator (,)',p:'פסיק שמופיע כל שלוש ספרות כדי שמספר גדול יהיה קריא. משנה רק מספרים מ-1,000 ומעלה.',ex:'4000 → 4,000. אבל 7 נשאר 7.'},
+ sep:{h:'מפריד אלפים',en:'1000 Separator (,)',p:'פסיק שמופיע כל שלוש ספרות כדי שמספר גדול יהיה קריא. משנה את התצוגה רק במספרים מ-1,000 ומעלה.',ex:'4000 → 4,000. אבל 7 נשאר 7.'},
  dec:{h:'מקומות עשרוניים',en:'Decimal places',p:'כמה ספרות יוצגו אחרי הנקודה. התצוגה מעוגלת, אבל Excel ממשיך לחשב עם הערך המלא.',ex:'0.3333 עם ספרה אחת מוצג 0.3, וסכום שלושה תאים כאלה הוא 1.0.'},
  cur:{h:'תבנית מטבע',en:'Currency',p:'תבנית מספר שמוסיפה סמל מטבע, מפריד אלפים וברירת מחדל של שתי ספרות אחרי הנקודה.',ex:'1700 → ₪ 1,700.00'},
  hash:{h:'סולמיות ####',en:'#### (column too narrow)',p:'כך Excel מציג מספר או תאריך שלא נכנסים ברוחב העמודה. הערך שמור בתא; מרחיבים את העמודה כדי לראות אותו.',ex:'₪ 1,250,000.00 בעמודה צרה → ########'},
  pct:{h:'תבנית אחוזים',en:'Percentage',p:'מציגה את ערך התא כפול 100, עם הסימן %. הערך עצמו לא משתנה.',ex:'0.18 → 18%. אבל 18 → 1800%.'},
  date:{h:'תאריך',en:'Date',p:'בשביל Excel תאריך הוא מספר סידורי של ימים שעברו מתחילת 1900. מקלידים יום/חודש/שנה, ואפשר לחבר ולחסר ימים.',ex:'01/03/2024 = 45352. =G2+12 → 13/03/2024'},
  time:{h:'שעה',en:'Time',p:'בשביל Excel שעה היא חלק מיממה: 24 שעות = 1. לכן כדי לקבל מספר שעות כופלים ב-24.',ex:'8:30 = 0.354. ‏0.354 × 24 = 8.5 שעות.'},
- wrap:{h:'גלישת טקסט',en:'Wrap Text',p:'טקסט שחורג מרוחב העמודה עובר לשורות נוספות בתוך אותו תא, והשורה מתרחבת לגובה. Excel קובע איפה לשבור.',ex:'״מחיר ליח׳ לפני מע״מ בש״ח״ בעמודה צרה הופך לשתיים או שלוש שורות באותו תא.'},
+ wrap:{h:'גלישת טקסט',en:'Wrap Text',p:'טקסט שחורג מרוחב העמודה עובר לשורות נוספות בתוך אותו תא, והשורה מתרחבת לגובה. Excel קובע איפה לשבור.',ex:'״מחיר ליח׳ לפני מע״מ בש״ח״ בעמודה צרה מוצג בשתיים או שלוש שורות באותו תא.'},
  altenter:{h:'ירידת שורה ידנית',en:'Alt+Enter (Mac: Option+Return)',p:'במצב Edit, מעבר לשורה חדשה בתוך התא בדיוק במקום של הסמן. אתם קובעים איפה המלל יורד.',ex:'״מחיר ליח׳״ ↵ ״לפני מע״מ״ ↵ ״בש״ח״'},
  border:{h:'גבולות',en:'Borders',p:'קווים שמוסיפים לתאים כחלק מהעיצוב. בניגוד לקווי הרשת, הם מודפסים.',ex:'גבול תחתון כפול מסמן שורת סיכום.'},
  grid:{h:'קווי רשת',en:'Gridlines',p:'הקווים האפורים שמפרידים בין התאים על המסך. הם קווי עזר, לא עיצוב, ואינם מודפסים. מכבים אותם בכרטיסיית תצוגה.',ex:'מורידים V מ״קווי רשת״ ורואים רק את הגבולות שהוספתם.'},
  merge:{h:'מיזוג ומירכוז',en:'Merge & Center',p:'הפיכת כמה תאים סמוכים לתא אחד גדול, והצגת התוכן במרכזו. נשמר רק הערך של התא הראשון.',ex:'כותרת ״דוח הזמנות רבעון 1״ ממורכזת מעל A1:F1.'},
  painter:{h:'מברשת עיצוב',en:'Format Painter',p:'מעתיקה את העיצוב של תא אחד לתאים אחרים, בלי להעתיק את הערכים. קליק אחד: פעם אחת. דאבל קליק: עד ESC.',ex:'הכותרת המעוצבת של טבלה 1 → הכותרת של טבלה 2.'},
  freeze:{h:'הקפאת חלוניות',en:'Freeze Panes',p:'השארת שורות (או עמודות) קבועות על המסך בזמן גלילה. שינוי תצוגה בלבד.',ex:'תצוגה ← הקפאת חלוניות ← הקפאת השורה העליונה.'},
- helper:{h:'תא עזר',en:'Helper cell',p:'תא שמכיל נתון אחד שמשמש את כל הטבלה, כמו שיעור מע״מ. משנים אותו פעם אחת, וכל הנוסחאות מתעדכנות.',ex:'J2 = 18%. כל המחירים כוללי המע״מ מפנים אליו.'},
- rel:{h:'הפניה יחסית',en:'Relative reference',p:'הפניה רגילה, כמו E2. בגרירה היא זזה יחד עם הנוסחה: שורה אחת למטה, E2 הופך ל-E3.',ex:'=E2*2 שנגרר למטה הופך ל-=E3*2.'},
- abs:{h:'קיבוע',en:'Absolute reference ($)',p:'סימן $ בתוך הפניה, שמונע מחלק ממנה לזוז בגרירה. $ לפני מספר השורה מקבע שורה; $ לפני האות מקבע עמודה.',ex:'J$2 נשאר J$2 בגרירה למטה. $I2 נשאר $I2 בגרירה הצידה.'},
- f4:{h:'מקש F4',en:'F4 (Mac: Cmd+T)',p:'במצב עריכת נוסחה, מחליף את סוג הקיבוע של ההפניה שהסמן עומד עליה, במחזור.',ex:'במחזור: J2, אחר כך $J$2, אחר כך J$2, אחר כך $J2.'},
+ helper:{h:'תא עזר',en:'Helper cell',p:'תא שמכיל נתון אחד שמשמש את כל הטבלה, כמו שיעור מע״מ. משנים אותו פעם אחת, וכל הנוסחאות מתעדכנות.',ex:'J2 = 18%. כל הנוסחאות של המחיר כולל מע״מ מפנות אליו.'},
+ rel:{h:'הפניה יחסית',en:'Relative reference',p:'הפניה רגילה, כמו E2. בגרירה היא זזה יחד עם הנוסחה: שורה אחת למטה, E2 הופך ל-E3.',ex:'הנוסחה =E2*2, כשגוררים אותה שורה אחת למטה, הופכת ל-=E3*2.'},
+ abs:{h:'קיבוע',en:'Absolute reference ($)',p:'סימן $ בתוך הפניה, שמונע מחלק ממנה לזוז בגרירה. סימן $ לפני מספר השורה מקבע שורה, וסימן $ לפני האות מקבע עמודה.',ex:'ההפניה J$2 נשארת J$2 בגרירה למטה, וההפניה $I2 נשארת $I2 בגרירה הצידה.'},
+ f4:{h:'מקש F4',en:'F4 (Mac: F4 or fn+F4)',p:'במצב עריכת נוסחה, מחליף את סוג הקיבוע של ההפניה שהסמן עומד עליה, במחזור.',ex:'במחזור: J2, אחר כך $J$2, אחר כך J$2, אחר כך $J2.'},
  eff:{h:'עבודה יעילה',en:'Efficient work',p:'עיקרון בקורס ובבחינה: הנוסחה הנכונה היא זו שעובדת, בלי $ מיותרים ובלי מספרים מוקלדים במקום הפניה לתא עזר.',ex:'בגרירה למטה: =E2*(1+J$2), ולא =E2*(1+$J$2).'},
  cell:{h:'תא',en:'Cell',p:'המשבצת הבסיסית בגיליון. כתובתו: אות העמודה ואחריה מספר השורה.',ex:'C4: עמודה C, שורה 4.'},
  modes:{h:'מצבי הזנה',en:'Ready / Enter / Edit',p:'Ready: התא מסומן, הקלדה תדרוס. Enter: הזנה מאפס. Edit: עריכת תוכן קיים (דאבל קליק או F2).',ex:'דאבל קליק על ״רחובות״ והקלדת ״ מערב״ = ״רחובות מערב״.'}
@@ -1728,20 +1745,20 @@ const G={
 
 /* ---------- part A: review ---------- */
 const RTILES=[
- {e:'📍',h:'תא וכתובת',s:'אות ואז מספר',b:'הכתובת היא אות העמודה ואחריה מספר השורה. גם בגיליון עברי.',d:'נכון: C18 · שגוי: 18C'},
- {e:'🗂️',h:'שדה ורשומה',s:'עמודה ושורה בטבלה',b:'עמודה = שדה (סוג מידע אחד). שורה = רשומה (כל המידע על פריט אחד).',d:'עמודה ״עיר״ = שדה · השורה של ״דין״ = רשומה'},
- {e:'📗',h:'Workbook ו-Sheet',s:'קובץ מול גיליון',b:'חוברת עבודה (Workbook) היא הקובץ כולו. גיליון (Sheet) הוא מרחב עבודה בתוכו. תמיד יש לפחות גיליון אחד.',d:'״שלח לי את הקובץ״ = את חוברת העבודה'},
- {e:'⌨️',h:'Ready · Enter · Edit',s:'שלושה מצבי הזנה',b:'קליק = Ready (הקלדה דורסת). הקלדה בתא ריק = Enter. דאבל קליק על תוכן = Edit (מוסיפים).',d:'ESC מבטל ומחזיר את התא למה שהיה'},
- {e:'🟰',h:'נוסחה והפניה',s:'הכול מתחיל ב-=',b:'נוסחה מתחילה ב-=. מפנים לתאים ולא מקלידים מספרים, כדי שהחישוב יתעדכן לבד.',d:'יתרה לתשלום: =C102-D102'},
- {e:'🟩',h:'גרירה',s:'ידית המילוי',b:'הריבוע הירוק בפינת התא משכפל נוסחה. בכל שורה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה.',d:'בשורה 102: =C102-D102, ובשורה 103: =C103-D103'},
- {e:'📈',h:'תוספת והנחה',s:'× (1 ± שיעור)',b:'מחיר אחרי תוספת: × (1 + שיעור). אחרי הנחה: × (1 - שיעור). × שיעור לבד = רק סכום השינוי.',d:'תוספת 18%: 100 × 1.18 = 118. הנחה 20%: 100 × 0.8 = 80'},
- {e:'↔️',h:'רוחב עמודה',s:'שלוש דרכים',b:'גרירת הגבול, דאבל קליק על הגבול (התאמה אוטומטית), וקליק ימני ← רוחב עמודה.',d:'מספר שלא נכנס מוצג ####'}];
+ {e:'📍',h:'תא וכתובת תא',en:'Cell',b:'תא הוא המשבצת הבסיסית בגיליון. הכתובת שלו היא אות העמודה ואחריה מספר השורה, גם בגיליון בפריסה עברית.',d:'C18 הוא התא בעמודה C ובשורה 18. הצירוף 18C אינו כתובת.'},
+ {e:'🗂️',h:'שורה, עמודה, שדה ורשומה',en:'Row, Column, Field, Record',b:'שורה היא רצף תאים אופקי, מסומן במספר. עמודה היא רצף תאים אנכי, מסומן באות. בטבלת נתונים עמודה נקראת שדה, ושורה נקראת רשומה.',d:'עמודת ״עיר״ היא שדה. השורה עם כל הפרטים של ״דין״ היא רשומה.'},
+ {e:'📗',h:'חוברת עבודה וגיליון',en:'Workbook, Sheet',b:'חוברת עבודה היא קובץ Excel שלם. גיליון הוא מרחב עבודה בתוך הקובץ, ובכל קובץ יש לפחות גיליון אחד.',d:'״שלח לי את הקובץ״ פירושו: שלח את חוברת העבודה, על כל הגיליונות שבה.'},
+ {e:'⌨️',h:'מצבי הזנה',en:'Ready, Enter, Edit',b:'Ready: התא מסומן, והקלדה תדרוס את תוכנו. Enter: הזנה מאפס. Edit: עריכת תוכן קיים, בדאבל קליק או F2. מקש ESC מבטל את ההקלדה.',d:'דאבל קליק על ״רחובות״ והקלדת ״ מערב״ נותנים ״רחובות מערב״.'},
+ {e:'🟰',h:'נוסחה והפניה',en:'Formula, Reference',b:'נוסחה מתחילה בסימן =. הפניה היא כתובת של תא בתוך הנוסחה, ו-Excel מחשב עם הערך שבאותו תא. כשהערך משתנה, התוצאה מתעדכנת.',d:'הנוסחה {{=C102-D102}} מחסרת את הערך שב-D102 מהערך שב-C102.'},
+ {e:'🟩',h:'גרירה',en:'Fill handle',b:'גוררים את הריבוע הקטן בפינת התא הפעיל (ידית המילוי), והנוסחה משוכפלת לתאים סמוכים. בגרירה למטה כל מספר שורה בנוסחה גדל ב-1.',d:'הנוסחה {{=C102-D102}} הופכת בשורה הבאה ל-{{=C103-D103}}.'},
+ {e:'📈',h:'תוספת והנחה באחוזים',en:'Percent change',b:'מחיר אחרי תוספת: מחיר × (1 + שיעור). מחיר אחרי הנחה: מחיר × (1 - שיעור). מחיר × שיעור נותן רק את סכום השינוי.',d:'תוספת של 18%: ⟦100 × 1.18 = 118⟧. הנחה של 20%: ⟦100 × 0.8 = 80⟧.'},
+ {e:'↔️',h:'רוחב עמודה',en:'Column width',b:'משנים בשלוש דרכים: גרירת הגבול שבין אותיות העמודות, דאבל קליק על הגבול (התאמה אוטומטית), וקליק ימני ← רוחב עמודה. מספר שלא נכנס מוצג כ-####.',d:'1250000 בעמודה צרה מוצג ####. הערך שמור בתא.'}];
 const RQUIZ=[
  {t:'הכתובת {{12D}} תקינה בגיליון בפריסה עברית.',a:false,x:'לא. בכל פריסה כותבים אות ואז מספר: D12.'},
  {t:'קליק בודד על תא עם ״רחובות״ והקלדת ״ מערב״ נותנים ״רחובות מערב״.',a:false,x:'לא. קליק בודד = Ready, וההקלדה דורסת. צריך דאבל קליק (Edit).'},
  {t:'קובץ Excel שלם נקרא חוברת עבודה (Workbook).',a:true,x:'נכון. גיליון (Sheet) הוא מרחב עבודה בתוך הקובץ.'},
  {t:'כדי לחשב מחיר אחרי הנחה של 20% כופלים את המחיר ב-20%.',a:false,x:'לא. כך מקבלים רק את סכום ההנחה. מחיר אחרי הנחה: × (1 - 20%).'},
- {t:'במצב Enter, לחיצה על ESC מבטלת את ההקלדה, והתא חוזר להיות ריק.',a:true,x:'נכון. ESC מבטל ומחזיר את התא למצבו הקודם.'},
+ {t:'כשמקלידים בתא ריק (מצב Enter), לחיצה על ESC מבטלת את ההקלדה, והתא חוזר להיות ריק.',a:true,x:'נכון. ESC מבטל ומחזיר את התא למצבו הקודם.'},
  {t:'אם הנוסחה {{=C5-D5}} תיגרר שורה אחת למטה, היא תהפוך ל-{{=C6-D6}}.',a:true,x:'נכון. זו הפניה יחסית: בגרירה למטה כל מספר שורה גדל ב-1.'},
  {t:'Ctrl+Shift+חץ למטה מסמן תמיד את כל העמודה עד סוף הטבלה.',a:false,x:'לא. הסימון נעצר לפני התא הריק הראשון.'},
  {t:'#### בתא אומר שהמספר נמחק.',a:false,x:'לא. העמודה צרה מדי. המספר שמור, ומופיע בשורת הנוסחאות.'}];
@@ -1763,11 +1780,11 @@ const LAB={
  wrap:{rows:[['מק״ט','מחיר ליח׳ לפני מע״מ בש״ח','מחיר כולל אחרי מע״מ בש״ח'],[101,18.456,''],[102,4000,'']],colW:[60,110,110],start:[0,1],hint:'נסו: גלישת טקסט, Alt+Enter (דאבל קליק על B1), ועיצוב תאים ← מספר על B2:B3.'},
  cur:{rows:[['','מחיר','כפול 2'],['מקלדת',4000,'=B2*2']],colW:[80,120,90],fm:{B2:{t:'cur',dec:2,sym:'₪'}},start:[1,1],hint:'לחצו על B2 והסתכלו בשורת הנוסחאות. אחר כך שנו את התבנית ל״כללי״ וראו אם C2 משתנה.'},
  pct:{rows:[['','ערך'],['מוקלד 18',18],['מוקלד 0.18',0.18],['ריק',''],['ריק','']],colW:[110,90],start:[1,1],hint:'החילו % על B2 ועל B3. ב-B4 הקלידו 18%.'},
- dec:{rows:[['','שליש'],['תא 1','=1/3'],['תא 2','=1/3'],['תא 3','=1/3'],['סכום','=SUM(B2:B4)']],colW:[70,90],fm:{'B2:B5':{t:'num',dec:1}},start:[1,1],hint:'לחצו על B2: שורת הנוסחאות מראה 1/3. הוסיפו ספרות אחרי הנקודה.'},
+ dec:{rows:[['','שליש'],['תא 1','=1/3'],['תא 2','=1/3'],['תא 3','=1/3'],['סכום','=SUM(B2:B4)']],colW:[70,90],fm:{'B2:B5':{t:'num',dec:1}},start:[1,1],hint:'לחצו על B2: שורת הנוסחאות מציגה את הנוסחה =1/3. הוסיפו ספרות אחרי הנקודה.'},
  hash:{rows:[['','סכום'],['עסקה',1250000]],colW:[60,64],fm:{B2:{t:'cur',dec:2,sym:'₪'}},start:[1,1],hint:'דאבל קליק על הגבול שבין B ל-C (בכותרות) מרחיב את העמודה.'},
  date:{rows:[['','תאריך רכישה'],['מוצר 1','01/03/2024'],['מוצר 2','=B2+12'],['מוצר 3',''],['מוצר 4','']],colW:[70,110],start:[2,1],hint:'גררו את B3 עד B5. אחר כך עצבו את B2 כ״כללי״.'},
  merge:{rows:[['דוח רבעוני','','',''],['מוצר','ינואר','פברואר','מרץ'],['קפה',120,135,128],['תה',80,72,95]],colW:[80,80,80,80],start:[0,0],hint:'סמנו A1:D1 ← מיזוג ומירכוז. נסו גם למזג B3:C3, שבהם שני ערכים.'},
- painter:{rows:[['מוצר','מחיר'],['קפה',12],['','',],['מוצר','מחיר'],['תה',9]],colW:[90,80],st:{'A1:B1':{b:true,bg:'#217346',color:'#ffffff'}},start:[0,0],hint:'A1 מסומן. 🖌️ ← סמנו A4:B4. דאבל קליק על המברשת כדי לצבוע כמה פעמים.'},
+ painter:{rows:[['מוצר','מחיר'],['קפה',12],['','',],['מוצר','מחיר'],['תה',9]],colW:[90,80],st:{'A1:B1':{b:true,bg:'#217346',color:'#ffffff'}},start:[0,0],hint:'התא A1 מסומן. לחצו על 🖌️ וסמנו את A4:B4. דאבל קליק על המברשת מאפשר לצבוע כמה פעמים.'},
  fix:{rows:[['מוצר','מחיר','כולל מע״מ','','שיעור המע״מ'],['מקלדת',120,'','','18%'],['עכבר',80,'','',''],['מסך',950,'','','']],colW:[70,70,80,30,80],start:[1,2],hint:'כתבו ב-C2 נוסחה עם E$2, וגררו עד C4. נסו גם F4 בזמן העריכה.'}
 };
 const ST='הטענה / הטענות הנכונה / הנכונות:';
@@ -1784,7 +1801,7 @@ const Q=[
  'באמצעות כלי עיצוב תאים (Format Cells) ניתן להציג ערך מספרי כערך מטבע (למשל, 1,000 ש״ח במקום 1000) וכן להגדיר פורמט של תאריך',
  'כלי גלישת הטקסט (Wrap Text) גורם לטקסט החורג מרוחב העמודה לגלוש כלפי מטה באותו התא, תוך הרחבת השורה'],
  ask:ST,opts:['טענה 1 בלבד','טענה 2 בלבד','טענות 1 ו-3','טענות 2 ו-3','כל הטענות נכונות'],ans:3,
- sol:[['F','שום דבר לא נמחק. הטקסט כולו נשאר בתא, רק מוצג בכמה שורות.'],['T','בקטגוריות מטבע ותאריך שבעיצוב תאים ← מספר.'],['T','זו ההגדרה של גלישת טקסט.']],
+ sol:[['F','שום דבר לא נמחק. הטקסט כולו נשאר בתא, רק מוצג בכמה שורות.'],['T','בעיצוב תאים ← מספר יש קטגוריות של מטבע ושל תאריך.'],['T','זו ההגדרה של גלישת טקסט.']],
  goal:'מה גלישת טקסט עושה, ומה עיצוב תאים מאפשר.',tip:'עיצוב לא מוחק ערכים. טענה שאומרת ״מוחק״ על כלי עיצוב היא חשודה מיד.'},
 {tag:'עיצוב תאים ו-Alt+Enter',src:'מבחן 2026ג, מועד ב',lab:'wrap',stem:'לפניכם מספר טענות:',claims:[
  'כלי עיצוב תאים (Format Cells) אינו מאפשר לשנות את מספר הספרות המוצגות אחרי הנקודה העשרונית; לשם כך יש להקליד מחדש את הערכים בתאים',
@@ -1807,19 +1824,19 @@ const Q=[
  ask:ST,opts:['טענה 1 בלבד','טענות 1 ו-2','טענות 2 ו-3','טענה 3 בלבד','כל הטענות נכונות'],ans:1,
  sol:[['T','התא מציג את הערך בתבנית, ושורת הנוסחאות מציגה את הערך עצמו.'],['T','הנוסחה עובדת עם הערך 4000.'],['F','העיצוב לא היה חלק מהערך, ולכן ביטולו לא משנה שום חישוב.']],
  goal:'כלל הזהב: עיצוב משנה מראה, לא ערך.',tip:'כשלא בטוחים מה יש בתא, חושבים מה תראה שורת הנוסחאות.'},
-{tag:'תבנית אחוזים',src:'מחברת הקורס',lab:'pct',stem:'בתא C4 הוקלד המספר 18. דנה סימנה את התא ולחצה על הכפתור סגנון אחוז (%).',claims:[
+{tag:'תבנית אחוזים',src:'מחברת הקורס',lab:'pct',stem:'בתא C4 הוקלד המספר 18. דנה סימנה את התא ולחצה על הכפתור ״סגנון אחוז״ (%).',claims:[
  'בתא C4 יוצג 18%',
  'בתא C4 יוצג 1800%, כי תבנית אחוזים מציגה את ערך התא כפול 100',
  'אילו דנה הייתה מקלידה בתא ריק 18% ישירות, הערך שנשמר בתא היה 0.18, והוא היה מוצג 18%'],
  ask:ST,opts:['טענה 1 בלבד','טענה 2 בלבד','טענות 2 ו-3','טענות 1 ו-3','כל הטענות שגויות'],ans:2,
  sol:[['F','הערך הוא 18, ו-18 כפול 100 הוא 1800.'],['T','זו בדיוק המלכודת של ה-100.'],['T','הקלדת 18% שומרת 0.18 ומעצבת אוטומטית כאחוזים.']],
  goal:'מה תבנית אחוזים עושה לערך שכבר הוקלד.',tip:'אחוזים = ערך × 100 + %. אז קודם בודקים מה הערך.'},
-{tag:'ספרות אחרי הנקודה',src:'טריק',lab:'dec',stem:'בתאים B2, B3 ו-B4 נרשמה הנוסחה {{=1/3}}, והתאים עוצבו להצגת ספרה אחת אחרי הנקודה. בתא B5 נרשמה הנוסחה {{=SUM(B2:B4)}}, גם הוא עם ספרה אחת אחרי הנקודה.',claims:[
+{tag:'ספרות אחרי הנקודה',src:'טריק',lab:'dec',stem:'בתאים B2, B3 ו-B4 נרשמה הנוסחה {{=1/3}}, והתאים עוצבו להצגת ספרה אחת אחרי הנקודה. בתא B5 נרשמה הנוסחה {{=SUM(B2:B4)}}, וגם הוא עוצב להצגת ספרה אחת אחרי הנקודה.',claims:[
  'בתאים B2 עד B4 יוצג 0.3',
  'בתא B5 יוצג 0.9, כי 0.3 + 0.3 + 0.3 = 0.9',
  'הפחתת מספר הספרות אחרי הנקודה משנה רק את התצוגה, ו-Excel ממשיך לחשב עם הערך המלא'],
  ask:ST,opts:['טענות 1 ו-3','טענות 1 ו-2','טענה 2 בלבד','טענה 3 בלבד','כל הטענות נכונות'],ans:0,
- sol:[['T','0.3333 עם ספרה אחת מוצג 0.3.'],['F','Excel מחבר את הערכים המלאים: 0.3333 × 3 = 1, ומציג 1.0.'],['T','לכן הסכום 1.0 ולא 0.9.']],
+ sol:[['T','0.3333 עם ספרה אחת מוצג 0.3.'],['F','Excel מחבר את הערכים המלאים: שליש ועוד שליש ועוד שליש הם 1, ולכן מוצג 1.0.'],['T','לכן בתא B5 מוצג 1.0 ולא 0.9.']],
  goal:'הבדל בין ערך מוצג לערך שמור.',tip:'מספר ״לא מסתדר״ בטבלה? כמעט תמיד עיגול בתצוגה.'},
 {tag:'####',src:'מחברת הקורס',lab:'hash',stem:'יוסי הקליד בתא D3 את המספר 1250000 ועיצב אותו בתבנית מטבע. במקום המספר מופיע בתא ########.',claims:[
  'המספר נמחק מהתא, ויש להקליד אותו מחדש',
@@ -1827,7 +1844,7 @@ const Q=[
  'כשהתא D3 מסומן, בשורת הנוסחאות יופיע 1250000'],
  ask:ST,opts:['טענה 1 בלבד','טענה 2 בלבד','טענות 1 ו-2','טענות 2 ו-3','כל הטענות נכונות'],ans:3,
  sol:[['F','#### הוא בעיה של רוחב, לא של תוכן. הערך שמור.'],['T','דאבל קליק על הגבול מתאים את הרוחב לתוכן.'],['T','שורת הנוסחאות מציגה את הערך עצמו.']],
- goal:'מה המשמעות של #### ואיך מתקנים.',tip:'#### = ״הרחיבו אותי״. לא שגיאה בנוסחה.'},
+ goal:'מה המשמעות של #### ואיך מתקנים.',tip:'#### פירושו ״העמודה צרה מדי״, לא שגיאה בנוסחה.'},
 {tag:'תאריכים',src:'מחברת הקורס',lab:'date',stem:'בתא G2 הוקלד התאריך 01/03/2024. בתא G3 נרשמה הנוסחה {{=G2+12}}, והיא נגררה כלפי מטה עד התא G5.',claims:[
  'בתא G5 יוצג התאריך 06/04/2024',
  'Excel שומר תאריך כמספר סידורי של ימים, ולכן אפשר לחבר לו ימים בנוסחה',
@@ -1861,7 +1878,7 @@ const Q=[
  'הנוסחה שתירשם בתא D71 לחישוב המחיר כולל מע״מ, באופן שיאפשר גרירתה כלפי מטה לשאר המוצרים, היא {{=C71*(1+G$71)}}',
  'אם הנוסחה {{=C71*(1+$G71)}} תירשם בתא D71 ותיגרר כלפי מטה, יתקבל חישוב שגוי של המחיר כולל מע״מ משורה 72 ואילך'],
  ask:ST,opts:['טענה 1 בלבד','טענה 2 בלבד','טענות 1 ו-3','כל הטענות נכונות','טענות 2 ו-3'],ans:4,
- sol:[['F','{{=C71*(1+G$71)}} מחזירה מחיר כולל. סכום המע״מ בלבד: {{=C71*G$71}}.'],['T','1 + שיעור, ו-$ לפני 71 כדי ששורת תא העזר לא תזוז בגרירה למטה.'],['T','$ לפני G מקבע עמודה, אבל בגרירה למטה זזה השורה: G72, G73 ריקים, והמחיר נשאר בלי מע״מ.']],
+ sol:[['F','הנוסחה {{=C71*(1+G$71)}} מחזירה את המחיר כולל מע״מ. לסכום המע״מ בלבד: {{=C71*G$71}}.'],['T','1 + שיעור, ו-$ לפני 71 כדי ששורת תא העזר לא תזוז בגרירה למטה.'],['T','סימן $ לפני G מקבע עמודה, אבל בגרירה למטה זזה השורה: G72, G73 ריקים, והמחיר נשאר בלי מע״מ.']],
  goal:'1 + שיעור מול שיעור לבד, ו-$ במקום הנכון.',tip:'גרירה למטה? ה-$ לפני המספר.'},
 {tag:'קיבוע: הנחה',src:'מבחן 2026ג, מועד א (ערב)',table:'disc81',stem:'לפניכם נתוני טבלת Excel. בתא G81 (תא העזר) מופיע שיעור ההנחה, החל על כל הפריטים בטבלה; התאים G82 עד G85 ריקים. מבקשים מכם להשלים את עמודה D.',claims:[
  'הנוסחה שתירשם בתא D81 לחישוב המחיר לאחר הנחה, באופן שיאפשר גרירתה כלפי מטה לשאר הפריטים, היא {{=C81*(1-G$81)}}',
@@ -1869,7 +1886,7 @@ const Q=[
  'אם הנוסחה {{=C81*(1-$G$81)}} תירשם בתא D81 ותיגרר כלפי מטה, יתקבל מחיר נכון בכל השורות, אך היא כוללת קיבוע מיותר (קיבוע העמודה), ולכן אינה הנוסחה שתירשם לפי הנחות הקורס'],
  ask:ST,opts:['טענות 1 ו-2','טענה 1 בלבד','טענה 2 בלבד','טענות 1 ו-3','כל הטענות נכונות'],ans:3,
  sol:[['T','1 - שיעור, ו-G$81 נשאר בגרירה למטה.'],['F','כך מתקבל סכום ההנחה, לא המחיר אחריה.'],['T','התוצאה נכונה, אבל ה-$ לפני G מיותר בגרירה למטה. עבודה יעילה = בלי $ מיותר.']],
- goal:'הנחה, ועיקרון העבודה היעילה.',tip:'$G$81 עובד, אבל ״איזו נוסחה תירשם״ = G$81.'},
+ goal:'הנחה, ועיקרון העבודה היעילה.',tip:'הנוסחה עם $G$81 עובדת, אבל ״איזו נוסחה תירשם״ = G$81.'},
 {tag:'סכום ההנחה',src:'מבחן 2026ג, מועד ג',table:'disc51',stem:'לפניכם נתוני טבלת Excel. בתא G51 (תא העזר) מופיע שיעור ההנחה, החל על כל הפריטים בטבלה; התאים G52 עד G55 ריקים. מבקשים מכם להשלים בעמודה D את סכום ההנחה בש״ח של כל פריט (ולא את המחיר לאחר הנחה).',claims:[
  'הנוסחה שתירשם בתא D51 לחישוב סכום ההנחה, באופן שיאפשר גרירתה כלפי מטה לשאר הפריטים, היא {{=C51*G$51}}',
  'אם הנוסחה {{=C51*(1-G$51)}} תירשם בתא D51 ותיגרר כלפי מטה, יחושב סכום ההנחה של כל פריט',
@@ -1879,14 +1896,14 @@ const Q=[
  goal:'לקרוא מה בדיוק מבקשים: סכום השינוי או הערך אחריו.',tip:'״סכום ההנחה״ = × שיעור. ״המחיר לאחר הנחה״ = × (1 - שיעור).'},
 {tag:'גרירה שמאלה',src:'מבחן 2026ג, מועד א',table:'bonus91',stem:'לפניכם נתוני טבלת Excel. בשורה 91 השכר בכל חודש, ובתא I91 (תא העזר) שיעור הבונוס, החל על כל החודשים. מהי הנוסחה שתירשם בתא C92, ואשר תתאפשר גרירתה שמאלה עד התא G92, כדי לחשב את השכר כולל בונוס בכל חודש, בצורה הנכונה והיעילה ביותר (ללא קיבועים מיותרים)?',claims:[],
  ask:'',opts:['=C91*(1+I$91)','=C91*(1+$I$91)','=C91*(1+$I91)','=C91*(1+I91)','=C91*$I91'],ans:2,
- solx:['גוררים <b>שמאלה</b>: בכל צעד אות העמודה זזה (C, D, E...), ומספר השורה נשאר 91.','לכן צריך לקבע רק את <b>העמודה</b> של תא העזר: {{$I91}}.','א: $ לפני השורה לא עוזר, כי השורה ממילא לא זזה. I91 יהפוך ל-J91, K91 הריקים.','ב: התוצאה נכונה, אבל $ לפני 91 מיותר.','ד: בלי קיבוע, I91 יזוז ל-J91. ה: בלי 1+, זה הבונוס בלבד.'],
+ solx:['גוררים <b>שמאלה</b>: בכל צעד אות העמודה זזה (C, D, E...), ומספר השורה נשאר 91.','לכן צריך לקבע רק את <b>העמודה</b> של תא העזר: {{$I91}}.','א: $ לפני השורה לא עוזר, כי השורה ממילא לא זזה. ההפניה I$91 תהפוך ל-J$91, K$91 הריקים.','ב: התוצאה נכונה, אבל $ לפני 91 מיותר.','ד: בלי קיבוע, ההפניה I91 תזוז ל-J91. ה: בלי 1+, זה הבונוס בלבד.'],
  goal:'קיבוע עמודה בגרירה הצידה.',tip:'הצידה? $ לפני האות. למטה? $ לפני המספר.'},
 {tag:'מתי לא מקבעים',src:'מחברת הקורס',table:'pharm',stem:'לפניכם מלאי תרופות בבית מרקחת. לכל תרופה שיעור השתתפות קופה משלה (עמודה D).',claims:[
  'ניתן לשפר את הצגת כותרות העמודות רק על ידי הרחבת עמודה D',
  'כדי לחשב את המחיר נטו (מחיר לצרכן בניכוי השתתפות הקופה) בתא E306, באופן שיאפשר גרירה כלפי מטה, יש לרשום {{=C306*(1-D$306)}}',
  'כדי לחשב את המחיר נטו בתא E306, באופן שיאפשר גרירה כלפי מטה, יש לרשום {{=C306*(1-D306)}}'],
  ask:ST,opts:['טענה 2 בלבד','טענה 3 בלבד','טענות 2 ו-3','טענות 1 ו-3','כל הטענות שגויות'],ans:1,
- sol:[['F','״רק״ הופך את הטענה לשגויה: אפשר גם גלישת טקסט או Alt+Enter.'],['F','D$306 נועל את כל התרופות על ההשתתפות של נרבן (50%).'],['T','לכל שורה שיעור משלה, ולכן D306 צריך לזוז: D307, D308...']],
+ sol:[['F','״רק״ הופך את הטענה לשגויה: אפשר גם גלישת טקסט או Alt+Enter.'],['F','ההפניה D$306 נועלת את כל התרופות על שיעור ההשתתפות של נרבן (50%).'],['T','לכל שורה שיעור משלה, ולכן D306 צריך לזוז: D307, D308...']],
  goal:'לזהות מתי אין תא אחד לנעול עליו.',tip:'יש שיעור בכל שורה? אין $.'},
 {tag:'משקל ללא אריזה',src:'מחברת הקורס',table:'pack',stem:'לפניכם גיליון נתונים. האריזה של כל מוצר שוקלת 15% מהמשקל הכולל שלו; השיעור כתוב בתא F202 בלבד.',claims:[
  'כדי להציג את המשקלים עם מפריד אלפים (6000 כ-6,000), הכלי המתאים הוא עיצוב תאים ← יישור ← גלישת טקסט',
@@ -1907,14 +1924,15 @@ const Q=[
  'אם אני גורר נוסחה שמאלה או ימינה, בהכרח אצטרך לקבע לפחות חלק מהתאים בנוסחה באמצעות סימן $ לפני אות העמודה',
  'אם אני גורר נוסחה כלפי מטה, הצורך בסימן $ לפני מספר שורה יתקיים אם ורק אם הנוסחה מפנה לתא אחד לפחות שערכו צריך להישאר קבוע למרות הגרירה, והקיבוע יבוצע רק עבור התאים האלה'],
  ask:ST,opts:['טענה 1 בלבד','טענה 2 בלבד','טענות 1 ו-3','טענה 3 בלבד','כל הטענות שגויות'],ans:3,
- sol:[['F','=C2-D2 נגררת למטה בלי שום $. ראו את בית המרקחת.'],['F','אותו דבר בגרירה הצידה.'],['T','שני תנאים: גוררים, ויש תא שחייב להישאר במקום. רק אותו מקבעים.']],
+ sol:[['F','הנוסחה {{=C2-D2}} נגררת למטה בלי שום $. ראו את בית המרקחת.'],['F','אותו דבר בגרירה הצידה.'],['T','שני תנאים: גוררים, ויש תא שחייב להישאר במקום. רק אותו מקבעים.']],
  goal:'התנאים לקיבוע, במילים.',tip:'״בהכרח״ ו״תמיד״ בטענה על $ כמעט תמיד שגויים.'}
 ];
 
 /* ---------- speaker notes ---------- */
 const NOTES={
  's-cover':['ארבעה חלקים: חזרה קצרה, עיצוב ערכים (יחידות 3 ו-4), קיבוע, ו-20 שאלות.','להפעיל טיימר (T).'],
- 's-rmap':['חמש דקות. לבקש מסטודנטים לבחור כרטיס ולהסביר לפני שהופכים.'],
+ 's-rmap':['להקריא כל הגדרה, ואז את הדוגמה. כל לחיצה מוסיפה הגדרה אחת.','השאלה לכיתה אחרי כל הגדרה: איפה ראינו את זה במפגש 1?'],
+ 's-rmap2':['ארבע ההגדרות הבאות. רק אחרי שמונה ההגדרות עוברים לסבב הבדיקה.'],
  's-rquiz':['להקריא טענה, הצבעה ביד, ואז ללחוץ.','טענה 4 (הנחה) ו-7 (Ctrl+Shift) הן המלכודות הקלאסיות.'],
  's-rsheet':['חימום בגיליון. התשובה =C2*(1+D2), גרירה עד E5.','להדגיש: כאן אין $, כי לכל פריט שיעור משלו. נחזור לזה בחלק ג.'],
  's-sec2':['הסיפור מהמחברת: דוח גולמי ושבעה אנשים עם בקשות.'],
@@ -1925,18 +1943,18 @@ const NOTES={
  's-wvsa':['טבלת השוואה ושתי טענות אמיתיות מהבחינות.'],
  's-sep':['דרך עיצוב תאים, 0 ספרות. ״,000״ ברצועה מוסיף שתי ספרות אחרי הנקודה, לשים לב.'],
  's-dec':['הטריק: 0.3+0.3+0.3=1.0. מראה שהתצוגה מעוגלת והחישוב לא.'],
- 's-cur':['₪ ואז ####. דאבל קליק על הגבול מתקן. חיבור לשיעור 1.'],
+ 's-cur':['₪ ואז ####. דאבל קליק על הגבול מתקן. חיבור למפגש 1.'],
  's-pct':['המלכודת: 18 → 1800%. שלוש דרכים נכונות.'],
  's-border':['גבולות מודפסים, קווי רשת לא. קו תחתון כפול = קו סיכום.'],
  's-date':['תאריך = מספר. 01/03/2024 = 45352. גרירה של =G2+12.'],
  's-time':['שעה = חלק מיממה. × 24. ההדגמה ממלאת את F3:F5.'],
- 's-merge':['מיזוג רק לכותרות. אזהרה על אובדן ערכים. בהמשך הקורס: מיון וסינון לא אוהבים מיזוג.'],
+ 's-merge':['מיזוג רק לכותרות. אזהרה על אובדן ערכים. בהמשך הקורס: מיזוג מפריע למיון ולסינון.'],
  's-painter':['קליק אחד מול דאבל קליק. ESC.'],
  's-freeze':['כרטיסיית תצוגה. לגלול ולהראות שהכותרת נשארת.'],
  's-fsum':['טבלת סיכום. ״הערך משתנה?״ כמעט תמיד לא.'],
  's-sec3':['מכאן הבסיס לכל הפונקציות במפגשים 4 ו-5.'],
  's-whyfix':['לתת להם לגרור ולראות שהמחירים לא השתנו. ללחוץ על F3 ולקרוא את הנוסחה: J3.'],
- 's-rowfix':['$ לפני המספר. F4. במק Cmd+T.','אם מישהו כותב $J$2: נכון בתוצאה, אבל קיבוע מיותר.'],
+ 's-rowfix':['$ לפני המספר. F4 (במק לפעמים fn+F4). בדקתי ב-Excel: F4 מחליף את ההפניה שהסמן עליה.','אם מישהו כותב $J$2: נכון בתוצאה, אבל קיבוע מיותר.'],
  's-nofix':['מלכודת קבועה. לכל שורה שיעור משלה, ולכן אין $.'],
  's-colfix':['גרירה שמאלה בגיליון עברי. $ לפני האות.','קיבוע כפול ($A$1) יורחב במפגש 4.'],
  's-tree':['שלוש שאלות. ללחוץ על כל תרחיש ולעבור את העץ.'],
@@ -2053,8 +2071,9 @@ $('#bTimer').ondblclick=()=>{tRun=false;clearInterval(tInt);tAcc=0;tShow();toast
 (function(){let h='';const lit=[[2,3],[4,1],[5,6],[1,5],[6,2],[3,7]];for(let r=0;r<9;r++)for(let c=0;c<7;c++){const L=lit.findIndex(x=>x[0]===c&&x[1]===r);h+=`<rect x="${c*78+4}" y="${r*58+4}" width="76" height="56" rx="3" class="${L>=0?'lit':''}" style="${L>=0?'animation-delay:'+(L*.8)+'s':''}"/>`;}$('#cellsBg').innerHTML=h;})();
 
 /* ---------- part A ---------- */
-$('#rtiles').innerHTML=RTILES.map(t=>`<div class="rt"><div class="in"><div class="fa"><div class="e">${t.e}</div><b>${esc(t.h)}</b><small>${esc(t.s)}</small></div><div class="ba"><b>${esc(t.h)}</b><div>${esc(t.b)}</div><div class="demo">דוגמה: <span dir="auto">${esc(t.d)}</span></div></div></div></div>`).join('');
-$$('#rtiles .rt').forEach(t=>t.onclick=()=>t.classList.toggle('flip'));
+const fx2=s=>fx(s).replace(/⟦(.+?)⟧/g,'<span class="ltr">$1</span>');
+const rdef=t=>`<div class="rd st"><div class="rdh"><span class="e">${t.e}</span><b>${esc(t.h)}</b><span class="en">${esc(t.en)}</span></div><p>${fx2(t.b)}</p><div class="rdx"><b>דוגמה:</b> ${fx2(t.d)}</div></div>`;
+$('#rdefs1').innerHTML=RTILES.slice(0,4).map(rdef).join('');$('#rdefs2').innerHTML=RTILES.slice(4).map(rdef).join('');
 (function(){let sc={};const R=$('#rq');R.innerHTML=RQUIZ.map((q,i)=>`<div class="rqi" data-i="${i}"><div class="tx">${i+1}. ${fx(q.t)}</div><div class="bt"><button data-a="1">✓ נכון</button><button data-a="0">✗ לא נכון</button></div><div class="ex">${esc(q.x)}</div></div>`).join('');
   const upd=()=>{const n=Object.keys(sc).length,c=Object.values(sc).filter(Boolean).length;$('#rqscore').textContent=n?`${c} מתוך ${n} נכונות${n===RQUIZ.length?(c>=7?' · מצוין, אפשר להתקדם':c>=5?' · בסדר, שווה לחזור על מה שפספסתם':' · כדאי לחזור על שקפי מפגש 1'):''}`:'';};
   R.querySelectorAll('.rqi').forEach(el=>el.querySelectorAll('button').forEach(b=>b.onclick=()=>{const i=+el.dataset.i,ok=(b.dataset.a==='1')===RQUIZ[i].a;if(!(i in sc))sc[i]=ok;el.classList.remove('ok','no');el.classList.add(ok?'ok':'no');el.querySelector('.ex').textContent=(ok?'✅ ':'❌ ')+RQUIZ[i].x;bidiFix(el);upd();}));})();
@@ -2077,7 +2096,7 @@ const HEAD={'A1:F1':{b:true,bg:'#ddebf7'}};
 /* chimum */
 fsTask('s-rsheet',{c0:'A',r0:1,start:[1,4],colW:[64,100,110,110,96],feat:{ribbon:false,fc:false},rows:[['מק״ט','פריט','מחיר לפני התייקרות','שיעור ההתייקרות','מחיר סופי'],[23523,'גרעיני אבטיח',80,'15%',''],[5,'ערמונים',90,'10%',''],[243,'שעועית',30,'0%',''],[17,'תורמוס',20,'5%','']]},[
  {k:'f',h:`בתא E2: נוסחה שמחזירה 92`,test:(t,i,x)=>t==='commit'&&i.a==='E2'&&near(x.value('E2'),92)&&/C2/.test(i.raw)&&/D2/.test(i.raw),msg:`✅ ${ff('=C2*(1+D2)')} → 92. עכשיו גררו את ידית המילוי עד E5.`},
- {k:'d',h:`גררו עד E5: 99, 30, 21`,test:(t,i,x)=>allOK(x,[['E3',99],['E4',30],['E5',21]]),msg:'✅ גרירה: בכל שורה C ו-D זזים יחד איתה. כאן אין צורך ב-$, כי לכל פריט שיעור משלו. ומה אם השיעור כתוב בתא אחד בלבד? זה חלק ג.'}],
+ {k:'d',h:`גררו עד E5: 99, 30, 21`,test:(t,i,x)=>allOK(x,[['E3',99],['E4',30],['E5',21]]),msg:'✅ בגרירה, ההפניות ל-C ול-D זזות יחד עם השורה. כאן אין צורך ב-$, כי לכל פריט שיעור משלו. ומה אם השיעור כתוב בתא אחד בלבד? זה חלק ג.'}],
  {idle:'לחצו פעמיים על E2 או התחילו להקליד =',demo:x=>demoFill(x,'E2','=C2*(1+D2)','E5'),react:(t,i,x)=>{if(t==='commit'&&i.a==='E2'){const v=x.value('E2');if(near(v,12))return `🤏 12 הוא רק <b>סכום</b> ההתייקרות. מחיר סופי: × (1 + שיעור).`;if(near(v,92)&&!/D2/.test(i.raw))return '🤏 92 נכון, אבל הקלדתם את האחוז. בגרירה כל הפריטים יקבלו 15%. הפנו ל-D2.';}}});
 
 /* golden rule */
@@ -2095,7 +2114,7 @@ fsTask('s-bold',{c0:'A',r0:1,start:[1,1],colW:OW,rows:ORD},[
 
 /* wrap */
 fsTask('s-wrap',{c0:'A',r0:1,start:[0,4],colW:OW,rows:ORD,st:HEAD},[
- {k:'r',h:`E1 ← בית ← גלישת טקסט`,test:(t,i,x)=>t==='wrap'&&i.on&&selHas(i,'E1',x)&&i.via!=='dialog',msg:'✅ הטקסט ירד שורה בתוך E1, והשורה גבהה. העמודה לא זזה.'},
+ {k:'r',h:`E1 ← בית ← גלישת טקסט`,test:(t,i,x)=>t==='wrap'&&i.on&&selHas(i,'E1',x)&&i.via!=='dialog',msg:'✅ הטקסט ירד שורה בתוך E1, והשורה גבהה. רוחב העמודה לא השתנה.'},
  {k:'d',h:`F1 ← קליק ימני ← עיצוב תאים ← יישור ← גלישת טקסט`,test:(t,i,x)=>t==='wrap'&&i.on&&i.via==='dialog'&&selHas(i,'F1',x),msg:'✅ אותה תוצאה, דרך שנייה. ״הדרך היחידה היא הכפתור״? שגוי.'},
  {k:'w',h:`הרחיבו את עמודה E (גררו את הגבול). מה קרה לשבירה?`,test:(t,i)=>t==='resize'&&i.c===4,msg:'✅ השבירה זזה לבד: בגלישת טקסט Excel קובע איפה לשבור לפי הרוחב.'}],{idle:'E1 מסומן. חפשו ↵ גלישת טקסט בקבוצת יישור.'});
 
@@ -2103,20 +2122,20 @@ fsTask('s-wrap',{c0:'A',r0:1,start:[0,4],colW:OW,rows:ORD,st:HEAD},[
 fsTask('s-alt',{c0:'A',r0:1,start:[0,4],colW:OW,rows:ORD,st:HEAD},[
  {k:'e',h:`דאבל קליק על E1 (מצב Edit)`,test:(t,i)=>t==='start'&&i.mode==='Edit'&&i.a==='E1',msg:'✅ מצב Edit: הסמן בתוך הטקסט. העמידו אותו אחרי ״ליח׳״.'},
  {k:'a',h:`Alt שמאלי + Enter (במק Option+Return) אחרי ״ליח׳״`,test:(t)=>t==='altenter',msg:'✅ ירידת שורה. עכשיו אחרי ״מע״מ״, ושוב Alt+Enter.'},
- {k:'c',h:`Enter לקליטה: שלוש שורות בתא`,test:(t,i,x)=>t==='commit'&&i.a==='E1'&&String(x.cells.E1).split('\n').length===3,msg:'✅ מחיר ליח׳ / לפני מע״מ / בש״ח. אתם קבעתם איפה יורדים, ו-Excel הפעיל גלישת טקסט לבד.'}],{idle:'בתוך תא, Enter רגיל קולט. Alt+Enter יורד שורה.'});
+ {k:'c',h:`Enter לקליטה: שלוש שורות בתא`,test:(t,i,x)=>t==='commit'&&i.a==='E1'&&String(x.cells.E1).split('\n').length===3,msg:'✅ מחיר ליח׳ / לפני מע״מ / בש״ח. אתם קבעתם איפה יורדים, ו-Excel הפעיל גלישת טקסט לבד.'}],{idle:'במצב Edit, Enter רגיל קולט את התוכן, ו-Alt+Enter יורד שורה.'});
 
 /* separator */
 fsTask('s-sep',{c0:'A',r0:1,start:[1,4],colW:OW,rows:ORD,st:HEAD},[
  {k:'s',h:`סמנו את E2:E6 (גרירה מ-E2 עד E6)`,test:(t,i,x)=>t==='select'&&selHas(i,'E2',x)&&selHas(i,'E6',x),msg:'✅ מסומן. שימו לב לשורת המצב למטה: ממוצע, ספירה וסכום.'},
  {k:'f',h:`קליק ימני ← עיצוב תאים ← מספר ← 0 ספרות ← V מפריד אלפים`,test:(t,i,x)=>t==='numfmt'&&i.via==='dialog'&&i.t==='num'&&i.sep&&i.dec===0&&selHas(i,'E2',x)&&selHas(i,'E6',x),msg:(i,x)=>`✅ ${esc(x.disp('E4'))} ו-${esc(x.disp('E6'))}. ו-18.5? מוצג <b>${esc(x.disp('E2'))}</b>: עיגול בתצוגה.`},
  {k:'v',h:`לחצו על E2 והסתכלו בשורת הנוסחאות`,test:(t,i,x)=>t==='select'&&x.kind==='cells'&&x.act.r===1&&x.act.c===4&&x.fm.E2&&x.fm.E2.t==='num',msg:'✅ 18.5. התא מציג 19, אבל הערך לא השתנה.'}],
- {idle:'ברצועת הכלים יש גם ,000. הוא עובד, אבל מוסיף שתי ספרות אחרי הנקודה. כאן מתרגלים את חלון עיצוב תאים.',react:(t,i)=>{if(t==='numfmt'&&i.via!=='dialog'&&i.sep)return '👍 סגנון פסיק עובד, ושם לב: הוא מוסיף .00. עכשיו נסו דרך עיצוב תאים, עם 0 ספרות.';}});
+ {idle:'ברצועת הכלים יש גם ,000. הוא עובד, אבל מוסיף שתי ספרות אחרי הנקודה. כאן מתרגלים את חלון עיצוב תאים.',react:(t,i)=>{if(t==='numfmt'&&i.via!=='dialog'&&i.sep)return '👍 סגנון פסיק עובד, ושימו לב: הוא מוסיף .00. עכשיו נסו דרך עיצוב תאים, עם 0 ספרות.';}});
 
 /* decimals trick */
 fsTask('s-dec',{c0:'A',r0:1,start:[1,1],colW:[90,100],rows:[['','שליש'],['תא 1','=1/3'],['תא 2','=1/3'],['תא 3','=1/3'],['סכום','=SUM(B2:B4)']],fm:{'B2:B5':{t:'num',dec:3}}},[
- {k:'d',h:`סמנו B2:B5 והורידו ל-1 ספרה (.00→.0 פעמיים)`,test:(t,i,x)=>t==='numfmt'&&i.dec===1&&selHas(i,'B2',x)&&selHas(i,'B5',x),msg:'🤯 0.3, 0.3, 0.3, וסכום 1.0.'},
- {k:'s',h:`סמנו B2:B4 והסתכלו על ״סכום״ בשורת המצב`,test:(t,i,x)=>t==='select'&&selHas(i,'B2',x)&&selHas(i,'B4',x)&&!selHas(i,'B5',x)&&(x.fm.B2||{}).dec===1,msg:'✅ גם שורת המצב אומרת 1.0. Excel מחבר 0.333... ולא 0.3.'},
- {k:'v',h:`לחצו על B2: מה בשורת הנוסחאות?`,test:(t,i,x)=>t==='select'&&x.act.r===1&&x.act.c===1&&x.kind==='cells'&&(x.fm.B2||{}).dec===1,msg:'✅ =1/3. התצוגה מעוגלת. החישוב לא.'}],{idle:'כרגע 3 ספרות. הכפתור .00→.0 בקבוצת מספר.'});
+ {k:'d',h:`סמנו B2:B5 והורידו לספרה אחת (.00→.0 פעמיים)`,test:(t,i,x)=>t==='numfmt'&&i.dec===1&&selHas(i,'B2',x)&&selHas(i,'B5',x),msg:'🤯 0.3, 0.3, 0.3, וסכום 1.0.'},
+ {k:'s',h:`סמנו B2:B4 והסתכלו על ״סכום״ בשורת המצב`,test:(t,i,x)=>t==='select'&&selHas(i,'B2',x)&&selHas(i,'B4',x)&&!selHas(i,'B5',x)&&(x.fm.B2||{}).dec===1,msg:'✅ גם שורת המצב מציגה 1.0. Excel מחבר 0.333... ולא 0.3.'},
+ {k:'v',h:`לחצו על B2: מה בשורת הנוסחאות?`,test:(t,i,x)=>t==='select'&&x.act.r===1&&x.act.c===1&&x.kind==='cells'&&(x.fm.B2||{}).dec===1,msg:'✅ בשורת הנוסחאות: =1/3. התצוגה מעוגלת, החישוב לא.'}],{idle:'כרגע מוצגות 3 ספרות אחרי הנקודה. הכפתור .00→.0 בקבוצת מספר.'});
 
 /* currency and #### */
 fsTask('s-cur',{c0:'A',r0:1,start:[1,4],colW:[52,72,108,52,70,112],rows:ORD,st:HEAD},[
@@ -2129,7 +2148,7 @@ fsTask('s-pct',{c0:'A',r0:1,start:[1,1],colW:[170,96],rows:[['','שיעור המ
  {k:'a',h:`B2 ← % (סגנון אחוז)`,test:(t,i,x)=>t==='numfmt'&&i.t==='pct'&&selHas(i,'B2',x),msg:'😱 1800%. הערך 18, ו-18 × 100 = 1800.'},
  {k:'b',h:`B3 ← %`,test:(t,i,x)=>t==='numfmt'&&i.t==='pct'&&selHas(i,'B3',x),msg:'✅ 18%. הערך 0.18, ו-0.18 × 100 = 18.'},
  {k:'c',h:`בתא B4 הקלידו 18% ו-Enter`,test:(t,i,x)=>t==='commit'&&i.a==='B4'&&near(x.value('B4'),0.18),msg:'✅ 18%, ובשורת הנוסחאות 18%. הערך: 0.18.'},
- {k:'d',h:`B5: קודם % על התא הריק, ואז הקלידו 18`,test:(t,i,x)=>t==='commit'&&i.a==='B5'&&near(x.value('B5'),0.18)&&(x.fm.B5||{}).t==='pct',msg:'✅ תא שכבר מעוצב כאחוזים הופך 18 ל-18%.'}],
+ {k:'d',h:`B5: קודם % על התא הריק, ואז הקלידו 18`,test:(t,i,x)=>t==='commit'&&i.a==='B5'&&near(x.value('B5'),0.18)&&(x.fm.B5||{}).t==='pct',msg:'✅ בתא שכבר מעוצב כאחוזים, ההקלדה 18 נשמרת כ-0.18 ומוצגת 18%.'}],
  {idle:'B2 מסומן. כפתור % בקבוצת מספר.',react:(t,i,x)=>{if(t==='commit'&&i.a==='B5'&&near(x.value('B5'),18))return '🤏 18 בתא כללי. קודם עצבו את B5 באחוזים, ואז הקלידו.';}});
 
 /* borders */
@@ -2172,7 +2191,7 @@ fsTask('s-painter',{c0:'A',r0:1,start:[0,0],colW:[90,70,80],rows:T2,st:{'A1:C1':
  const x=fsTask('s-freeze',{c0:'A',r0:1,start:[1,0],colW:[110,100,120],rows,st:{'A1:C1':{b:true,bg:'#ddebf7'}},fm:{'C2:C31':{t:'num',dec:0,sep:true}}},[
   {k:'s',h:`גללו למטה בגיליון. איפה הכותרות?`,test:(t)=>t==='scroll0',msg:'🙈 נעלמו. ״מה זה 3,212?״'},
   {k:'f',h:`כרטיסיית תצוגה ← הקפאת חלוניות ← הקפאת השורה העליונה`,test:(t,i)=>t==='freeze'&&i.on,msg:'✅ עכשיו גללו שוב.'},
-  {k:'g',h:`גללו למטה: שורה 1 נשארת`,test:(t,i,x)=>t==='scroll'&&x.frozen,msg:'✅ הכותרת לא בורחת. וכלום בנתונים לא השתנה.'}],{idle:'הגיליון נגלל בתוך המסגרת.'});
+  {k:'g',h:`גללו למטה: שורה 1 נשארת`,test:(t,i,x)=>t==='scroll'&&x.frozen,msg:'✅ הכותרת לא בורחת, ושום נתון לא השתנה.'}],{idle:'הגיליון נגלל בתוך המסגרת.'});
  x.wrapEl.addEventListener('scroll',()=>{if(x.wrapEl.scrollTop>40)x.emit(x.frozen?'scroll':'scroll0',{});});})();
 
 /* why anchor */
@@ -2183,13 +2202,13 @@ const VFM={'F2:F6':{t:'num',dec:2}};
 fsTask('s-whyfix',{c0:'A',r0:1,start:[1,5],colW:VW,rows:ORDV,st:VST,fm:VFM,feat:{ribbon:false}},[
  {k:'a',h:`בתא F2 כתבו ${ff('=E2*(1+J2)')}`,test:(t,i,x)=>t==='commit'&&i.a==='F2'&&near(x.value('F2'),18.5*1.18),msg:'✅ 21.83. נכון. עכשיו גררו עד F6.'},
  {k:'b',h:`גררו את F2 עד F6`,test:(t,i,x)=>t==='fill'&&i.from==='F2'&&x.cells.F3!==undefined,msg:(i,x)=>near(x.value('F3'),7)?'😱 F3 = 7, בדיוק כמו בלי מע״מ. גם F4, F5, F6. לחצו על F3.':'✅ נגרר. לחצו על F3.'},
- {k:'c',h:`לחצו על F3 וקראו את הנוסחה`,test:(t,i,x)=>t==='select'&&x.act.r===2&&x.act.c===5&&x.cells.F3!==undefined,msg:(i,x)=>`💡 ${ff(String(x.cells.F3))}: הגרירה הזיזה גם את J2 ל-J3. J3 ריק = 0, ולכן × (1+0).`}],
+ {k:'c',h:`לחצו על F3 וקראו את הנוסחה`,test:(t,i,x)=>t==='select'&&x.act.r===2&&x.act.c===5&&x.cells.F3!==undefined,msg:(i,x)=>`💡 ${ff(String(x.cells.F3))}: הגרירה הזיזה גם את J2 ל-J3. התא J3 ריק, כלומר 0, ולכן × (1+0).`}],
  {done:'הבעיה: בגרירה למטה כל ההפניות זזות, גם זו שצריכה להישאר. הפתרון בשקף הבא.',idle:'F2 מסומן.'});
 
 fsTask('s-rowfix',{c0:'A',r0:1,start:[1,5],colW:VW,rows:ORDV,st:VST,fm:VFM,feat:{ribbon:false}},[
  {k:'a',h:`בתא F2: ${ff('=E2*(1+J$2)')}`,test:(t,i,x)=>t==='commit'&&i.a==='F2'&&/(^|[^$])J\$2/.test(i.raw)&&near(x.value('F2'),18.5*1.18),msg:'✅ J$2: השורה נעולה. עכשיו גררו.'},
  {k:'b',h:`גררו עד F6`,test:(t,i,x)=>t==='fill'&&allOK(x,[['F3',7*1.18],['F4',4000*1.18],['F5',35*1.18],['F6',1700*1.18]]),msg:(i,x)=>`✅ כל המחירים כוללים מע״מ. F6: ${ff(String(x.cells.F6))}. E זז, J$2 נשאר.`},
- {k:'c',h:`בונוס: כתבו מחדש ב-F2, ובזמן ההקלדה לחצו F4 על J2 (במק Cmd+T)`,test:(t)=>t==='f4',msg:`✅ F4 מחליף: ${ff('J2 → $J$2 → J$2 → $J2')}`}],
+ {k:'c',h:`בונוס: כתבו מחדש ב-F2, ובזמן ההקלדה, כשהסמן על J2, לחצו F4 (במק F4 או fn+F4)`,test:(t)=>t==='f4',msg:`✅ F4 מחליף: ${ff('J2 → $J$2 → J$2 → $J2')}`}],
  {idle:'את הסימן $ מקלידים ב-Shift+4.',demo:x=>demoFill(x,'F2','=E2*(1+J$2)','F6'),react:(t,i,x)=>{if(t==='commit'&&i.a==='F2'){if(/\$J\$2/.test(i.raw))return '⚖️ $J$2 נותן תוצאה נכונה, אבל ה-$ לפני J מיותר: בגרירה למטה העמודה לא זזה ממילא. בבחינה: J$2.';if(/\$J2/.test(i.raw))return '❌ $J2 נועל את העמודה. בגרירה למטה זזה השורה, ולכן ה-$ לפני 2.';}}});
 
 /* pharmacy */
@@ -2201,14 +2220,14 @@ fsTask('s-nofix',{c0:'A',r0:1,start:[1,4],colW:[100,60,90,104,90],feat:{ribbon:f
 /* column anchor */
 fsTask('s-colfix',{c0:'A',r0:1,start:[2,1],colW:[84,66,66,66,66,66,66,16,90],feat:{ribbon:false},rows:[['','ינואר','פברואר','מרץ','אפריל','מאי','יוני','','שיעור הבונוס'],['שכר',8000,8200,7900,8500,8100,8300,'','10%'],['כולל בונוס','','','','','','','','']],st:{'A1:G1':{b:true,bg:'#ddebf7'},I1:{b:true,bg:'#fff2cc'},I2:{bg:'#fff2cc',b:true}},fm:{'B2:G3':{t:'num',dec:0,sep:true}}},[
  {k:'a',h:`בתא B3: ${ff('=B2*(1+$I2)')}`,test:(t,i,x)=>t==='commit'&&i.a==='B3'&&/\$I2/.test(i.raw)&&!/\$I\$2/.test(i.raw)&&near(x.value('B3'),8800),msg:'✅ 8,800. עכשיו גררו שמאלה עד G3.'},
- {k:'b',h:`גררו את ידית המילוי שמאלה עד G3`,test:(t,i,x)=>allOK(x,[['C3',9020],['D3',8690],['E3',9350],['F3',8910],['G3',9130]]),msg:'✅ B2 זז ל-C2, D2... ו-$I2 נשאר. ושימו לב: השורה 2 לא זזה בכלל, לכן אין צורך ב-$ לפניה.'}],
+ {k:'b',h:`גררו את ידית המילוי שמאלה עד G3`,test:(t,i,x)=>allOK(x,[['C3',9020],['D3',8690],['E3',9350],['F3',8910],['G3',9130]]),msg:'✅ ההפניה B2 זזה ל-C2, D2... וההפניה $I2 נשארת. ושימו לב: מספר השורה 2 לא זז בכלל, ולכן אין צורך ב-$ לפניו.'}],
  {idle:'בגיליון עברי ״שמאלה״ = העמודות הבאות.',react:(t,i,x)=>{if(t==='commit'&&i.a==='B3'){if(/I\$2/.test(i.raw)&&!/\$I/.test(i.raw))return '❌ I$2 נועל את השורה, אבל בגרירה שמאלה זזה העמודה: I2 יהפוך ל-J2 הריק. $ לפני I.';if(/\$I\$2/.test(i.raw))return '⚖️ $I$2 עובד, אבל ה-$ לפני 2 מיותר בגרירה הצידה.';}}});
 
 /* decision tree */
 (function(){const SC=[
-  {t:'🧾 מחיר כולל מע״מ, המע״מ בתא J2, גוררים למטה',p:['כן','כן','למטה'],a:'<span class="f">=E2*(1+J$2)</span><br>$ לפני מספר השורה.'},
+  {t:'🧾 מחיר כולל מע״מ, המע״מ בתא J2, גוררים למטה',p:['כן','כן','למטה'],a:'<span class="f">=E2*(1+J$2)</span><br>סימן $ לפני מספר השורה.'},
   {t:'💊 בית מרקחת: לכל תרופה שיעור משלה',p:['כן','לא'],a:'<span class="f">=C2*(1-D2)</span><br>בלי $. כל שורה עם השיעור שלה.'},
-  {t:'📅 בונוס חודשי, החודשים בשורה, גוררים שמאלה',p:['כן','כן','הצידה'],a:'<span class="f">=B2*(1+$I2)</span><br>$ לפני האות.'},
+  {t:'📅 בונוס חודשי, החודשים בשורה, גוררים שמאלה',p:['כן','כן','הצידה'],a:'<span class="f">=B2*(1+$I2)</span><br>סימן $ לפני האות.'},
   {t:'🎯 נוסחה אחת בתא אחד, בלי גרירה',p:['לא'],a:'בלי $. אין גרירה, אין מה לנעול.'}];
  const N=[['שאלה 1','גוררים את הנוסחה?'],['שאלה 2','יש בה תא שחייב להישאר במקום?'],['שאלה 3','לאיזה כיוון גוררים?'],['התשובה','']];
  $('#scen').innerHTML=SC.map((s,i)=>`<button data-i="${i}">${esc(s.t)}</button>`).join('');
