@@ -593,6 +593,36 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .fs.fsc .ffbar{padding:4px 6px}.fs.fsc .fnb{width:56px;font-size:12.5px}.fs.fsc .ffv{font-size:13px;min-height:22px}
 .fs .ft td.n .cv,.fs .ft td.e .cv{direction:ltr}
 
+/* v2 mockup */
+.fs .fi{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.fs .fi.big{width:26px;height:26px}
+.fs .ftitle{display:flex;align-items:center;gap:12px;background:#185c37;color:#fff;padding:5px 12px;border-radius:11px 11px 0 0;font-size:13px}
+.fs .ftitle b{flex:1;text-align:center;font-weight:600;letter-spacing:.2px}
+.fs .ftitle .fqa{opacity:.9;letter-spacing:4px}
+.fs .ftitle .fsrch{background:rgba(255,255,255,.16);border-radius:6px;padding:2px 14px;font-size:12px;opacity:.9}
+.fs .frib{border-radius:0;background:#f8f9f8}
+.fs .ftabs{background:#f8f9f8;border-bottom:1px solid #dde2dd;border-radius:0;padding:2px 8px 0}
+.fs .ftabs span{color:#333;border-radius:0;padding:5px 11px 4px}
+.fs .ftabs span.fdoc{color:#185c37;font-weight:700}
+.fs .ftabs span.on{background:transparent;color:#185c37;font-weight:800;box-shadow:inset 0 -3px 0 #217346}
+.fs .ftabs span:hover{background:#eef2ee}
+.fs .ffbar{direction:rtl}
+.fs .ffv{text-align:right}
+.fs .fwrap{flex:1;min-height:0;background:#fff}
+.fs .ftabsb{display:flex;align-items:center;gap:8px;background:#f3f3f3;border-top:1px solid #d6dbd6;padding:0 10px;height:26px;font-size:12.5px;color:#555}
+.fs .ftabsb .fstab{background:#fff;color:#185c37;font-weight:700;padding:3px 16px;border-bottom:3px solid #217346;margin-top:-1px}
+.fs .ftabsb .fadd{font-size:16px;color:#666}.fs .ftabsb .fnav{color:#9aa;letter-spacing:4px;font-size:10px}
+.fs .fsb{border-radius:0 0 12px 12px}
+.fs .fzoom{color:#777;font-size:11.5px;letter-spacing:.5px;direction:ltr;margin-right:auto}
+.fs .fsum{margin-right:auto}
+.fs.fsc .ftitle,.fs.fsc .ftabsb{display:none}
+.fs .ft td{height:28px}
+.tsheet{display:flex;flex-direction:column;min-height:0;height:100%}
+.tsheet>.fs{flex:1;min-height:0;width:100%}
+.tsheet>.ctrl{flex:none}
+.fs .fb{min-height:0;margin-top:0;font-weight:400}
+.fs .fb.big{min-height:0}
+
 /* ===== lesson 2 additions ===== */
 .tg3{display:grid;grid-template-columns:286px 1fr;gap:14px;margin-top:12px;align-items:start;min-height:0}
 .tg3 .tcolR .rule{padding:10px 14px}
@@ -671,6 +701,9 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 #labov .msmsg{font-size:16px;min-height:24px;margin-bottom:6px}
 @media print{#labov{display:none!important}}
 .qL.sm{font-size:17px;line-height:1.42}.qL.sm .claims p{margin-bottom:4px}
+.slide:has(.tg3){justify-content:flex-start}
+.tg3{flex:1;min-height:0;align-items:stretch}
+.tg3 .tcolR{overflow:hidden}
 
 </style>
 </head>
@@ -735,7 +768,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-bold" data-title="תמיר: כותרת שבולטת" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">🧔 תמיר</span> ״אני לא מבין איפה הכותרת נגמרת והנתונים מתחילים״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br><b>B</b> (או <span class="kbd">Ctrl</span>+<span class="kbd">B</span>, במק <span class="kbd">Cmd</span>+<span class="kbd">B</span>) מדגיש, ו<b>צבע מילוי</b> 🪣 צובע את הרקע.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br><b>B</b> (או <span class="ltr"><span class="kbd">Ctrl</span>+<span class="kbd">B</span></span>, במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">B</span></span>) מדגיש, ו<b>צבע מילוי</b> 🪣 צובע את הרקע.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
   <div class="tsheet"><div id="s-bold-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · גופן ומילוי</div>
 </section>
@@ -749,7 +782,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-alt" data-title="מאי: Alt+Enter" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">👩 מאי</span> ״אני רוצה ׳מחיר ליח׳׳, מתחתיו ׳לפני מע״מ׳, ומתחתיו ׳בש״ח׳״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זה <span class="term" data-t="altenter">ירידת שורה ידנית</span>?</small><b>אתם קובעים איפה יורדים</b><span>בגלישת טקסט Excel מחליט איפה לשבור. כאן <b>אתם</b> מחליטים:<br>1. דאבל קליק על התא (מצב Edit).<br>2. מעמידים את הסמן במקום השבירה.<br>3. <span class="kbd">Alt</span> שמאלי ובלי לעזוב <span class="kbd">Enter</span>. במק: <span class="kbd">Option</span>+<span class="kbd">Return</span>.<br>4. בסוף: <span class="kbd">Enter</span> כדי לקלוט.</span></div><ol class="tasks" id="s-alt-tasks"></ol><div class="msmsg" id="s-alt-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>מה זה <span class="term" data-t="altenter">ירידת שורה ידנית</span>?</small><b>אתם קובעים איפה יורדים</b><span>בגלישת טקסט Excel מחליט איפה לשבור. כאן <b>אתם</b> מחליטים:<br>1. דאבל קליק על התא (מצב Edit).<br>2. מעמידים את הסמן במקום השבירה.<br>3. <span class="kbd">Alt</span> שמאלי ובלי לעזוב <span class="kbd">Enter</span>. במק: <span class="ltr"><span class="kbd">Option</span>+<span class="kbd">Return</span></span>.<br>4. בסוף: <span class="kbd">Enter</span> כדי לקלוט.</span></div><ol class="tasks" id="s-alt-tasks"></ol><div class="msmsg" id="s-alt-msg"></div></div>
   <div class="tsheet"><div id="s-alt-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · Alt+Enter</div>
 </section>
@@ -866,14 +899,14 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-rowfix" data-title="קיבוע שורה: J$2" data-part="d" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="term" data-t="abs">קיבוע שורה</span>: <span class="f" style="font-size:.95em">J$2</span> נשאר בשורה 2</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>$ לפני מספר השורה</small><b>״בגרירה למטה, השורה לא זזה״</b><span>בגרירה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה. <span class="f">$</span> לפני המספר אומר לו: את זה לא.<br><span class="f">=E2*(1+J$2)</span>: <span class="f">E2</span> זז ל-E3, E4 וכן הלאה. <span class="f">J$2</span> נשאר.<br>הקלדה: <span class="kbd">Shift</span>+<span class="kbd">4</span>, או <span class="kbd">F4</span> על ההפניה (במק <span class="kbd">Cmd</span>+<span class="kbd">T</span>), שוב ושוב: <span class="f">J2 → $J$2 → J$2 → $J2</span></span></div><ol class="tasks" id="s-rowfix-tasks"></ol><div class="msmsg" id="s-rowfix-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>$ לפני מספר השורה</small><b>״בגרירה למטה, השורה לא זזה״</b><span>בגרירה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה. <span class="f">$</span> לפני המספר אומר לו: את זה לא.<br>בנוסחה <span class="f">=E2*(1+J$2)</span> התא E2 זז ל-E3, E4 וכן הלאה, ו-<span class="f">J$2</span> נשאר.<br>הקלדה: <span class="ltr"><span class="kbd">Shift</span>+<span class="kbd">4</span></span>, או <span class="kbd">F4</span> על ההפניה (במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">T</span></span>), שוב ושוב: <span class="f">J2 → $J$2 → J$2 → $J2</span></span></div><ol class="tasks" id="s-rowfix-tasks"></ol><div class="msmsg" id="s-rowfix-msg"></div></div>
   <div class="tsheet"><div id="s-rowfix-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn g" data-demo="1">🪄 הדגמה</button><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">קיבוע · שורה</div>
 </section>
 
 <section class="slide light" id="s-nofix" data-title="מתי לא מקבעים" data-part="d" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px">ומתי <span class="acc">לא</span> מקבעים? <span style="font-size:24px;color:var(--mut)">בית המרקחת</span></div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>לכל שורה שיעור משלה</small><b>אין תא אחד לנעול עליו</b><span>השתתפות הקופה שונה לכל תרופה (עמודה D). בגרירה <b>רוצים</b> ש-D2 יהפוך ל-D3, D4...<br><span class="f">=C2*(1-D2)</span> נכונה. <span class="f bad">=C2*(1-D$2)</span> נועלת את כל התרופות על ההנחה של נרבן.<br>זו מלכודת קבועה בבחינה: ״$ תמיד בגרירה למטה״? לא.</span></div><ol class="tasks" id="s-nofix-tasks"></ol><div class="msmsg" id="s-nofix-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>לכל שורה שיעור משלה</small><b>אין תא אחד לנעול עליו</b><span>השתתפות הקופה שונה לכל תרופה (עמודה D). בגרירה <b>רוצים</b> ש-D2 יהפוך ל-D3, D4...<br>הנוסחה <span class="f">=C2*(1-D2)</span> נכונה. הנוסחה <span class="f bad">=C2*(1-D$2)</span> נועלת את כל התרופות על ההנחה של נרבן.<br>זו מלכודת קבועה בבחינה: ״$ תמיד בגרירה למטה״? לא.</span></div><ol class="tasks" id="s-nofix-tasks"></ol><div class="msmsg" id="s-nofix-msg"></div></div>
   <div class="tsheet"><div id="s-nofix-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">קיבוע · מלכודת</div>
 </section>
@@ -1315,6 +1348,19 @@ function taskSlide(id,X,tasks,opt){opt=opt||{};let done={};const S=$('#'+id),T=$
 
 
 /* ================= FSHEET: an Excel-like sheet with formats, ribbon, Format Cells, fill, $ and freeze ================= */
+const FS_IC={
+ paste:'<rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1" fill="#fff"/><path d="M9 11h6M9 15h6"/>',
+ cut:'<circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 4M16 16 5 4"/>',
+ copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M5 16V5a2 2 0 0 1 2-2h9"/>',
+ painter:'<rect x="4" y="3" width="15" height="6" rx="1.5" fill="#f6d36b"/><path d="M19 6h2v5h-9v3"/><rect x="10.5" y="14" width="3" height="7" rx="1"/>',
+ bd:'<rect x="4" y="4" width="16" height="16"/><path d="M12 4v16M4 12h16" stroke-dasharray="2 2"/>',
+ bg:'<path d="M5 12 12 5l7 7-7 7z" fill="#fff"/><path d="M19 13c1 2 2 3 2 4a2 2 0 0 1-4 0c0-1 1-2 2-4z" fill="currentColor"/>',
+ ar:'<path d="M4 6h16M10 10h10M4 14h16M10 18h10"/>',ac:'<path d="M4 6h16M7 10h10M4 14h16M7 18h10"/>',al:'<path d="M4 6h16M4 10h10M4 14h16M4 18h10"/>',
+ wrap:'<path d="M4 6h16M4 12h13a3 3 0 0 1 0 6h-4"/><path d="m15 16-2 2 2 2M4 18h5"/>',
+ merge:'<rect x="3" y="6" width="18" height="12" rx="1"/><path d="m8 12h8M10 10l-2 2 2 2M14 10l2 2-2 2"/>',
+ cells:'<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M3 14h18M9 4v16"/><circle cx="17" cy="17" r="4" fill="#fff"/><path d="M17 15v4M15 17h4"/>',
+ freeze:'<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18" stroke-width="3"/><path d="M3 14h18M9 9v11M15 9v11" stroke-dasharray="2 2"/>'};
+const fic=(k,big)=>`<svg class="fi${big?' big':''}" viewBox="0 0 24 24" aria-hidden="true">${FS_IC[k]}</svg>`;
 const FS_ALL=[];
 const FS_REFC=['#2f6fd6','#d1443c','#7b3fc6','#16904f','#c67a04','#0f8fa3'];
 const FS_DAY0=Date.UTC(1899,11,30);
@@ -1335,9 +1381,10 @@ const FS_CATS=[['gen','כללי','General'],['num','מספר','Number'],['cur','
 
 class FSheet{
   constructor(host,o){this.host=host;this.o=o;this.f=Object.assign({ribbon:true,edit:true,fill:true,fc:true,resize:true,view:false},o.feat||{});
-    this.c0=colI(o.c0||'A');this.r0=o.r0||1;FS_ALL.push(this);this.build();this.reset();}
+    this.c0=colI(o.c0||'A');this.r0=o.r0||1;FS_ALL.push(this);this.build();this.reset();if(o.fit!==false&&!o.compact)this.fitGrid();}
+  fitGrid(){const W=this.wrapEl;if(!W.clientHeight)return;const dh=W.clientHeight-this.tbl.offsetHeight-4,dw=W.clientWidth-this.tbl.offsetWidth-4;this.padR=(this.padR||0)+Math.max(0,Math.floor(dh/29));this.padC=(this.padC||0)+Math.max(0,Math.floor(dw/80));if(this.padR||this.padC)this.reset();}
   /* ---------- model ---------- */
-  reset(){const o=this.o;this.nr=o.rows.length;this.nc=Math.max(...o.rows.map(r=>r.length),o.nc||0);
+  reset(){const o=this.o;this.nr=o.rows.length+(this.padR||0);this.nc=Math.max(...o.rows.map(r=>r.length),o.nc||0)+(this.padC||0);
     this.cells={};this.fm={};this.st={};this.merges=JSON.parse(JSON.stringify(o.merges||[]));
     o.rows.forEach((row,r)=>row.forEach((v,c)=>{if(v===''||v===undefined||v===null)return;this.cells[this.A(r,c)]=typeof v==='string'&&v[0]!=='='?this.parseIn(v,this.A(r,c),true):v;}));
     Object.entries(o.fm||{}).forEach(([k,v])=>this.forRange(k,a=>this.fm[a]=Object.assign({},v)));
@@ -1389,20 +1436,21 @@ class FSheet{
     let rib='';
     if(f.ribbon){rib=`<div class="frib"><div class="ftabs"><span class="fdoc">קובץ</span><span data-tab="home" class="on">בית</span><span data-tab="ins">הוספה</span><span data-tab="lay">פריסת עמוד</span><span data-tab="fx">נוסחאות</span><span data-tab="data">נתונים</span><span data-tab="view">תצוגה</span></div>
       <div class="fpane" data-pane="home">
-        <div class="fg"><div class="fr"><button class="fb big" data-c="paste" title="הדבקה (Paste)">📋<small>הדבקה</small></button><div class="fcol"><button class="fb" data-c="cut" title="גזירה (Cut)">✂️ גזירה</button><button class="fb" data-c="copy" title="העתקה (Copy)">⧉ העתקה</button><button class="fb" data-c="painter" title="מברשת עיצוב (Format Painter). קליק: פעם אחת. דאבל קליק: עד ESC">🖌️ מברשת עיצוב</button></div></div><small>לוח</small></div>
+        <div class="fg"><div class="fr"><button class="fb big" data-c="paste" title="הדבקה (Paste)">${fic('paste',1)}<small>הדבקה</small></button><div class="fcol"><button class="fb" data-c="cut" title="גזירה (Cut)">${fic('cut')} גזירה</button><button class="fb" data-c="copy" title="העתקה (Copy)">${fic('copy')} העתקה</button><button class="fb" data-c="painter" title="מברשת עיצוב (Format Painter). קליק: פעם אחת. דאבל קליק: עד ESC">${fic('painter')} מברשת עיצוב</button></div></div><small>לוח</small></div>
         <div class="fg"><div class="fr"><select class="fsize" title="גודל גופן">${[9,10,11,12,14,16,18,20,24].map(s=>`<option ${s===11?'selected':''}>${s}</option>`).join('')}</select></div>
-          <div class="fr"><button class="fb" data-c="b" title="מודגש (Bold) Ctrl+B"><b>B</b></button><button class="fb" data-c="i" title="נטוי (Italic) Ctrl+I"><i>I</i></button><button class="fb" data-c="u" title="קו תחתון (Underline) Ctrl+U"><u>U</u></button><span class="fdd"><button class="fb" data-m="bd" title="גבולות (Borders)">▦▾</button><div class="fmenu" data-menu="bd"><button data-bd="all">▦ כל הגבולות</button><button data-bd="out">▢ גבולות חיצוניים</button><button data-bd="thick">⬛ גבול חיצוני עבה</button><button data-bd="dbl">⩸ גבול תחתון כפול (קו סיכום)</button><button data-bd="none">⬚ ללא גבול</button></div></span><span class="fdd"><button class="fb" data-m="bg" title="צבע מילוי (Fill Color)">🪣<i class="bar" style="background:#ffe699"></i>▾</button><div class="fmenu pal" data-menu="bg">${pal('bg',['#ffffff','#ffe699','#c6efce','#ddebf7','#fce4d6','#e4dfec','#217346','#1f3864'])}</div></span><span class="fdd"><button class="fb" data-m="fc" title="צבע גופן (Font Color)"><b>A</b><i class="bar" style="background:#e0454f"></i>▾</button><div class="fmenu pal" data-menu="fc">${pal('color',['#000000','#e0454f','#217346','#2f6fd6','#c67a04','#7b3fc6','#ffffff'])}</div></span></div><small>גופן</small></div>
-        <div class="fg"><div class="fr"><button class="fb" data-c="ar" title="יישור לימין">☰⇥</button><button class="fb" data-c="ac" title="מירכוז">☰</button><button class="fb" data-c="al" title="יישור לשמאל">⇤☰</button><button class="fb wide" data-c="wrap" title="גלישת טקסט (Wrap Text)">↵ גלישת טקסט</button></div>
-          <div class="fr"><span class="fdd"><button class="fb wide" data-c="merge" title="מיזוג ומירכוז (Merge &amp; Center)">⇔ מיזוג ומירכוז</button><button class="fb" data-m="mg" title="אפשרויות מיזוג">▾</button><div class="fmenu" data-menu="mg"><button data-mg="mc">⇔ מיזוג ומירכוז</button><button data-mg="un">✕ ביטול מיזוג תאים</button></div></span></div><small>יישור</small></div>
+          <div class="fr"><button class="fb" data-c="b" title="מודגש (Bold) Ctrl+B"><b>B</b></button><button class="fb" data-c="i" title="נטוי (Italic) Ctrl+I"><i>I</i></button><button class="fb" data-c="u" title="קו תחתון (Underline) Ctrl+U"><u>U</u></button><span class="fdd"><button class="fb" data-m="bd" title="גבולות (Borders)">${fic('bd')}▾</button><div class="fmenu" data-menu="bd"><button data-bd="all">▦ כל הגבולות</button><button data-bd="out">▢ גבולות חיצוניים</button><button data-bd="thick">⬛ גבול חיצוני עבה</button><button data-bd="dbl">⩸ גבול תחתון כפול (קו סיכום)</button><button data-bd="none">⬚ ללא גבול</button></div></span><span class="fdd"><button class="fb" data-m="bg" title="צבע מילוי (Fill Color)">${fic('bg')}<i class="bar" style="background:#ffe699"></i>▾</button><div class="fmenu pal" data-menu="bg">${pal('bg',['#ffffff','#ffe699','#c6efce','#ddebf7','#fce4d6','#e4dfec','#217346','#1f3864'])}</div></span><span class="fdd"><button class="fb" data-m="fc" title="צבע גופן (Font Color)"><b>A</b><i class="bar" style="background:#e0454f"></i>▾</button><div class="fmenu pal" data-menu="fc">${pal('color',['#000000','#e0454f','#217346','#2f6fd6','#c67a04','#7b3fc6','#ffffff'])}</div></span></div><small>גופן</small></div>
+        <div class="fg"><div class="fr"><button class="fb" data-c="ar" title="יישור לימין">${fic('ar')}</button><button class="fb" data-c="ac" title="מירכוז">${fic('ac')}</button><button class="fb" data-c="al" title="יישור לשמאל">${fic('al')}</button><button class="fb wide" data-c="wrap" title="גלישת טקסט (Wrap Text)">${fic('wrap')} גלישת טקסט</button></div>
+          <div class="fr"><span class="fdd"><button class="fb wide" data-c="merge" title="מיזוג ומירכוז (Merge &amp; Center)">${fic('merge')} מיזוג ומירכוז</button><button class="fb" data-m="mg" title="אפשרויות מיזוג">▾</button><div class="fmenu" data-menu="mg"><button data-mg="mc">⇔ מיזוג ומירכוז</button><button data-mg="un">✕ ביטול מיזוג תאים</button></div></span></div><small>יישור</small></div>
         <div class="fg"><div class="fr"><select class="fnf" title="תבנית מספר (Number Format)">${FS_CATS.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join('')}</select></div>
           <div class="fr"><button class="fb" data-c="cur" title="תבנית מטבע (Currency) ₪">₪</button><button class="fb" data-c="pct" title="סגנון אחוז (Percent Style)">%</button><button class="fb" data-c="comma" title="סגנון פסיק, מפריד אלפים (Comma Style)">,000</button><button class="fb" data-c="decup" title="הוספת ספרה עשרונית (Increase Decimal)">.0←.00</button><button class="fb" data-c="decdn" title="הסרת ספרה עשרונית (Decrease Decimal)">.00→.0</button></div><small>מספר</small></div>
-        ${f.fc?`<div class="fg"><div class="fr"><button class="fb big" data-c="dlg" title="עיצוב תאים (Format Cells) Ctrl+1">🧾<small>עיצוב תאים</small></button></div><small>תאים</small></div>`:''}
+        ${f.fc?`<div class="fg"><div class="fr"><button class="fb big" data-c="dlg" title="עיצוב תאים (Format Cells) Ctrl+1">${fic('cells',1)}<small>עיצוב תאים</small></button></div><small>תאים</small></div>`:''}
       </div>
       <div class="fpane" data-pane="view" hidden>
-        <div class="fg"><div class="fr"><span class="fdd"><button class="fb big" data-m="fz" title="הקפאת חלוניות (Freeze Panes)">❄️<small>הקפאת חלוניות ▾</small></button><div class="fmenu" data-menu="fz"><button data-fz="top">הקפאת השורה העליונה</button><button data-fz="off">ביטול הקפאת חלוניות</button></div></span></div><small>חלון</small></div>
+        <div class="fg"><div class="fr"><span class="fdd"><button class="fb big" data-m="fz" title="הקפאת חלוניות (Freeze Panes)">${fic('freeze',1)}<small>הקפאת חלוניות ▾</small></button><div class="fmenu" data-menu="fz"><button data-fz="top">הקפאת השורה העליונה</button><button data-fz="off">ביטול הקפאת חלוניות</button></div></span></div><small>חלון</small></div>
         <div class="fg"><div class="fr"><label class="fchk"><input type="checkbox" class="fgridc" checked> קווי רשת</label></div><small>הצגה</small></div>
       </div></div>`;}
-    h.innerHTML=rib+`<div class="ffbar"><div class="fnb"></div><span class="ffx">fx</span><div class="ffv"></div></div><div class="fwrap"><div class="fgrid"><table class="ft"></table><div class="fsel"><i class="fh" title="ידית מילוי: גררו כדי לשכפל"></i></div><div class="fghost"></div><div class="frefs"></div></div></div><div class="fsb"><span class="fmode">Ready</span><span class="fsum"></span></div><div class="fpop"></div><div class="fctx"></div><div class="fdlg"></div><div class="ftip"></div>`;
+    const tb=this.o.compact?'':`<div class="ftitle"><span class="fqa">💾 ↶ ↷</span><b>${esc(this.o.file||'חוברת1.xlsx')}</b><span class="fsrch">🔍 חיפוש</span></div>`;
+    h.innerHTML=tb+rib+`<div class="ffbar"><div class="fnb"></div><span class="ffx">fx</span><div class="ffv"></div></div><div class="fwrap"><div class="fgrid"><table class="ft"></table><div class="fsel"><i class="fh" title="ידית מילוי: גררו כדי לשכפל"></i></div><div class="fghost"></div><div class="frefs"></div></div></div>${this.o.compact?'':`<div class="ftabsb"><span class="fnav">◀ ▶</span><span class="fstab">${esc(this.o.sheet||'גיליון1')}</span><span class="fadd">+</span></div>`}<div class="fsb"><span class="fmode">Ready</span><span class="fsum"></span><span class="fzoom">▭ ▦ ━━━●━━━ 100%</span></div><div class="fpop"></div><div class="fctx"></div><div class="fdlg"></div><div class="ftip"></div>`;
     this.tbl=h.querySelector('.ft');this.gridEl=h.querySelector('.fgrid');this.wrapEl=h.querySelector('.fwrap');this.box=h.querySelector('.fsel');this.ghost=h.querySelector('.fghost');this.refs=h.querySelector('.frefs');
     this.ctxEl=h.querySelector('.fctx');this.dlg=h.querySelector('.fdlg');this.tip=h.querySelector('.ftip');
     if(this.o.viewH)this.wrapEl.style.maxHeight=this.o.viewH+'px';
@@ -1439,7 +1487,7 @@ class FSheet{
         let txt=this.disp(a);const wrap=!!st.wrap||(typeof v==='string'&&v.includes('\n')&&st.wrap!==false);
         const nb=c+1<this.nc&&!this.mergeAt(r,c+1)&&(this.cells[this.A(r,c+1)]===undefined);
         const ov=!isN&&!wrap&&!m&&txt!==''&&(c+1>=this.nc||nb);
-        let al=st.al||(m?'c':null);const ta=al==='c'?'center':al==='l'?'left':al==='r'?'right':(isN||isE?'left':'right');
+        let al=st.al||(m?'c':null);const lat=typeof v==='string'&&/^[^\u0590-\u05FFA-Za-z]*[A-Za-z]/.test(v);const ta=al==='c'?'center':al==='l'?'left':al==='r'?'right':(isN||isE||lat?'left':'right');
         const bd=st.bd||{};const bs=k=>bd[k]?(bd[k]===3?'3px double #000':bd[k]===2?'2.5px solid #000':'1px solid #000'):'';
         const css=[st.bg?'background:'+st.bg:'',bs('t')?'border-top:'+bs('t'):'',bs('b')?'border-bottom:'+bs('b'):'',bs('l')?'border-left:'+bs('l'):'',bs('r')?'border-right:'+bs('r'):''].filter(Boolean).join(';');
         const ccss=[st.b?'font-weight:700':'',st.i?'font-style:italic':'',st.u?'text-decoration:underline':'',st.color?'color:'+st.color:'',st.size?'font-size:'+Math.round(st.size*1.36)+'px':'',st.font==='David'?'font-family:David,"David Libre",serif':st.font==='Calibri'?'font-family:Calibri,Carlito,Arial,sans-serif':'','text-align:'+ta,wrap?'white-space:pre-wrap':'white-space:pre'].filter(Boolean).join(';');
@@ -1672,7 +1720,7 @@ const G={
  helper:{h:'תא עזר',en:'Helper cell',p:'תא שמכיל נתון אחד שמשמש את כל הטבלה, כמו שיעור מע״מ. משנים אותו פעם אחת, וכל הנוסחאות מתעדכנות.',ex:'J2 = 18%. כל המחירים כוללי המע״מ מפנים אליו.'},
  rel:{h:'הפניה יחסית',en:'Relative reference',p:'הפניה רגילה, כמו E2. בגרירה היא זזה יחד עם הנוסחה: שורה אחת למטה, E2 הופך ל-E3.',ex:'=E2*2 שנגרר למטה הופך ל-=E3*2.'},
  abs:{h:'קיבוע',en:'Absolute reference ($)',p:'סימן $ בתוך הפניה, שמונע מחלק ממנה לזוז בגרירה. $ לפני מספר השורה מקבע שורה; $ לפני האות מקבע עמודה.',ex:'J$2 נשאר J$2 בגרירה למטה. $I2 נשאר $I2 בגרירה הצידה.'},
- f4:{h:'מקש F4',en:'F4 (Mac: Cmd+T)',p:'במצב עריכת נוסחה, מחליף את סוג הקיבוע של ההפניה שהסמן עומד עליה, במחזור.',ex:'J2 → $J$2 → J$2 → $J2 → J2'},
+ f4:{h:'מקש F4',en:'F4 (Mac: Cmd+T)',p:'במצב עריכת נוסחה, מחליף את סוג הקיבוע של ההפניה שהסמן עומד עליה, במחזור.',ex:'במחזור: J2, אחר כך $J$2, אחר כך J$2, אחר כך $J2.'},
  eff:{h:'עבודה יעילה',en:'Efficient work',p:'עיקרון בקורס ובבחינה: הנוסחה הנכונה היא זו שעובדת, בלי $ מיותרים ובלי מספרים מוקלדים במקום הפניה לתא עזר.',ex:'בגרירה למטה: =E2*(1+J$2), ולא =E2*(1+$J$2).'},
  cell:{h:'תא',en:'Cell',p:'המשבצת הבסיסית בגיליון. כתובתו: אות העמודה ואחריה מספר השורה.',ex:'C4: עמודה C, שורה 4.'},
  modes:{h:'מצבי הזנה',en:'Ready / Enter / Edit',p:'Ready: התא מסומן, הקלדה תדרוס. Enter: הזנה מאפס. Edit: עריכת תוכן קיים (דאבל קליק או F2).',ex:'דאבל קליק על ״רחובות״ והקלדת ״ מערב״ = ״רחובות מערב״.'}
@@ -1680,13 +1728,13 @@ const G={
 
 /* ---------- part A: review ---------- */
 const RTILES=[
- {e:'📍',h:'תא וכתובת',s:'אות ואז מספר',b:'הכתובת היא אות העמודה ואחריה מספר השורה. גם בגיליון עברי.',d:'C18 ✓ · 18C ✗'},
+ {e:'📍',h:'תא וכתובת',s:'אות ואז מספר',b:'הכתובת היא אות העמודה ואחריה מספר השורה. גם בגיליון עברי.',d:'נכון: C18 · שגוי: 18C'},
  {e:'🗂️',h:'שדה ורשומה',s:'עמודה ושורה בטבלה',b:'עמודה = שדה (סוג מידע אחד). שורה = רשומה (כל המידע על פריט אחד).',d:'עמודה ״עיר״ = שדה · השורה של ״דין״ = רשומה'},
  {e:'📗',h:'Workbook ו-Sheet',s:'קובץ מול גיליון',b:'חוברת עבודה (Workbook) היא הקובץ כולו. גיליון (Sheet) הוא מרחב עבודה בתוכו. תמיד יש לפחות גיליון אחד.',d:'״שלח לי את הקובץ״ = את חוברת העבודה'},
  {e:'⌨️',h:'Ready · Enter · Edit',s:'שלושה מצבי הזנה',b:'קליק = Ready (הקלדה דורסת). הקלדה בתא ריק = Enter. דאבל קליק על תוכן = Edit (מוסיפים).',d:'ESC מבטל ומחזיר את התא למה שהיה'},
- {e:'🟰',h:'נוסחה והפניה',s:'הכול מתחיל ב-=',b:'נוסחה מתחילה ב-=. מפנים לתאים ולא מקלידים מספרים, כדי שהחישוב יתעדכן לבד.',d:'=C102-D102'},
- {e:'🟩',h:'גרירה',s:'ידית המילוי',b:'הריבוע הירוק בפינת התא משכפל נוסחה. בכל שורה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה.',d:'=C102-D102 → =C103-D103'},
- {e:'📈',h:'תוספת והנחה',s:'× (1 ± שיעור)',b:'מחיר אחרי תוספת: × (1 + שיעור). אחרי הנחה: × (1 - שיעור). × שיעור לבד = רק סכום השינוי.',d:'100 × 1.18 = 118 · 100 × 0.8 = 80'},
+ {e:'🟰',h:'נוסחה והפניה',s:'הכול מתחיל ב-=',b:'נוסחה מתחילה ב-=. מפנים לתאים ולא מקלידים מספרים, כדי שהחישוב יתעדכן לבד.',d:'יתרה לתשלום: =C102-D102'},
+ {e:'🟩',h:'גרירה',s:'ידית המילוי',b:'הריבוע הירוק בפינת התא משכפל נוסחה. בכל שורה למטה Excel מוסיף 1 לכל מספר שורה בנוסחה.',d:'בשורה 102: =C102-D102, ובשורה 103: =C103-D103'},
+ {e:'📈',h:'תוספת והנחה',s:'× (1 ± שיעור)',b:'מחיר אחרי תוספת: × (1 + שיעור). אחרי הנחה: × (1 - שיעור). × שיעור לבד = רק סכום השינוי.',d:'תוספת 18%: 100 × 1.18 = 118. הנחה 20%: 100 × 0.8 = 80'},
  {e:'↔️',h:'רוחב עמודה',s:'שלוש דרכים',b:'גרירת הגבול, דאבל קליק על הגבול (התאמה אוטומטית), וקליק ימני ← רוחב עמודה.',d:'מספר שלא נכנס מוצג ####'}];
 const RQUIZ=[
  {t:'הכתובת {{12D}} תקינה בגיליון בפריסה עברית.',a:false,x:'לא. בכל פריסה כותבים אות ואז מספר: D12.'},
@@ -2013,8 +2061,9 @@ $$('#rtiles .rt').forEach(t=>t.onclick=()=>t.classList.toggle('flip'));
 $('#cast').innerHTML=CAST.map((c,i)=>`<div class="cst st"><div class="av">${c[0]}</div><b>${c[1]}</b><div class="bub">${esc(c[2])}</div><span class="tool">${esc(c[3])}</span></div>`).join('');
 
 /* ---------- helpers ---------- */
+const FSFILE={'s-rsheet':'קליית יבגני.xlsx','s-golden':'כלל הזהב.xlsx','s-pct':'מע״מ.xlsx','s-dec':'שליש.xlsx','s-date':'תאריכי רכישה.xlsx','s-time':'נוכחות נובמבר.xlsx','s-painter':'בית קפה.xlsx','s-freeze':'מכירות ינואר.xlsx','s-nofix':'בית מרקחת.xlsx','s-colfix':'שכר ובונוס.xlsx'};
 const FSX={};
-function fsTask(id,X,tasks,opt){opt=opt||{};const x=taskSlide(id,X,tasks,Object.assign({cls:FSheet},opt));FSX[id]=x;
+function fsTask(id,X,tasks,opt){opt=opt||{};X=Object.assign({file:FSFILE[id]||'דוח הזמנות.xlsx'},X);const x=taskSlide(id,X,tasks,Object.assign({cls:FSheet},opt));FSX[id]=x;
   const S=$('#'+id);const d=S.querySelector('[data-demo]');if(d&&opt.demo)d.onclick=()=>{x.reset();opt.demo(x);};return x;}
 const near=(a,b)=>typeof a==='number'&&Math.abs(a-b)<1e-6;
 const selHas=(i,a,x)=>{const s=i.sel||x.ns();const p=x.rc(a);return p&&p.r>=s.r1&&p.r<=s.r2&&p.c>=s.c1&&p.c<=s.c2;};
@@ -2120,7 +2169,7 @@ fsTask('s-painter',{c0:'A',r0:1,start:[0,0],colW:[90,70,80],rows:T2,st:{'A1:C1':
 
 /* freeze */
 (function(){const br=['תל אביב','חיפה','ירושלים','באר שבע','אשדוד','נתניה'];const rows=[['תאריך','סניף','מכירות בש״ח']];for(let i=0;i<30;i++){const d=new Date(Date.UTC(2024,0,1+i));rows.push([`${p2(d.getUTCDate())}/${p2(d.getUTCMonth()+1)}/2024`,br[(i*7)%6],1000+((i*7919)%4500)]);}
- const x=fsTask('s-freeze',{c0:'A',r0:1,start:[1,0],colW:[110,100,120],viewH:330,rows,st:{'A1:C1':{b:true,bg:'#ddebf7'}},fm:{'C2:C31':{t:'num',dec:0,sep:true}}},[
+ const x=fsTask('s-freeze',{c0:'A',r0:1,start:[1,0],colW:[110,100,120],rows,st:{'A1:C1':{b:true,bg:'#ddebf7'}},fm:{'C2:C31':{t:'num',dec:0,sep:true}}},[
   {k:'s',h:`גללו למטה בגיליון. איפה הכותרות?`,test:(t)=>t==='scroll0',msg:'🙈 נעלמו. ״מה זה 3,212?״'},
   {k:'f',h:`כרטיסיית תצוגה ← הקפאת חלוניות ← הקפאת השורה העליונה`,test:(t,i)=>t==='freeze'&&i.on,msg:'✅ עכשיו גללו שוב.'},
   {k:'g',h:`גללו למטה: שורה 1 נשארת`,test:(t,i,x)=>t==='scroll'&&x.frozen,msg:'✅ הכותרת לא בורחת. וכלום בנתונים לא השתנה.'}],{idle:'הגיליון נגלל בתוך המסגרת.'});
@@ -2141,7 +2190,7 @@ fsTask('s-rowfix',{c0:'A',r0:1,start:[1,5],colW:VW,rows:ORDV,st:VST,fm:VFM,feat:
  {k:'a',h:`בתא F2: ${ff('=E2*(1+J$2)')}`,test:(t,i,x)=>t==='commit'&&i.a==='F2'&&/(^|[^$])J\$2/.test(i.raw)&&near(x.value('F2'),18.5*1.18),msg:'✅ J$2: השורה נעולה. עכשיו גררו.'},
  {k:'b',h:`גררו עד F6`,test:(t,i,x)=>t==='fill'&&allOK(x,[['F3',7*1.18],['F4',4000*1.18],['F5',35*1.18],['F6',1700*1.18]]),msg:(i,x)=>`✅ כל המחירים כוללים מע״מ. F6: ${ff(String(x.cells.F6))}. E זז, J$2 נשאר.`},
  {k:'c',h:`בונוס: כתבו מחדש ב-F2, ובזמן ההקלדה לחצו F4 על J2 (במק Cmd+T)`,test:(t)=>t==='f4',msg:`✅ F4 מחליף: ${ff('J2 → $J$2 → J$2 → $J2')}`}],
- {idle:'$ = Shift+4.',demo:x=>demoFill(x,'F2','=E2*(1+J$2)','F6'),react:(t,i,x)=>{if(t==='commit'&&i.a==='F2'){if(/\$J\$2/.test(i.raw))return '⚖️ $J$2 נותן תוצאה נכונה, אבל ה-$ לפני J מיותר: בגרירה למטה העמודה לא זזה ממילא. בבחינה: J$2.';if(/\$J2/.test(i.raw))return '❌ $J2 נועל את העמודה. בגרירה למטה זזה השורה, ולכן ה-$ לפני 2.';}}});
+ {idle:'את הסימן $ מקלידים ב-Shift+4.',demo:x=>demoFill(x,'F2','=E2*(1+J$2)','F6'),react:(t,i,x)=>{if(t==='commit'&&i.a==='F2'){if(/\$J\$2/.test(i.raw))return '⚖️ $J$2 נותן תוצאה נכונה, אבל ה-$ לפני J מיותר: בגרירה למטה העמודה לא זזה ממילא. בבחינה: J$2.';if(/\$J2/.test(i.raw))return '❌ $J2 נועל את העמודה. בגרירה למטה זזה השורה, ולכן ה-$ לפני 2.';}}});
 
 /* pharmacy */
 fsTask('s-nofix',{c0:'A',r0:1,start:[1,4],colW:[100,60,90,104,90],feat:{ribbon:false},rows:[['שם התרופה','כמות','מחיר לצרכן','השתתפות קופה','מחיר נטו'],['נרבן',3,40,'50%',''],['ציפרלקס',1,120,'75%',''],['פרוזאק',2,90,'60%',''],['זולופט',1,110,'70%','']],st:{'A1:E1':{b:true,bg:'#ddebf7'}}},[
@@ -2186,7 +2235,8 @@ $('#appxQ').innerHTML='<h2>נספח א: 20 השאלות עם פתרונות מפ
   return h+`<div style="margin-top:6px;font-weight:800">התשובה: ${HL[q.ans]}. ${fo(q.opts[q.ans])}</div><div>💡 ${fx(q.tip)}</div></div>`;}).join('');
 $('#appxNotes').innerHTML='<h2>נספח ב: הערות דובר</h2>'+slides.map((s,i)=>NOTES[s.id]?`<div class="gp"><b>${i+1}. ${esc(s.dataset.title)}</b><ul style="margin:4px 18px 0 0">${NOTES[s.id].map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`:'').join('');
 
-bidiFix(stage);bidiFix($('#appxQ'));bidiFix($('#appxNotes'));
+bidiFix(stage);bidiFix($('#appxQ'));
+const refit=()=>Object.values(FSX).forEach(x=>{x.padR=0;x.padC=0;x.reset();x.fitGrid();});(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(refit);bidiFix($('#appxNotes'));
 slides=$$('.slide',stage);
 const si=slides.findIndex(s=>s.id===(location.hash||'').slice(1));show(si>=0?si:0);
 addEventListener('beforeprint',()=>{$$('.st').forEach(s=>s.classList.add('show'));Object.values(printers).forEach(f=>f());});
