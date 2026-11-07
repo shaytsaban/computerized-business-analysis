@@ -783,7 +783,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-bold" data-title="תמיר: כותרת שבולטת" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">🧔 תמיר</span> ״אני לא מבין איפה הכותרת נגמרת והנתונים מתחילים״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br><b>B</b> (או <span class="ltr"><span class="kbd">Ctrl</span>+<span class="kbd">B</span></span>, במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">B</span></span>) מדגיש, ו<b>צבע מילוי</b> 🪣 צובע את הרקע.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br>הכפתור <b>B</b> מדגיש (או <span class="ltr"><span class="kbd">Ctrl</span>+<span class="kbd">B</span></span>, במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">B</span></span>), ו<b>צבע מילוי</b> 🪣 צובע את הרקע.<br>בקבוצת <b>יישור</b>: יישור לימין, למרכז או לשמאל. בגיליון עברי Excel מיישר טקסט לימין ומספרים לשמאל, ואפשר לשנות.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
   <div class="tsheet"><div id="s-bold-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · גופן ומילוי</div>
 </section>
@@ -1454,7 +1454,7 @@ class FSheet{
         <div class="fg"><div class="fr"><button class="fb big" data-c="paste" title="הדבקה (Paste)">${fic('paste',1)}<small>הדבקה</small></button><div class="fcol"><button class="fb" data-c="cut" title="גזירה (Cut)">${fic('cut')} גזירה</button><button class="fb" data-c="copy" title="העתקה (Copy)">${fic('copy')} העתקה</button><button class="fb" data-c="painter" title="מברשת עיצוב (Format Painter). קליק: פעם אחת. דאבל קליק: עד ESC">${fic('painter')} מברשת עיצוב</button></div></div><small>לוח</small></div>
         <div class="fg"><div class="fr"><select class="fsize" title="גודל גופן">${[9,10,11,12,14,16,18,20,24].map(s=>`<option ${s===11?'selected':''}>${s}</option>`).join('')}</select></div>
           <div class="fr"><button class="fb" data-c="b" title="מודגש (Bold) Ctrl+B"><b>B</b></button><button class="fb" data-c="i" title="נטוי (Italic) Ctrl+I"><i>I</i></button><button class="fb" data-c="u" title="קו תחתון (Underline) Ctrl+U"><u>U</u></button><span class="fdd"><button class="fb" data-m="bd" title="גבולות (Borders)">${fic('bd')}▾</button><div class="fmenu" data-menu="bd"><button data-bd="all">▦ כל הגבולות</button><button data-bd="out">▢ גבולות חיצוניים</button><button data-bd="thick">⬛ גבול חיצוני עבה</button><button data-bd="dbl">⩸ גבול תחתון כפול (קו סיכום)</button><button data-bd="none">⬚ ללא גבול</button></div></span><span class="fdd"><button class="fb" data-m="bg" title="צבע מילוי (Fill Color)">${fic('bg')}<i class="bar" style="background:#ffe699"></i>▾</button><div class="fmenu pal" data-menu="bg">${pal('bg',['#ffffff','#ffe699','#c6efce','#ddebf7','#fce4d6','#e4dfec','#217346','#1f3864'])}</div></span><span class="fdd"><button class="fb" data-m="fc" title="צבע גופן (Font Color)"><b>A</b><i class="bar" style="background:#e0454f"></i>▾</button><div class="fmenu pal" data-menu="fc">${pal('color',['#000000','#e0454f','#217346','#2f6fd6','#c67a04','#7b3fc6','#ffffff'])}</div></span></div><small>גופן</small></div>
-        <div class="fg"><div class="fr"><button class="fb" data-c="ar" title="יישור לימין">${fic('ar')}</button><button class="fb" data-c="ac" title="מירכוז">${fic('ac')}</button><button class="fb" data-c="al" title="יישור לשמאל">${fic('al')}</button><button class="fb wide" data-c="wrap" title="גלישת טקסט (Wrap Text)">${fic('wrap')} גלישת טקסט</button></div>
+        <div class="fg"><div class="fr"><button class="fb" data-c="ar" title="יישור לימין (Align Right)">${fic('ar')}</button><button class="fb" data-c="ac" title="מירכוז (Center)">${fic('ac')}</button><button class="fb" data-c="al" title="יישור לשמאל (Align Left)">${fic('al')}</button><button class="fb wide" data-c="wrap" title="גלישת טקסט (Wrap Text)">${fic('wrap')} גלישת טקסט</button></div>
           <div class="fr"><span class="fdd"><button class="fb wide" data-c="merge" title="מיזוג ומירכוז (Merge &amp; Center)">${fic('merge')} מיזוג ומירכוז</button><button class="fb" data-m="mg" title="אפשרויות מיזוג">▾</button><div class="fmenu" data-menu="mg"><button data-mg="mc">⇔ מיזוג ומירכוז</button><button data-mg="un">✕ ביטול מיזוג תאים</button></div></span></div><small>יישור</small></div>
         <div class="fg"><div class="fr"><select class="fnf" title="תבנית מספר (Number Format)">${FS_CATS.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join('')}</select></div>
           <div class="fr"><button class="fb" data-c="cur" title="תבנית מטבע (Currency) ₪">₪</button><button class="fb" data-c="pct" title="סגנון אחוז (Percent Style)">%</button><button class="fb" data-c="comma" title="סגנון פסיק, מפריד אלפים (Comma Style)">,000</button><button class="fb" data-c="decup" title="הוספת ספרה עשרונית (Increase Decimal)">.0←.00</button><button class="fb" data-c="decdn" title="הסרת ספרה עשרונית (Decrease Decimal)">.00→.0</button></div><small>מספר</small></div>
@@ -1517,7 +1517,7 @@ class FSheet{
   inSel(r,c){const s=this.ns();return s.r1<=r&&r<=s.r2&&s.c1<=c&&c<=s.c2&&(s.r1!==s.r2||s.c1!==s.c2)&&!(r===this.act.r&&c===this.act.c);}
   fbar(t,colored){const el=this.host.querySelector('.ffv');if(colored)el.innerHTML=colored;else el.textContent=t;el.dir=String(t)[0]==='='?'ltr':'auto';}
   syncRibbon(){if(!this.f.ribbon)return;const a=this.A(this.act.r,this.act.c),st=this.st[a]||{},f=this.fm[a]||{t:'gen'};const h=this.host;
-    h.querySelector('.fnf').value=f.t||'gen';['b','i','u'].forEach(k=>h.querySelector(`[data-c="${k}"]`).classList.toggle('on',!!st[k]));h.querySelector('[data-c="wrap"]').classList.toggle('on',!!st.wrap);
+    h.querySelector('.fnf').value=f.t||'gen';['b','i','u'].forEach(k=>h.querySelector(`[data-c="${k}"]`).classList.toggle('on',!!st[k]));h.querySelector('[data-c="wrap"]').classList.toggle('on',!!st.wrap);['r','c','l'].forEach(z=>h.querySelector(`[data-c="a${z}"]`).classList.toggle('on',st.al===z));
     h.querySelector('[data-c="merge"]').classList.toggle('on',!!this.mergeAt(this.act.r,this.act.c));h.querySelector('[data-c="painter"]').classList.toggle('on',!!this.painter);h.querySelector('.fsize').value=st.size||11;
     const fz=h.querySelector('.fgridc');if(fz)fz.checked=this.grid;}
   cellRect(r,c){const m=this.mergeAt(r,c);if(m){r=m.r1;c=m.c1;}const td=this.tbl.querySelector(`td[data-r="${r}"][data-c="${c}"]`);if(!td)return{x:0,y:0,w:0,h:0};return{x:td.offsetLeft,y:td.offsetTop,w:td.offsetWidth,h:td.offsetHeight};}
@@ -1937,7 +1937,7 @@ const NOTES={
  's-rsheet':['חימום בגיליון. התשובה =C2*(1+D2), גרירה עד E5.','להדגיש: כאן אין $, כי לכל פריט שיעור משלו. נחזור לזה בחלק ג.'],
  's-sec2':['הסיפור מהמחברת: דוח גולמי ושבעה אנשים עם בקשות.'],
  's-golden':['זה השקף הכי חשוב בחלק ב. בכל כלי עיצוב לשאול: מה רואים בשורת הנוסחאות?','לנסות % על 4000: יוצא 400000%. צחוק טוב, ומוביל לשקף האחוזים.'],
- 's-bold':['קליק על מספר השורה מסמן שורה שלמה. Ctrl+B.'],
+ 's-bold':['קליק על מספר השורה מסמן שורה שלמה. Ctrl+B.','בגיליון עברי מספרים מיושרים לשמאל (בדקתי ב-Excel). יישור לימין בקבוצת יישור משנה רק את המראה.'],
  's-wrap':['שתי דרכים: כפתור, ועיצוב תאים ← יישור. בבחינה שאלו על ״הדרך היחידה״: שגוי.'],
  's-alt':['Alt שמאלי. במק Option+Return. Excel מפעיל לבד גלישת טקסט בתא.'],
  's-wvsa':['טבלת השוואה ושתי טענות אמיתיות מהבחינות.'],
@@ -2110,7 +2110,8 @@ fsTask('s-golden',{c0:'A',r0:1,start:[1,1],colW:[90,110,110],rows:[['','מחיר
 fsTask('s-bold',{c0:'A',r0:1,start:[1,1],colW:OW,rows:ORD},[
  {k:'s',h:`סמנו את שורה 1 (קליק על המספר 1)`,test:(t,i)=>t==='select'&&i.kind==='row'&&i.sel.r1===0,msg:'✅ כל השורה מסומנת. בתיבת השם: 1:1.'},
  {k:'b',h:`הדגישו: B, או Ctrl+B (במק Cmd+B)`,test:(t,i,x)=>t==='style'&&i.k==='b'&&i.v&&i.sel.r1===0,msg:'✅ מודגש.'},
- {k:'f',h:`צבע מילוי 🪣 לשורת הכותרות`,test:(t,i)=>t==='style'&&i.k==='bg'&&i.v&&i.sel.r1===0,msg:'✅ תמיר מרוצה. ושימו לב: אף ערך לא השתנה.'}],{idle:'קודם מסמנים, אחר כך מעצבים.'});
+ {k:'f',h:`צבע מילוי 🪣 לשורת הכותרות`,test:(t,i)=>t==='style'&&i.k==='bg'&&i.v&&i.sel.r1===0,msg:'✅ הכותרת בולטת. ושימו לב: אף ערך לא השתנה.'},
+ {k:'r',h:`סמנו את המחירים E2:E6 ← בית ← יישור לימין (בקבוצת יישור)`,test:(t,i,x)=>t==='style'&&i.k==='al'&&i.v==='r'&&selHas(i,'E2',x)&&selHas(i,'E6',x),msg:'✅ המחירים עברו לימין. בגיליון בפריסה עברית Excel מיישר מספרים לשמאל כברירת מחדל, ו״יישור לימין״ משנה רק את המראה.'}],{idle:'קודם מסמנים, אחר כך מעצבים.'});
 
 /* wrap */
 fsTask('s-wrap',{c0:'A',r0:1,start:[0,4],colW:OW,rows:ORD,st:HEAD},[
