@@ -78,6 +78,13 @@ h2.sec:before{content:"";width:34px;height:5px;border-radius:5px;background:var(
 .rec h4{font-size:18px;margin-bottom:10px;color:var(--navy2)}
 .recbox{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0c1426}
 .recbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rechead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rechead .dot{width:12px;height:12px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 5px rgba(255,59,48,.15);flex:none}
+.rechead b{font-size:19px;color:var(--navy2)}
+.rechead span{color:var(--mut);font-size:15px}
+.rechead a{margin-right:auto;font-size:15px;font-weight:700;color:var(--navy2);border:2px solid var(--line);border-radius:999px;padding:5px 14px;transition:border-color .15s}
+.rechead a:hover{border-color:var(--coral)}
+.recbox{box-shadow:0 14px 34px rgba(15,27,51,.18)}
 .recph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#b8c6e8;padding:20px}
 .recph div{max-width:420px}
 .recph .big{font-size:46px}
@@ -196,6 +203,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
         </div>
       </div>
       <div class="rec" id="recording-1">
+        <div class="rechead" id="rechead1"><i class="dot"></i><b>הקלטת מפגש 1</b><span>25.10.2026</span><a href="https://youtu.be/CetjhD1_33E" target="_blank" rel="noopener">▶ לצפייה ב-YouTube</a></div>
         <div class="recbox" id="recbox1">
           <div class="recph"><div><div class="big">🎥</div><b>ההקלטה תתווסף כאן</b>הקישור להקלטת מפגש 1 יוזן בקרוב.</div></div>
         </div>
@@ -255,8 +263,9 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
         </div>
       </div>
       <div class="rec" id="recording-2">
+        <div class="rechead" id="rechead2"><i class="dot"></i><b>הקלטת מפגש 2</b><span>8.11.2026</span><a href="https://youtu.be/F_bhzU-R5yE" target="_blank" rel="noopener">▶ לצפייה ב-YouTube</a></div>
         <div class="recbox" id="recbox2">
-          <div class="recph"><div><div class="big">🎥</div><b>ההקלטה תתווסף כאן</b>הקישור להקלטת מפגש 2 יוזן אחרי המפגש.</div></div>
+          <div class="recph"><div><div class="big">🎥</div><b>ההקלטה תתווסף כאן</b>ההקלטה נטענת.</div></div>
         </div>
       </div>
     </article>
@@ -283,7 +292,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
 /* הקלטות: מזינים כאן את הקישור לכל שיעור. נתמכים קישורי YouTube, Vimeo, Google Drive וקישור הטמעה ישיר. */
 var RECORDINGS = {
   "recbox1": "https://youtu.be/CetjhD1_33E",  // הקלטת מפגש 1, 25.10.2026
-  "recbox2": ""                               // הקלטת מפגש 2, 8.11.2026
+  "recbox2": "https://youtu.be/F_bhzU-R5yE"   // הקלטת מפגש 2, 8.11.2026
 };
 function toEmbed(u){
   try{
