@@ -786,7 +786,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 <section class="slide light" id="s-bold" data-title="תמיר: כותרת שבולטת" data-part="b" style="padding:30px 44px 46px">
   <div class="big" style="font-size:40px"><span class="who">🧔 תמיר</span> ״אני לא מבין איפה הכותרת נגמרת והנתונים מתחילים״</div>
-  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br>הכפתור <b>B</b> מדגיש (או <span class="ltr"><span class="kbd">Ctrl</span>+<span class="kbd">B</span></span>, במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">B</span></span>), ו<b>צבע מילוי</b> 🪣 צובע את הרקע.<br>בקבוצת <b>יישור</b>: יישור לימין, למרכז או לשמאל. בגיליון עברי Excel מיישר טקסט לימין ומספרים לשמאל. אפשר לשנות את היישור, והוא משנה רק את המראה.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
+  <div class="tg3"><div class="tcolR"><div class="rule"><small>כרטיסיית בית · קבוצת גופן</small><b>קודם מסמנים, אחר כך מעצבים</b><span>קליק על <b>מספר השורה</b> 1 מסמן את כל שורת הכותרות.<br>הכפתור <b>B</b> מדגיש (או <span class="ltr"><span class="kbd">Ctrl</span>+<span class="kbd">B</span></span>, במק <span class="ltr"><span class="kbd">Cmd</span>+<span class="kbd">B</span></span>), ו<b>צבע מילוי</b> 🪣 צובע את הרקע.<br>בקבוצת <b>יישור</b>: יישור לימין, למרכז או לשמאל. בגיליון עברי Excel מיישר לימין גם טקסט עברי וגם מספרים, וטקסט באנגלית לשמאל. אפשר לשנות את היישור, והוא משנה רק את המראה.</span></div><ol class="tasks" id="s-bold-tasks"></ol><div class="msmsg" id="s-bold-msg"></div></div>
   <div class="tsheet"><div id="s-bold-sheet"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" data-reset="1">↺ מהתחלה</button></div></div></div>
   <div class="tagc g">עיצוב ערכים · גופן ומילוי</div>
 </section>
@@ -1505,7 +1505,7 @@ class FSheet{
         let txt=this.disp(a);const wrap=!!st.wrap||(typeof v==='string'&&v.includes('\n')&&st.wrap!==false);
         const nb=c+1<this.nc&&!this.mergeAt(r,c+1)&&(this.cells[this.A(r,c+1)]===undefined);
         const ov=!isN&&!wrap&&!m&&txt!==''&&(c+1>=this.nc||nb);
-        let al=st.al||(m?'c':null);const lat=typeof v==='string'&&/^[^\u0590-\u05FFA-Za-z]*[A-Za-z]/.test(v);const ta=al==='c'?'center':al==='l'?'left':al==='r'?'right':(isN||isE||lat?'left':'right');
+        let al=st.al||(m?'c':null);const lat=typeof v==='string'&&/^[^\u0590-\u05FFA-Za-z]*[A-Za-z]/.test(v);const ta=al==='c'?'center':al==='l'?'left':al==='r'?'right':(lat?'left':'right');
         const bd=st.bd||{};const bs=k=>bd[k]?(bd[k]===3?'3px double #000':bd[k]===2?'2.5px solid #000':'1px solid #000'):'';
         const css=[st.bg?'background:'+st.bg:'',bs('t')?'border-top:'+bs('t'):'',bs('b')?'border-bottom:'+bs('b'):'',bs('l')?'border-left:'+bs('l'):'',bs('r')?'border-right:'+bs('r'):''].filter(Boolean).join(';');
         const ccss=[st.b?'font-weight:700':'',st.i?'font-style:italic':'',st.u?'text-decoration:underline':'',st.color?'color:'+st.color:'',st.size?'font-size:'+Math.round(st.size*1.36)+'px':'',st.font==='David'?'font-family:David,"David Libre",serif':st.font==='Calibri'?'font-family:Calibri,Carlito,Arial,sans-serif':'','text-align:'+ta,wrap?'white-space:pre-wrap':'white-space:pre'].filter(Boolean).join(';');
@@ -1940,7 +1940,7 @@ const NOTES={
  's-rsheet':['חימום בגיליון. התשובה =C2*(1+D2), גרירה עד E5.','להדגיש: כאן אין $, כי לכל פריט שיעור משלו. נחזור לזה בחלק ג.'],
  's-sec2':['הסיפור מהמחברת: דוח גולמי ושבעה אנשים עם בקשות.'],
  's-golden':['זה השקף הכי חשוב בחלק ב. בכל כלי עיצוב לשאול: מה רואים בשורת הנוסחאות?','לנסות % על 4000: יוצא 400000%. צחוק טוב, ומוביל לשקף האחוזים.'],
- 's-bold':['קליק על מספר השורה מסמן שורה שלמה. Ctrl+B.','בגיליון עברי מספרים מיושרים לשמאל (בדקתי ב-Excel). יישור לימין בקבוצת יישור משנה רק את המראה.'],
+ 's-bold':['קליק על מספר השורה מסמן שורה שלמה. Ctrl+B.','בגיליון עברי מספרים מיושרים לימין, כמו טקסט עברי (בדקתי ב-Excel). כפתורי היישור משנים רק את המראה.'],
  's-wrap':['שתי דרכים: כפתור, ועיצוב תאים ← יישור. בבחינה שאלו על ״הדרך היחידה״: שגוי.'],
  's-alt':['Alt שמאלי. במק Option+Return. Excel מפעיל לבד גלישת טקסט בתא.'],
  's-wvsa':['טבלת השוואה ושתי טענות אמיתיות מהבחינות.'],
@@ -2117,7 +2117,7 @@ fsTask('s-bold',{c0:'A',r0:1,start:[1,1],colW:OW,rows:ORD},[
  {k:'s',h:`סמנו את שורה 1 (קליק על המספר 1)`,test:(t,i)=>t==='select'&&i.kind==='row'&&i.sel.r1===0,msg:'✅ כל השורה מסומנת. בתיבת השם: 1:1.'},
  {k:'b',h:`הדגישו את השורה: כפתור B, או Ctrl+B (במק Cmd+B)`,test:(t,i,x)=>t==='style'&&i.k==='b'&&i.v&&i.sel.r1===0,msg:'✅ מודגש.'},
  {k:'f',h:`בחרו צבע מילוי 🪣 לשורת הכותרות (השורה עדיין מסומנת)`,test:(t,i)=>t==='style'&&i.k==='bg'&&i.v&&i.sel.r1===0,msg:'✅ הכותרת בולטת. ושימו לב: אף ערך לא השתנה.'},
- {k:'r',h:`סמנו את המחירים E2:E6 ← בית ← יישור לימין (בקבוצת יישור)`,test:(t,i,x)=>t==='style'&&i.k==='al'&&i.v==='r'&&selHas(i,'E2',x)&&selHas(i,'E6',x),msg:'✅ המחירים עברו לימין. בגיליון בפריסה עברית Excel מיישר מספרים לשמאל כברירת מחדל, ו״יישור לימין״ משנה רק את המראה.'}],{idle:'קודם מסמנים, אחר כך מעצבים.'});
+ {k:'r',h:`סמנו את המחירים E2:E6 ← בית ← מירכוז (בקבוצת יישור)`,test:(t,i,x)=>t==='style'&&i.k==='al'&&i.v==='c'&&selHas(i,'E2',x)&&selHas(i,'E6',x),msg:'✅ המחירים עברו למרכז התא. בגיליון בפריסה עברית Excel מיישר מספרים לימין כברירת מחדל, והיישור משנה רק את המראה: הערך לא השתנה.'}],{idle:'קודם מסמנים, אחר כך מעצבים.'});
 
 /* wrap */
 fsTask('s-wrap',{c0:'A',r0:1,start:[0,4],colW:OW,rows:ORD,st:HEAD},[
