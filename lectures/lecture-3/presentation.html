@@ -642,9 +642,26 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .fs .ffm .fmlist{margin:2px 10px;max-height:160px;overflow:auto;border:1px solid #e1e4e1;border-radius:4px;padding:4px 6px}
 .fs .ffm .fmlist label{display:flex;gap:6px;align-items:center;padding:1px 0;cursor:pointer}
 .fs .ffm .fmf{display:flex;gap:8px;justify-content:flex-start;padding:6px 10px 2px}.fs .ffm .fmf button{padding:3px 16px;border-radius:5px;border:1px solid #b9c0b9;background:#fff;font-size:13px}.fs .ffm .fmf .ok{background:#217346;color:#fff;border-color:#217346}
-.fs .fsdtop{display:flex;gap:6px;align-items:center;padding:8px 14px 4px;flex-wrap:wrap}.fs .fsdtop button{padding:3px 10px;border:1px solid #c6cdc6;border-radius:5px;background:#fff;font-size:13px}.fs .fsdtop .fchk{margin-inline-start:auto}
-.fs .fsdt{width:calc(100% - 28px);margin:4px 14px;border-collapse:collapse;font-size:13.5px}.fs .fsdt th{font-weight:700;color:#555;text-align:right;padding:4px;border-bottom:1px solid #ddd;font-size:12.5px}.fs .fsdt td{padding:4px}.fs .fsdt tr.on td{background:#e3f1e8}.fs .fsdt select{width:100%}
-.fs .fserr{color:#c62828;font-size:13px;padding:2px 16px;min-height:18px}
+.fs .fdlg.fsdlg{background:#f0f0f0;border-radius:8px;border:1px solid #8a8a8a;font-size:13.5px;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.fs .fsdlg .fdt{background:#fff;display:flex;align-items:center;gap:8px;padding:8px 14px;font-weight:600;border-bottom:1px solid #e1e1e1}
+.fs .fsdlg .fdx{margin-inline-start:auto;font-size:20px;line-height:1;color:#444;padding:0 6px;border-radius:4px}.fs .fsdlg .fdx:hover{background:#e81123;color:#fff}
+.fs .fsdtop{display:flex;gap:5px;align-items:center;padding:10px 12px 8px;flex-wrap:nowrap}
+.fs .fsdtop button{padding:3px 9px;border:1px solid #adadad;border-radius:3px;background:#e1e1e1;font-size:13px;white-space:nowrap;line-height:1.5}
+.fs .fsdtop button:hover{background:#e5f1fb;border-color:#0078d7}
+.fs .fsdtop .pl{color:#217346}.fs .fsdtop .mi{color:#c62828}
+.fs .fsdtop .fchk{margin-inline-start:auto;white-space:nowrap;font-size:13px}
+.fs .fsdbox{margin:0 12px;background:#fff;border:1px solid #7a7a7a;min-height:132px}
+.fs .fsdt{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+.fs .fsdt th{font-weight:400;color:#222;text-align:right;padding:4px 8px;border-bottom:1px solid #d0d0d0;border-inline-start:1px solid #e3e3e3;background:#fff;font-size:13px}
+.fs .fsdt th:first-child{border-inline-start:0}.fs .fsdt th:nth-child(2){width:128px}.fs .fsdt th:nth-child(3){width:212px}
+.fs .fsdt td{padding:5px 6px}.fs .fsdt td.lb{width:98px;white-space:nowrap;padding-inline-start:10px}
+.fs .fsdt tr.on td{background:#cce8ff}
+.fs .fsdt select{width:100%;font:inherit;font-size:13.5px;padding:2px 4px;border:1px solid #adadad;border-radius:2px;background:#fff;color:#111}
+.fs .fserr{color:#c62828;font-size:13px;padding:4px 14px;min-height:22px;line-height:1.4}.fs .fserr .fsnote{color:#333}
+.fs .fsdlg .fdf{background:#f0f0f0;border-top:0;justify-content:flex-end;padding:4px 12px 12px}
+.fs .fsdlg .fdf button{background:#e1e1e1;border:1px solid #adadad;border-radius:3px;font-weight:400;color:#111;min-width:86px;padding:4px 14px}
+.fs .fsdlg .fdf .ok{border:2px solid #0078d7;background:#e1e1e1;color:#111}
+.fs .fsdlg .fdf button:hover{background:#e5f1fb}
 .fs .fmenu hr{border:0;border-top:1px solid #e3e6e3;margin:3px 0}
 .fs .fmenu button .fi{vertical-align:-3px}
 
@@ -767,6 +784,63 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .qtab .fs{margin:0}
 .qcl .claims{margin-top:0}
 .qslide.wide .opt{font-size:17px}
+/* two-level animation: numbers sit under their header */
+.lvr span:last-child,.lvh span:last-child{text-align:right;font-weight:700}
+.lvr span.ltr{direction:rtl;unicode-bidi:normal}
+/* ---------- SortStory ---------- */
+#stov{position:fixed;inset:0;background:rgba(5,8,15,.66);z-index:86;display:none;align-items:center;justify-content:center}
+#stov.open{display:flex}
+#stov .stbox{background:var(--paper);border-radius:22px;padding:16px 22px 18px;flex:none;box-shadow:0 30px 80px rgba(0,0,0,.5);direction:rtl}
+#stov .sthead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+#stov .sthead b{font-size:22px}#stov .sthead span{font-size:15.5px;color:var(--mut);max-width:760px;line-height:1.4}
+#stov #stx{margin-right:auto;font-size:30px;color:var(--mut)}
+.ss{display:grid;grid-template-columns:660px max-content;gap:24px;align-items:start}
+.ssteps{display:flex;gap:6px;flex-wrap:wrap}
+.sst{display:flex;align-items:center;gap:6px;padding:6px 12px 6px 10px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-size:15px;font-weight:700;color:var(--mut)}
+.sst i{font-style:normal;width:22px;height:22px;border-radius:50%;background:#e9edf3;display:flex;align-items:center;justify-content:center;font-size:13px}
+.sst.past{color:var(--ink)}.sst.past i{background:#cfe9d9;color:#185c37}
+.sst.on{background:var(--xl);color:#fff;box-shadow:none}.sst.on i{background:rgba(255,255,255,.25);color:#fff}
+.sssay{margin-top:10px;background:#fff;border-radius:14px;padding:12px 16px;font-size:17.5px;line-height:1.55;min-height:138px;box-shadow:0 2px 0 var(--line);border-right:6px solid var(--xl)}
+.sssay b.T{color:var(--ok)}.sssay b.F{color:var(--bad)}
+.ssdl{display:block!important;position:relative;margin-top:12px;min-height:262px;border:0!important;box-shadow:none!important;background:transparent!important;width:100%}
+.ssdl .fdlg{position:static!important;transform:none!important;display:none;width:100%!important;box-shadow:0 10px 30px rgba(0,0,0,.25)!important}
+.ssdl.open .fdlg{display:block;animation:ssin .35s ease-out}
+.ssdl .ssdlph{position:absolute;inset:0;border:2px dashed #c9d1dc;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:16px}
+.ssdl.open .ssdlph{display:none}
+.ssdl .fdlg *{pointer-events:none}
+.ssdl .fsdt tr.fresh td{animation:ssfl 1.4s ease-out 2}
+.ssdl .pls{animation:sspl 1s ease-in-out 3;border-color:#0078d7!important}
+@keyframes ssin{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+@keyframes ssfl{0%{background:#ffe08a}100%{background:#cce8ff}}
+@keyframes sspl{0%,100%{box-shadow:0 0 0 0 rgba(0,120,215,.0)}50%{box-shadow:0 0 0 5px rgba(0,120,215,.35)}}
+.ssnav{display:flex;gap:10px;margin-top:12px;align-items:center}.ssnav .sstry{margin-right:auto}.ssnav button:disabled{opacity:.4}
+.ssx{background:#fff;border-radius:10px;border:1px solid #c9cfc9;box-shadow:0 12px 30px rgba(22,33,58,.14);overflow:hidden;font-family:'Segoe UI',Arial,'Heebo',sans-serif}
+.ssxt{display:flex;align-items:center;background:#185c37;color:#fff;padding:5px 12px;font-size:13px}.ssxt b{flex:1;text-align:center;font-weight:600}.ssxt .d{letter-spacing:3px;opacity:.7;font-size:9px}
+.ssxr{display:flex;gap:2px;background:#f3f3f3;padding:4px 8px 0;border-bottom:1px solid #dcdcdc;font-size:13px}.ssxr span{padding:3px 12px;color:#444}.ssxr span.on{color:#185c37;font-weight:700;box-shadow:inset 0 -3px 0 #217346}
+.ssxb{display:flex;gap:8px;align-items:center;padding:6px 12px;background:#f9f9f9;border-bottom:1px solid #dcdcdc;font-size:12.5px;color:#333}
+.ssxb .sb{padding:3px 8px;border-radius:5px;border:1px solid transparent}.ssxb .sb.big{font-size:14px;font-weight:700}
+.ssx.ribon .srt{background:#cfe9d9;border-color:#217346;animation:sspl 1s ease-in-out 3}
+.ssg{margin:0;direction:rtl;font-size:18px;color:#111}
+.ssh{display:grid;background:#e8e8e8;border-bottom:1px solid #c6c6c6;font-size:12.5px;color:#444;text-align:center}.ssh span{border-left:1px solid #cfcfcf;padding:2px 0}
+.ssb{position:relative}
+.ssn{position:absolute;right:0;width:30px;display:flex;align-items:center;justify-content:center;background:#e8e8e8;border-bottom:1px solid #cfcfcf;border-left:1px solid #c6c6c6;font-size:12.5px;color:#444;box-sizing:border-box}
+.ssrow{position:absolute;top:0;right:30px;display:grid;align-items:stretch;transition:transform 1s cubic-bezier(.3,1.05,.4,1),opacity .4s;background:#fff;box-sizing:border-box}
+.ssrow span{border-left:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;padding:0 10px;display:flex;align-items:center;justify-content:flex-start;white-space:nowrap;overflow:hidden;box-sizing:border-box;transition:background .5s}
+.ssrow.sshd{transform:none;font-weight:700;z-index:2}.ssrow.sshd span{background:#ddebf7;white-space:normal;line-height:1.15;font-size:15.5px}
+.ssrow.tie span.k1{background:var(--gc);font-weight:700}
+.ssrow.tie span:first-child{box-shadow:inset -5px 0 0 var(--gc)}
+.ssrow.k2on span.k2{background:color-mix(in srgb,var(--gc) 45%,#fff);font-weight:700}
+.ssrow.gtop span{border-top:2px solid #6b7280}
+.ssrow.hl{z-index:3}.ssrow.hl span{background:#fff3c4;font-weight:800;border-top:2px solid #e0a100;border-bottom:2px solid #e0a100}
+.ssrow.hl.tie span.k1,.ssrow.hl.k2on span.k2{background:var(--gc)}
+.ssrow.dim{opacity:.55}
+.sssel{position:absolute;right:30px;border:2px solid #217346;background:rgba(33,115,70,.07);pointer-events:none;box-sizing:border-box;z-index:4}
+.ssleg{margin-top:10px;font-size:15px;color:var(--mut);min-height:26px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ssleg span{background:var(--gc);color:#111;border-radius:999px;padding:1px 12px;font-weight:700}
+.solp .stbtns{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:16.5px;font-weight:700}
+.solp .stbtns button{padding:6px 14px;border-radius:999px;background:var(--xl);color:#fff;font-weight:800;font-size:15.5px}
+.solp .stbtns button:hover{filter:brightness(1.1)}
+@media print{#stov{display:none!important}.solp .stbtns{display:none}}
 
 </style>
 </head>
@@ -963,7 +1037,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   <div class="steps4">
     <div class="s4 st"><i>1</i><b>טענה אחת בכל פעם</b><span>נכונה או שגויה, עם נימוק בשורה אחת. רק אחר כך מסתכלים על האפשרויות.</span></div>
     <div class="s4 st"><i>2</i><b>מי לפני מי?</b><span>קודם המשתנה הראשי. רק אם יש שוויון, המשני, ובכיוון שלו.</span></div>
-    <div class="s4 st"><i>3</i><b>🧪 הטבלה חיה</b><span>בכל טבלה בשאלה יש חיצי סינון. מותר ורצוי למיין ולסנן בה. בכפתור 🧪 נפתח גיליון מלא עם חלון המיון.</span></div>
+    <div class="s4 st"><i>3</i><b>🧪 הטבלה חיה, 🎬 והפתרון מונפש</b><span>בכפתור 🧪 נפתח גיליון מלא: מסמנים את הטבלה, נתונים ← מיון, ובונים את הרמות בחלון המיון. בפתרון של שאלות המיון יש 🎬 הדגמה, שלב אחרי שלב.</span></div>
     <div class="s4 st"><i>4</i><b>📝 מקור</b><span>שאלות שמסומנות ״מבחן״ לקוחות מבחינות 2026, בשינויים קלים.</span></div>
   </div>
   <div class="tagc y">חלק ד</div>
@@ -1011,6 +1085,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 
 <div id="labov"><div class="labbox"><div class="labhead"><b id="labtitle">גיליון לניסוי</b><span id="labhint"></span><button id="labx" aria-label="סגירה">×</button></div><div id="labmsg" class="msmsg"></div><div id="labhost"></div><div class="ctrl" style="margin-top:8px"><button class="btn o" id="labreset">↺ מהתחלה</button></div></div></div>
+<div id="stov"><div class="stbox"><div class="sthead"><b id="sttitle">הדגמה</b><span id="stsub"></span><button id="stx" aria-label="סגירה">×</button></div><div id="sthost"></div></div></div>
 <script>
 
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -1672,6 +1747,7 @@ class FSheet{
     if(k==='Enter'||k==='Tab'){e.preventDefault();e.stopPropagation();this.arrow(k==='Enter'?[e.shiftKey?-1:1,0]:[0,e.shiftKey?-1:1],false);return;}
     if(k==='Escape'){if(this.painter){e.stopPropagation();this.painterOff();this.say('מברשת העיצוב כובתה.');}return;}
     if(mod&&(k==='z'||k==='Z')){e.preventDefault();e.stopPropagation();this.undo();return;}
+    if(mod&&!e.shiftKey&&(k==='a'||k==='A')){e.preventDefault();e.stopPropagation();const R=this.region(this.act.r,this.act.c);this.sel={r1:R.r1,c1:R.c1,r2:R.r2,c2:R.c2};this.kind='cells';this.render();this.status();this.emit('select',{kind:'region',sel:this.ns()});return;}
     if(mod&&e.shiftKey&&(k==='l'||k==='L'||k==='f'||k==='F')){e.preventDefault();e.stopPropagation();this.dataCmd('flt','key');return;}
     if(mod&&k==='1'){e.preventDefault();e.stopPropagation();this.openDlg();return;}
     if(mod&&/^[biuBIU]$/.test(k)){e.preventDefault();e.stopPropagation();this.cmd(k.toLowerCase(),'key');return;}
@@ -1787,23 +1863,40 @@ Object.assign(FSheet.prototype,{
       else{const R2={r1:S.r1,r2:S.r2,c1:S.c1,c2:S.c2};const hdr=S.r1===R.r1&&this.hasHdr(R);this.doSort(R2,hdr,[{c:S.c1,asc}],via,'selection');}};
     d.querySelector('.no').onclick=()=>{d.style.display='none';this.host.focus({preventScroll:true});this.emit('sortcancel',{});};},
   msgDlg(t,html){const d=this.dlg;d.style.width='420px';d.style.display='block';d.innerHTML=`<div class="fdt">${t}</div><div class="fdb2">${html}</div><div class="fdf"><button class="ok">אישור</button></div>`;d.querySelector('.ok').onclick=()=>{d.style.display='none';this.host.focus({preventScroll:true});};},
-  sortDlg(via){const R=this.af||this.region(this.act.r,this.act.c);if(R.r1===R.r2&&!this.filled(R.r1,R.c1)){this.say('לחצו קודם על תא בתוך הטבלה.');return;}
-    let hdr=this.hasHdr(R);const L=[{c:null,asc:true}];const d=this.dlg;d.style.width='600px';d.style.display='block';this.emit('sortdlg',{});
-    const paint=(err)=>{const cols=[];for(let c=R.c1;c<=R.c2;c++)cols.push(c);
-      d.innerHTML=`<div class="fdt">מיון <small>Sort</small></div><div class="fsdtop"><button class="fsa">+ הוסף רמה</button><button class="fsd">− מחק רמה</button><button class="fsc2">⧉ העתק רמה</button><label class="fchk"><input type="checkbox" class="fsh" ${hdr?'checked':''}> הנתונים שלי מכילים כותרות</label></div>
-      <table class="fsdt"><tr><th></th><th>עמודה</th><th>מיין על בסיס</th><th>סדר</th></tr>${L.map((l,i)=>{const num=l.c!==null&&this.colNum(l.c,R,hdr);return `<tr data-i="${i}" class="${i===this.sdSel?'on':''}"><td>${i?'לאחר מכן לפי':'מיין לפי'}</td><td><select class="fsc"><option value="">${'&nbsp;'}</option>${cols.map(c=>`<option value="${c}" ${l.c===c?'selected':''}>${esc(this.colName(c,R,hdr))}</option>`).join('')}</select></td><td>ערכי תאים</td><td><select class="fso"><option value="1" ${l.asc?'selected':''}>${num?'מהקטן לגדול':'א עד ת'}</option><option value="0" ${!l.asc?'selected':''}>${num?'מהגדול לקטן':'ת עד א'}</option></select></td></tr>`;}).join('')}</table>
-      <div class="fserr">${err||''}</div><div class="fdf"><button class="ok">אישור</button><button class="no">ביטול</button></div>`;
+  sortDlg(via){let R=this.af||this.region(this.act.r,this.act.c);if(R.r1===R.r2&&!this.filled(R.r1,R.c1)){this.say('לחצו קודם על תא בתוך הטבלה.');return;}
+    const s=this.ns(),multi=this.kind==='col'||s.r1!==s.r2||s.c1!==s.c2;
+    if(multi&&!this.af){const sc1=Math.max(s.c1,R.c1),sc2=Math.min(s.c2,R.c2);
+      if(sc1<=sc2&&(sc1>R.c1||sc2<R.c2)){const S={r1:Math.max(R.r1,s.r1),r2:Math.min(R.r2,s.r2),c1:sc1,c2:sc2};this.sortWarnDlg(R,S,via);return;}}
+    this.sortDlgOn(R,via);},
+  sortWarnDlg(R,S,via){const d=this.dlg;d.className='fdlg';d.style.width='470px';d.style.display='block';
+    d.innerHTML=`<div class="fdt">אזהרת מיון <small>Sort Warning</small></div><div class="fdb2">Excel מצא נתונים לצד הבחירה שלכם. הנתונים האלה לא ימוינו.<div class="fgt" style="margin-top:8px">מה ברצונכם לעשות?</div><label class="fchk"><input type="radio" name="sw" value="x" checked> הרחב את הבחירה <small>(Expand the selection)</small></label><label class="fchk"><input type="radio" name="sw" value="c"> המשך עם הבחירה הנוכחית <small>(Continue with the current selection)</small></label></div><div class="fdf"><button class="ok">מיון...</button><button class="no">ביטול</button></div>`;
+    this.emit('sortwarn',{});
+    d.querySelector('.ok').onclick=()=>{const ex=d.querySelector('input[value=x]').checked;d.style.display='none';this.emit('sortchoice',{expand:ex});this.sortDlgOn(ex?R:S,via,ex?'region':'selection',ex?null:(S.r1===R.r1));};
+    d.querySelector('.no').onclick=()=>{d.style.display='none';this.host.focus({preventScroll:true});this.emit('sortcancel',{});};},
+  sortDlgOn(R,via,scope,hdrForce){
+    let hdr=hdrForce===false?false:this.hasHdr(R);const L=[{c:null,asc:true}];const d=this.dlg;d.className='fdlg fsdlg';d.style.width='640px';d.style.display='block';
+    const mark=()=>{this.sel={r1:Math.min(R.r2,R.r1+(hdr?1:0)),c1:R.c1,r2:R.r2,c2:R.c2};this.kind='cells';if(this.act.r<this.sel.r1||this.act.r>R.r2||this.act.c<R.c1||this.act.c>R.c2)this.act={r:this.sel.r1,c:R.c1};this.render();this.status();};
+    mark();this.emit('sortdlg',{});
+    const close=()=>{d.style.display='none';d.className='fdlg';this.host.focus({preventScroll:true});};
+    const paint=(err,note)=>{const cols=[];for(let c=R.c1;c<=R.c2;c++)cols.push(c);
+      d.innerHTML=sortDlgHTML(L.map(l=>({c:l.c,asc:l.asc,num:l.c!==null&&this.colNum(l.c,R,hdr)})),cols.map(c=>[c,this.colName(c,R,hdr)]),{hdr,sel:this.sdSel,err,note});
       bidiFix(d);
       d.querySelectorAll('tr[data-i]').forEach(tr=>{const i=+tr.dataset.i;tr.addEventListener('pointerdown',()=>{this.sdSel=i;d.querySelectorAll('tr[data-i]').forEach(x=>x.classList.toggle('on',x===tr));});
-        tr.querySelector('.fsc').onchange=e=>{L[i].c=e.target.value===''?null:+e.target.value;paint();this.emit('sortlevel',{i,c:L[i].c});};
+        tr.querySelector('.fsc').onchange=e=>{L[i].c=e.target.value===''?null:+e.target.value;this.sdSel=i;paint();this.emit('sortlevel',{i,c:L[i].c});};
+        tr.querySelector('.fson').onchange=()=>{this.sdSel=i;paint('',' במפגש הזה ממיינים לפי <b>ערכי תאים</b>. מיון לפי צבע תא, צבע גופן או סמל הוא מחוץ לחומר.');};
         tr.querySelector('.fso').onchange=e=>{L[i].asc=e.target.value==='1';this.emit('sortlevel',{i,asc:L[i].asc});};});
       d.querySelector('.fsa').onclick=()=>{L.push({c:null,asc:true});this.sdSel=L.length-1;paint();this.emit('addlevel',{n:L.length});};
-      d.querySelector('.fsc2').onclick=()=>{const i=this.sdSel||0;L.splice(i+1,0,Object.assign({},L[i]));paint();};
-      d.querySelector('.fsd').onclick=()=>{if(L.length>1){L.splice(this.sdSel||L.length-1,1);this.sdSel=0;paint();}};
-      d.querySelector('.fsh').onchange=e=>{hdr=e.target.checked;paint();};
-      d.querySelector('.ok').onclick=()=>{if(L.some(l=>l.c===null)){paint('חסר שם עמודה (Missing column name). בחרו עמודה בכל רמה, או מחקו רמה ריקה.');return;}
-        d.style.display='none';this.doSort(R,hdr,L.map(l=>({c:l.c,asc:l.asc})),'dialog');};
-      d.querySelector('.no').onclick=()=>{d.style.display='none';this.host.focus({preventScroll:true});};};
+      d.querySelector('.fsc2').onclick=()=>{const i=this.sdSel||0;L.splice(i+1,0,Object.assign({},L[i]));this.sdSel=i+1;paint();this.emit('addlevel',{n:L.length,copy:true});};
+      d.querySelector('.fsd').onclick=()=>{if(!L.length)return;const i=Math.min(this.sdSel||0,L.length-1);L.splice(i,1);if(!L.length)L.push({c:null,asc:true});this.sdSel=Math.max(0,Math.min(i,L.length-1));paint();this.emit('dellevel',{n:L.length});};
+      const mv=k=>{const i=this.sdSel||0,j=i+k;if(j<0||j>=L.length)return;[L[i],L[j]]=[L[j],L[i]];this.sdSel=j;paint();this.emit('movelevel',{from:i,to:j});};
+      d.querySelector('.fsu').onclick=()=>mv(-1);d.querySelector('.fsdn').onclick=()=>mv(1);
+      d.querySelector('.fsop').onclick=()=>paint('','<b>אפשרויות מיון:</b> ברירת המחדל היא מיון מלמעלה למטה (ממיינים שורות), בלי הבחנה בין אותיות גדולות לקטנות באנגלית. במפגש הזה לא משנים אותה.');
+      d.querySelector('.fsh').onchange=e=>{hdr=e.target.checked;mark();paint();this.emit('sorthdr',{hdr});};
+      d.querySelector('.ok').onclick=()=>{if(L.some(l=>l.c===null)){paint('לכל קריטריוני המיון חייבים להיות עמודה או שורה מוגדרים. בחרו עמודה בכל רמה, או מחקו את הרמה הריקה.');return;}
+        const seen=new Set();for(const l of L){if(seen.has(l.c)){paint(`העמודה ״${esc(this.colName(l.c,R,hdr))}״ ממוינת לפי ערכים יותר מפעם אחת. מחקו את הקריטריון הכפול.`);return;}seen.add(l.c);}
+        close();this.doSort(R,hdr,L.map(l=>({c:l.c,asc:l.asc})),'dialog',scope);};
+      d.querySelector('.no').onclick=d.querySelector('.fdx').onclick=()=>{close();this.emit('sortcancel',{});};};
+    d.onkeydown=e=>{e.stopPropagation();if(e.key==='Escape'){const n=d.querySelector('.no');if(n)n.click();}};
     this.sdSel=0;paint();},
   /* ---------- filter ---------- */
   dataCmd(k,via){if(this.editing)this.commit();
@@ -1871,6 +1964,87 @@ Object.assign(FSheet.prototype,{
       if(vs.length===all.length&&(bl||!blank)){this.setFlt(c,null);return;}
       this.setFlt(c,{t:'list',vals:vs,blank:bl});};}
 });
+
+function sortDlgHTML(L,cols,o){o=o||{};const dis=o.mock?'tabindex="-1"':'';
+  return `<div class="fdt">מיון <small>Sort</small><button class="fdx" ${dis} aria-label="סגירה">×</button></div>
+  <div class="fsdtop"><button class="fsa ${o.pulse==='add'?'pls':''}" ${dis}><b class="pl">＋</b> הוסף רמה</button><button class="fsd" ${dis}><b class="mi">✕</b> מחק רמה</button><button class="fsc2" ${dis}>⧉ העתק רמה</button><button class="fsu" ${dis} title="הזז למעלה">▲</button><button class="fsdn" ${dis} title="הזז למטה">▼</button><button class="fsop" ${dis}>אפשרויות...</button><label class="fchk"><input type="checkbox" class="fsh" ${o.hdr?'checked':''} ${dis}> הנתונים שלי מכילים כותרות</label></div>
+  <div class="fsdbox"><table class="fsdt"><tr><th colspan="2">עמודה</th><th>מיין לפי</th><th>סדר</th></tr>${L.map((l,i)=>`<tr data-i="${i}" class="${i===o.sel?'on':''} ${o.fresh===i?'fresh':''}"><td class="lb">${i?'לאחר מכן לפי':'מיין לפי'}</td><td><select class="fsc" ${dis}><option value="">&nbsp;</option>${cols.map(c=>`<option value="${c[0]}" ${l.c===c[0]?'selected':''}>${esc(c[1])}</option>`).join('')}</select></td><td><select class="fson" ${dis}><option>ערכי תאים</option><option>צבע תא</option><option>צבע גופן</option><option>סמל עיצוב מותנה</option></select></td><td><select class="fso" ${dis}><option value="1" ${l.asc?'selected':''}>${l.num?'מהקטן ביותר לגדול ביותר':'א עד ת'}</option><option value="0" ${!l.asc?'selected':''}>${l.num?'מהגדול ביותר לקטן ביותר':'ת עד א'}</option></select></td></tr>`).join('')}</table></div>
+  <div class="fserr">${o.err||''}<span class="fsnote">${o.note||''}</span></div><div class="fdf"><button class="ok ${o.pulse==='ok'?'pls':''}" ${dis}>אישור</button><button class="no" ${dis}>ביטול</button></div>`;}
+
+/* ================= SortStory: a staged, animated walk through one sort, in an Excel-looking mock =================
+   sortStory(host,{rows:[header,...data], keys:[['C',0],['D',0]], nm:'B', colW:[..], file:'שאלה 1.xlsx', chk:{before|first|last|same}, onTry:fn}) */
+const SS_COL=['#ffe08a','#a8e0b8','#b9d2fb','#f9c2a2','#d9c4f1','#f7c6dc','#bfe8ea','#e3e09a'];
+function sortStory(host,o){
+  const ci=L=>L.charCodeAt(0)-65,H=o.rows[0],data=o.rows.slice(1).map((r,i)=>({id:i,v:r})),nmC=ci(o.nm||'A');
+  const val=(r,c)=>{const x=r.v[c];return x===''||x===undefined?null:x;};
+  const cmp=FSheet.prototype.cmpV;
+  const srt=keys=>data.slice().sort((a,b)=>{for(const [L,asc] of keys){const d=cmp(val(a,ci(L)),val(b,ci(L)),!!asc);if(d)return d;}return a.id-b.id;});
+  const K=o.keys,k1=ci(K[0][0]),k2=K[1]?ci(K[1][0]):null;
+  const isNum=c=>data.filter(r=>typeof val(r,c)==='number').length>data.length/2;
+  const dirL=(c,asc)=>isNum(c)?(asc?'מהקטן ביותר לגדול ביותר':'מהגדול ביותר לקטן ביותר'):(asc?'א עד ת':'ת עד א');
+  const hn=c=>String(H[c]).replace(/\n/g,' ');
+  const ord0=data.slice(),ord1=srt([K[0]]),ord2=K[1]?srt(K):ord1,fin=ord2;
+  /* tie groups in the primary key */
+  const cnt=new Map();data.forEach(r=>{const k=String(val(r,k1));cnt.set(k,(cnt.get(k)||0)+1);});
+  const gcol=new Map();ord1.forEach(r=>{const k=String(val(r,k1));if(cnt.get(k)>1&&!gcol.has(k))gcol.set(k,SS_COL[gcol.size%SS_COL.length]);});
+  const ties=[...gcol.keys()];
+  const names=a=>a.map(r=>val(r,nmC)).join(', ');
+  const moved2=ord2.filter((r,i)=>ord1[i]!==r);
+  const rowOf=n=>fin.findIndex(r=>val(r,nmC)===n)+2;
+  const lastCol=String.fromCharCode(65+H.length-1),range=`A1:${lastCol}${data.length+1}`;
+  /* verdict */
+  const c=o.chk||{};let verdict='';
+  if(c.before){const [a,b]=c.before,ra=data.find(r=>val(r,nmC)===a),rb=data.find(r=>val(r,nmC)===b),t=rowOf(a)<rowOf(b);
+    const same1=cmp(val(ra,k1),val(rb,k1),true)===0;
+    verdict=(same1?`ל${esc(a)} ול${esc(b)} אותו ערך ב״${esc(hn(k1))}״: ${val(ra,k1)}. `+(k2!==null?`השוויון מעביר את ההכרעה למשתנה המשני, ״${esc(hn(k2))}״: ${val(ra,k2)} מול ${val(rb,k2)}, ${dirL(k2,K[1][1])}. `:'אין משתנה משני, ולכן נשאר ביניהם הסדר המקורי. ')
+      :`ההכרעה כבר במשתנה הראשי, ״${esc(hn(k1))}״: ${val(ra,k1)} מול ${val(rb,k1)}. `+(k2!==null?'המשתנה המשני לא נדרש כאן. ':''))
+      +`בטבלה הממוינת ${esc(a)} בשורה ${rowOf(a)}, ו${esc(b)} בשורה ${rowOf(b)}. לכן הטענה ״${esc(a)} לפני ${esc(b)}״ <b class="${t?'T':'F'}">${t?'נכונה':'שגויה'}</b>.`;}
+  else if(c.first)verdict=`בראש הטבלה הממוינת, בשורה 2: <b>${esc(val(fin[0],nmC))}</b>.`;
+  else if(c.last)verdict=`בשורה האחרונה של הטבלה הממוינת: <b>${esc(val(fin[fin.length-1],nmC))}</b>.`;
+  else if(c.note)verdict=c.note;
+  else if(c.same){const same=fin.every((r,i)=>r===ord0[i]);verdict=same?'אף שורה לא זזה: הטבלה כבר הייתה מסודרת כך.':'הסדר השתנה לעומת הטבלה המקורית.';}
+  else verdict=`זו הטבלה אחרי המיון. בראש הטבלה: <b>${esc(val(fin[0],nmC))}</b>.`;
+  const hl=c.before||(c.first?[val(fin[0],nmC)]:c.last?[val(fin[fin.length-1],nmC)]:[]);
+  /* stages */
+  const ST=[{t:'הטבלה המקורית',say:`זו הטבלה לפני המיון. מסמנים אותה: קליק על תא אחד בתוך הטבלה, או סימון של כל הטווח <span class="ltr">${range}</span>. לא מסמנים עמודה בודדת.`,ord:ord0,dlg:null,sel:1},
+    {t:'נתונים ← מיון',say:'בכרטיסיית <b>נתונים</b> לוחצים על <b>מיון</b>. נפתח חלון המיון, עם רמה אחת ריקה. התיבה ״הנתונים שלי מכילים כותרות״ מסומנת, ולכן שורה 1 נשארת במקומה.',ord:ord0,dlg:[{c:null,asc:true}],rib:1,sel:1},
+    {t:'רמה ראשונה',say:`<b>מיין לפי:</b> ${esc(hn(k1))}, ${dirL(k1,K[0][1])}. זה המשתנה הראשי. `+(ties.length?`הצבעים מסמנים שוויון: כל צבע הוא קבוצת שורות עם אותו ערך ב״${esc(hn(k1))}״ (${ties.join(', ')}). בתוך כל צבע הסדר נשאר כמו בטבלה המקורית.`:`אין שני ערכים שווים ב״${esc(hn(k1))}״, ולכן הסדר כבר נקבע עד הסוף.`)+(K[1]?' כך הטבלה הייתה נראית אילו לחצנו אישור כבר עכשיו.':''),ord:ord1,dlg:[{c:k1,asc:!!K[0][1]}],fresh:0,tint:1,sel:1}];
+  if(K[1])ST.push({t:'רמה שנייה',say:`<b>הוסף רמה</b>, ואז <b>לאחר מכן לפי:</b> ${esc(hn(k2))}, ${dirL(k2,K[1][1])}. המשתנה המשני מסדר רק <b>בתוך</b> כל צבע. `+(moved2.length?`זזו רק: ${esc(names(moved2))}. אף שורה לא עברה לצבע אחר.`:(ties.length?'בתוך הצבעים הסדר כבר היה נכון, ולכן אף שורה לא זזה.':'אין שוויון במשתנה הראשי, ולכן אף שורה לא זזה: למשתנה המשני אין מה להכריע.')),ord:ord2,dlg:[{c:k1,asc:!!K[0][1]},{c:k2,asc:!!K[1][1]}],fresh:1,tint:1,k2:1,pulse:'add',sel:1});
+  ST.push({t:'אישור, והמסקנה',say:verdict,ord:fin,dlg:K.map(k=>({c:ci(k[0]),asc:!!k[1]})),tint:1,k2:K[1]?1:0,pulse:'ok',hl:1,done:1});
+  /* markup */
+  const W=(o.colW||H.map(()=>84)).map(w=>Math.round(w*1.3)),RH=37,HH=Math.round((o.hdrH||34)*1.25),tw=W.reduce((a,b)=>a+b,0);
+  const gtc=W.map(w=>w+'px').join(' ');
+  const cell=(v,cls)=>`<span class="${cls||''}" ${typeof v==='string'&&/^[A-Za-z]/.test(v)?'style="text-align:left"':''}>${v===null||v===undefined?'':esc(String(v))}</span>`;
+  host.innerHTML=`<div class="ss"><div class="ssR"><div class="ssteps">${ST.map((s,i)=>`<button class="sst" data-i="${i}"><i>${i+1}</i>${s.t}</button>`).join('')}</div>
+    <div class="sssay"></div>
+    <div class="ssdl fs"><div class="fdlg fsdlg"></div><div class="ssdlph">חלון המיון ייפתח בשלב 2</div></div>
+    <div class="ssnav"><button class="btn g ssprev">→ הקודם</button><button class="btn ssnext">הבא ←</button>${o.onTry?'<button class="btn o sstry">🧪 נסו בעצמכם ב-Excel</button>':''}</div></div>
+    <div class="ssL"><div class="ssx"><div class="ssxt"><span class="d">● ● ●</span><b>${esc((o.file||'גיליון').replace(/\.xlsx$/,''))}</b><span></span></div>
+      <div class="ssxr"><span>קובץ</span><span>בית</span><span>הוספה</span><span class="on">נתונים</span><span>תצוגה</span></div>
+      <div class="ssxb"><span class="sb">א↓ת</span><span class="sb">ת↓א</span><span class="sb big srt">⇅ מיון</span><span class="sb">▽ סינון</span></div>
+      <div class="ssg" style="width:${tw+30}px"><div class="ssh" style="grid-template-columns:30px ${gtc}"><span></span>${H.map((_,i)=>`<span>${String.fromCharCode(65+i)}</span>`).join('')}</div>
+        <div class="ssb" style="height:${HH+data.length*RH}px"><div class="ssn" style="top:0;height:${HH}px">1</div>${data.map((_,i)=>`<div class="ssn" style="top:${HH+i*RH}px;height:${RH}px">${i+2}</div>`).join('')}
+          <div class="ssrow sshd" style="grid-template-columns:${gtc};height:${HH}px;width:${tw}px">${H.map(h=>cell(String(h).replace(/\n/g,' '))).join('')}</div>
+          ${data.map(r=>`<div class="ssrow" data-id="${r.id}" style="grid-template-columns:${gtc};height:${RH}px;width:${tw}px">${r.v.map((v,j)=>cell(v===''?null:v,j===k1?'k1':j===k2?'k2':'')).join('')}</div>`).join('')}
+          <div class="sssel" style="width:${tw}px"></div></div></div></div>
+      <div class="ssleg"></div></div></div>`;
+  const q=s=>host.querySelector(s),qa=s=>[...host.querySelectorAll(s)];
+  const cols=H.map((h,i)=>[i,hn(i)]);let cur=0;
+  const go=k=>{cur=Math.max(0,Math.min(ST.length-1,k));const s=ST[cur];
+    qa('.sst').forEach((b,i)=>{b.classList.toggle('on',i===cur);b.classList.toggle('past',i<cur);});
+    q('.sssay').innerHTML=s.say;bidiFix(q('.sssay'));
+    s.ord.forEach((r,i)=>{const el=q(`.ssrow[data-id="${r.id}"]`);el.style.transform=`translateY(${HH+i*RH}px)`;
+      const g=s.tint?gcol.get(String(val(r,k1))):null;el.style.setProperty('--gc',g||'transparent');el.classList.toggle('tie',!!g);el.classList.toggle('k2on',!!(s.k2&&g));
+      el.classList.toggle('gtop',!!s.tint&&i>0&&String(val(s.ord[i-1],k1))!==String(val(r,k1))&&!!(g||gcol.get(String(val(s.ord[i-1],k1)))));
+      el.classList.toggle('hl',!!s.hl&&hl.includes(val(r,nmC)));el.classList.toggle('dim',!!s.hl&&hl.length>0&&!hl.includes(val(r,nmC)));});
+    const D=q('.ssdl .fdlg');q('.ssdl').classList.toggle('open',!!s.dlg);
+    if(s.dlg){D.innerHTML=sortDlgHTML(s.dlg.map(l=>({c:l.c,asc:l.asc,num:l.c!==null&&isNum(l.c)})),cols,{hdr:true,mock:true,fresh:s.fresh,pulse:s.pulse,sel:s.fresh===undefined?-1:s.fresh});bidiFix(D);}
+    q('.ssx').classList.toggle('ribon',!!s.rib);q('.sssel').style.display=s.sel?'block':'none';q('.sssel').style.top=HH+'px';q('.sssel').style.height=(data.length*RH)+'px';
+    q('.ssleg').innerHTML=s.tint&&ties.length?`<b>שוויון במשתנה הראשי:</b> `+ties.map(t=>`<span style="--gc:${gcol.get(t)}">${esc(t)}</span>`).join(''):(s.tint?'אין שוויון במשתנה הראשי.':'');
+    q('.ssprev').disabled=cur===0;q('.ssnext').disabled=cur===ST.length-1;};
+  qa('.sst').forEach(b=>b.onclick=()=>go(+b.dataset.i));q('.ssprev').onclick=()=>go(cur-1);q('.ssnext').onclick=()=>go(cur+1);
+  if(o.onTry)q('.sstry').onclick=o.onTry;
+  go(0);return {go,next:()=>go(cur+1),prev:()=>go(cur-1),n:ST.length,get cur(){return cur;}};}
 
 /* ---------- glossary ---------- */
 const G={
@@ -2141,6 +2315,34 @@ $('#dx').onclick=()=>dr.classList.remove('open');
 $('#gwrap').innerHTML=gk.map(k=>`<button class="gitem" data-k="${k}">${G[k].h}<div style="direction:ltr;text-align:right;font-size:13px;color:#5d6a86">${G[k].en}</div></button>`).join('');
 
 
+/* ---------- animated sort walk-throughs, derived from each question's machine check ---------- */
+function storyList(q){const o=[];if(!q.fs||!q.chk)return o;q.chk.forEach((c,k)=>{if(!c||c.flt)return;
+  if(c.sort)o.push({label:'טענה '+(k+1),k,keys:c.sort,chk:c});
+  const cm=c.cmp||c.cmp1;if(cm){const nm=(q.nm||'A').charCodeAt(0)-65,ord=cm.map(keys=>sortRows(q.fs.rows.slice(1),keys).map(r=>r[nm]));
+    const note=c.cmp?(ord[0].join()===ord[1].join()?'שני המיונים נותנים בדיוק אותו סדר: הרמה הנוספת לא שינתה דבר.':'שני המיונים נותנים סדר שונה.'):`בראש הטבלה במיון א: <b>${esc(String(ord[0][0]))}</b>. במיון ב: <b>${esc(String(ord[1][0]))}</b>.`;
+    cm.forEach((keys,j)=>o.push({label:'טענה '+(k+1)+' · מיון '+'אב'[j],k,keys,chk:{note:`זו התוצאה של מיון ${'אב'[j]}. `+note+' פתחו גם את ההדגמה של המיון השני, והשוו.'}}));}});return o;}
+function sortRows(rows,keys){const v=x=>x===''||x===undefined?null:x;return rows.map((r,i)=>[r,i]).sort((a,b)=>{for(const [L,asc] of keys){const c=L.charCodeAt(0)-65,d=FSheet.prototype.cmpV(v(a[0][c]),v(b[0][c]),!!asc);if(d)return d;}return a[1]-b[1];}).map(x=>x[0]);}
+const keyTxt=(q,keys)=>keys.map((k,j)=>{const c=k[0].charCodeAt(0)-65,h=String(q.fs.rows[0][c]).replace(/\n/g,' '),num=typeof q.fs.rows[1][c]==='number';return (j?'משני: ':'ראשי: ')+h+' '+(num?(k[1]?'מהקטן לגדול':'מהגדול לקטן'):(k[1]?'א עד ת':'ת עד א'));}).join(' · ');
+let STX=null;
+function openStory(qi,t){const q=Q[qi];$('#sttitle').textContent='שאלה '+(qi+1)+' · '+t.label;$('#stsub').textContent=keyTxt(q,t.keys);
+  const host=$('#sthost');host.innerHTML='';$('#stov').classList.add('open');
+  STX=sortStory(host,{rows:q.fs.rows,keys:t.keys,nm:q.nm,colW:q.fs.colW.map(w=>w+22),hdrH:(q.fs.rowH&&q.fs.rowH[0])?40:32,file:'שאלה '+(qi+1)+'.xlsx',chk:t.chk,
+    onTry:()=>{$('#stov').classList.remove('open');openQLab(qi);}});
+  const bx=$('#stov .stbox');bx.style.zoom=1;bx.style.zoom=Math.min(1.25,innerWidth*.96/bx.offsetWidth,innerHeight*.94/bx.offsetHeight).toFixed(3);}
+$('#stx').onclick=()=>$('#stov').classList.remove('open');
+$('#stov').addEventListener('pointerdown',e=>{if(e.target.id==='stov')$('#stov').classList.remove('open');});
+document.addEventListener('keydown',e=>{if(!$('#stov').classList.contains('open'))return;e.stopPropagation();
+  if(e.key==='Escape')$('#stov').classList.remove('open');else if(e.key==='ArrowLeft'||e.key===' '||e.key==='Enter'||e.key==='PageDown'){e.preventDefault();STX&&STX.next();}else if(e.key==='ArrowRight'||e.key==='PageUp'){e.preventDefault();STX&&STX.prev();}},true);
+/* a full sheet for one question: recognises the sort of each claim */
+function openQLab(qi){const q=Q[qi];const st=storyList(q);const msg=$('#labmsg');
+  const cfg=Object.assign({},q.fs,{file:'שאלה '+(qi+1)+'.xlsx',colW:q.fs.colW.map(w=>w+14),
+    hint:st.length?'סמנו את הטבלה (קליק על תא בתוכה, או Ctrl+A) ← נתונים ← מיון. לפני כל טענה לחצו ״↺ מהתחלה״: כל טענה מתחילה מהטבלה המקורית.':'גיליון מלא: חיצי הסינון פעילים, ובכרטיסיית נתונים יש גם חלון מיון בכמה רמות.',
+    onEvent:(t,i,x)=>{if(t!=='sort'||!st.length)return;const sig=i.keys.map(k=>k.col+(k.asc?1:0)).join();
+      const hit=st.filter(s=>s.keys.map(k=>k[0]+(k[1]?1:0)).join()===sig);
+      const first=x.value(x.A(1,(q.nm||'A').charCodeAt(0)-65));
+      msg.innerHTML=hit.length?`✅ זה המיון של ${hit.map(h=>h.label).join(' ושל ')}. בראש הטבלה עכשיו: <b>${esc(String(first))}</b>. קראו את התוצאה, ובדקו את הטענה.`
+        :`🔎 מיינתם לפי ${esc(i.keys.map(k=>String(q.fs.rows[0][k.c]).replace(/\n/g,' ')).join(', ואחר כך לפי '))}. זה לא המיון של אחת הטענות. ״↺ מהתחלה״ מחזיר את הטבלה המקורית.`;bidiFix(msg);}});
+  openLab(cfg,'גיליון לניסוי · שאלה '+(qi+1));}
 /* ---------- build question slides ---------- */
 (function(){
   const end=$('#s-end');
@@ -2155,6 +2357,7 @@ $('#gwrap').innerHTML=gk.map(k=>`<button class="gitem" data-k="${k}">${G[k].h}<d
     let S=`<button class="x">×</button><h4>פתרון שאלה ${i+1}</h4><div class="goal">🎯 מה השאלה בודקת: ${fx(q.goal)}</div>`;
     if(q.sol)S+=`<table><tr><th>טענה</th><th>נכונה / שגויה</th><th>נימוק</th></tr>${q.sol.map((x,j)=>`<tr><td>${j+1}</td><td class="${x[0]}">${x[0]==='T'?'נכונה':'שגויה'}</td><td>${fx(x[1])}</td></tr>`).join('')}</table>`;
     if(q.solx)S+=q.solx.map(x=>`<p class="ex">${fx(x)}</p>`).join('');
+    const stl=storyList(q);if(stl.length)S+=`<div class="stbtns"><span>🎬 הדגמה מונפשת ב-Excel, שלב אחרי שלב:</span>${stl.map((t,k)=>`<button class="stb" data-k="${k}">${t.label}</button>`).join('')}</div>`;
     S+=`<div class="ans">התשובה הנכונה: ${HL[q.ans]}. ${fo(q.opts[q.ans])}</div><div class="tipx">💡 טיפ למבחן: ${fx(q.tip)}</div>`;
     s.innerHTML=`<div class="qhead"><span class="qn">שאלה ${i+1}</span><span class="qtag">${esc(q.tag)}</span>${q.src?`<span class="qsrc">📝 ${esc(q.src)}</span>`:''}<span class="qprog">חלק ד · ${i+1} מתוך ${Q.length}</span></div>
       <div class="qgrid"><div class="qL${(q.stem.length+q.claims.join('').length)>480?' sm':''}">${L}</div><div class="qR">${R}</div></div><div class="solp">${S}</div><div class="tagc y">בסגנון מבחן</div>`;
@@ -2185,7 +2388,8 @@ $$('.qslide').forEach((s,i)=>{const q=Q[i];
     markMenu();});
   s.querySelector('.solb').onclick=()=>{s.querySelector('.solp').classList.add('open');s.querySelectorAll('.opt')[q.ans].classList.add('reveal');};
   s.querySelector('.solp .x').onclick=()=>s.querySelector('.solp').classList.remove('open');
-  const lb=s.querySelector('.labb');if(lb)lb.onclick=()=>openLab(q.lab?LAB[q.lab]:Object.assign({},q.fs,{file:'שאלה '+(i+1)+'.xlsx',colW:q.fs.colW.map(w=>w+14),hint:'גיליון מלא: חיצי הסינון פעילים, ובכרטיסיית נתונים יש גם חלון מיון בכמה רמות.'}),'גיליון לניסוי · שאלה '+(i+1));
+  const lb=s.querySelector('.labb');if(lb)lb.onclick=()=>q.lab?openLab(LAB[q.lab],'גיליון לניסוי · שאלה '+(i+1)):openQLab(i);
+  const stl=storyList(q);s.querySelectorAll('.stb').forEach(b=>b.onclick=()=>openStory(i,stl[+b.dataset.k]));
 });
 
 /* shrink long questions to fit (after tables exist) */
@@ -2219,7 +2423,7 @@ window.doPrint=function(){closeOverlays();$$('.st').forEach(s=>s.classList.add('
 $('#bPrint').onclick=window.doPrint;
 $('#bFull').onclick=()=>{if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();}else document.exitFullscreen();};
 document.addEventListener('keydown',e=>{
- if(e.target&&e.target.closest&&e.target.closest('.ms,.xs,.fs,#labov'))return;
+ if(e.target&&e.target.closest&&e.target.closest('.ms,.xs,.fs,#labov,#stov'))return;
  if(e.target.type==='range'&&(e.key==='ArrowLeft'||e.key==='ArrowRight'))return;
  if(e.key==='ArrowLeft'||e.key==='PageDown'||e.key===' '){e.preventDefault();next();}
  else if(e.key==='ArrowRight'||e.key==='PageUp'){e.preventDefault();prev();}
@@ -2317,7 +2521,8 @@ fsTask('s-sortwarn',AGX(),[
 
 /* sort 2: dialog with two levels */
 fsTask('s-sort2',AGX({start:[1,2]}),[
- {k:'o',h:`פתחו את חלון המיון (נתונים ← מיון)`,test:t=>t==='sortdlg',msg:'✅ זה חלון המיון. ״מיין לפי״ היא הרמה הראשית.'},
+ {k:'a',h:`סמנו את הטבלה כולה: קליק על תא בטבלה ואז Ctrl+A (במק Cmd+A), או גרירה מ-A1 עד E13`,test:(t,i)=>t==='select'&&i.sel&&i.sel.r1===0&&i.sel.r2===12&&i.sel.c1===0&&i.sel.c2===4,msg:'✅ כל הטבלה מסומנת, כולל שורת הכותרות. עכשיו נתונים ← מיון.'},
+ {k:'o',h:`פתחו את חלון המיון (נתונים ← מיון)`,test:t=>t==='sortdlg',msg:'✅ זה חלון המיון. Excel זיהה את שורת הכותרות, ולכן הסימון ירד לשורות הנתונים בלבד. ״מיין לפי״ היא הרמה הראשית.'},
  {k:'l',h:`״הוסף רמה״, כדי שתהיה גם שורת ״לאחר מכן לפי״`,test:(t,i)=>t==='addlevel',msg:'✅ שתי רמות. בחרו עמודה וסדר בכל אחת.'},
  {k:'s',h:`סניף א עד ת, ואחר כך ותק מהגדול לקטן. אישור`,test:(t,i)=>t==='sort'&&KK(i,[[2,1],[3,0]]),msg:(i,x)=>{const h=[];for(let r=1;r<=12;r++)if(x.value(x.A(r,2))==='חיפה')h.push(`${x.value(x.A(r,1))} (${x.value(x.A(r,3))})`);return `✅ באר שבע ראשונה, תל אביב אחרונה. ובתוך חיפה, לפי ותק: ${h.join(', ')}. הוותק לא הזיז אף אחד מחוץ לסניף שלו.`;}}],
  {idle:'לחצו על תא בטבלה, ואז על הכפתור הגדול <b>מיון</b> בכרטיסיית <b>נתונים</b>.',react:(t,i)=>{if(t==='sort'&&KK(i,[[3,0],[2,1]]))return '🤏 הפוך: הוותק הוא הראשי כאן. ברמה העליונה צריך להיות הסניף.';if(t==='sort'&&i.keys.length===1&&i.keys[0].c===2)return '🤏 זו רמה אחת. בחלון <b>מיון</b> הוסיפו רמה שנייה, ותק.';}});
